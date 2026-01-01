@@ -64,8 +64,8 @@ Each question follows a consistent structure:
 
 This chapter explores mathematical foundations, loss function design, and optimization pitfalls that can silently destroy ML systems.
 
-% Question 1: The Auto-Bidder Paradox
-\section{Question 1: The Auto-Bidder Paradox}
+% The Auto-Bidder Paradox
+\section{The Auto-Bidder Paradox}
 \label{sec:q01}
 
 \textit{Why symmetric loss turns your model into a toxic-asset machine - and how quantile-based losses fix it.}
@@ -86,9 +86,9 @@ That answer is wrong. If you deploy this model, the company will likely lose mil
 
 \subsection{The Trap Explained}
 
-The trap here is a phenomenon known as **Adversarial Selection Bias**, often referred to in economics as the **Winner's Curse**.
+The trap here is a phenomenon known as \textbf{Adversarial Selection Bias}, often referred to in economics as the \textbf{Winner's Curse}.
 
-The deceptive nature of this problem lies in the metric: **RMSE**. RMSE is a \textit{symmetric} metric. It penalizes overestimation (predicting a house is worth \$500k when it's really \$400k) exactly the same amount as underestimation (predicting \$400k when it's \$500k).
+The deceptive nature of this problem lies in the metric: \textbf{RMSE}. RMSE is a \textit{symmetric} metric. It penalizes overestimation (predicting a house is worth \$500k when it's really \$400k) exactly the same amount as underestimation (predicting \$400k when it's \$500k).
 
 \begin{notebox}
 \textbf{The Asymmetry of Auctions}
@@ -117,7 +117,7 @@ Standard regression models are typically trained to minimize Mean Squared Error 
 
 This objective function assumes that the cost of an error is proportional to the square of its magnitude, regardless of direction. However, the true business objective function (Profit and Loss, or PnL) is asymmetric.
 
-To align the model with the business reality, we need a loss function that penalizes overestimation much more heavily than underestimation. The standard tool for this is **Quantile Loss** (also known as Pinball Loss).
+To align the model with the business reality, we need a loss function that penalizes overestimation much more heavily than underestimation. The standard tool for this is \textbf{Quantile Loss} (also known as Pinball Loss).
 
 \begin{thmbox}{Quantile (Pinball) Loss}{quantile-loss}
 For a target quantile $\tau \in (0, 1)$, the loss is defined as:
@@ -134,7 +134,7 @@ If we set $\tau = 0.1$, the penalty for overestimation ($1 - \tau = 0.9$) is 9 t
 
 \subsubsection{Algorithmic Implementation}
 
-Implementing this in a modern deep learning framework is straightforward. Instead of using `MSELoss`, we implement a custom loss module.
+Implementing this in a modern deep learning framework is straightforward. Instead of using \texttt{MSELoss}, we implement a custom loss module.
 
 \begin{codebox}{PyTorch Implementation of Quantile Loss}{quantile-pytorch}
 \begin{amzcode}{python}
@@ -163,9 +163,9 @@ criterion = PinballLoss(tau=0.1)
 Deploying an asymmetric model changes the system architecture requirements.
 
 \begin{enumerate}
-    \item \textbf{Metric Monitoring:} You can no longer monitor RMSE in production effectively because the model is *designed* to be biased (specifically, to have a negative bias). You must monitor **PnL (Profit and Loss)** and **Win Rate**.
-    \item \textbf{Bidding Logic:} The raw output of a quantile model is a conservative estimate. The bidding logic typically becomes simpler: `Bid = Model_Prediction`. With a symmetric model, the bidding logic requires complex (and fragile) heuristics like `Bid = Model_Prediction * 0.95`.
-    \item \textbf{Feedback Loop:} The system needs to capture not just the sales price of homes won, but specifically the delta between the bid and the eventual market price for homes *lost*, to calibrate the "Winner's Curse" magnitude.
+    \item \textbf{Metric Monitoring:} You can no longer monitor RMSE in production effectively because the model is \textit{designed} to be biased (specifically, to have a negative bias). You must monitor \textbf{PnL (Profit and Loss)} and \textbf{Win Rate}.
+    \item \textbf{Bidding Logic:} The raw output of a quantile model is a conservative estimate. The bidding logic typically becomes simpler: \texttt{Bid = Model_Prediction}. With a symmetric model, the bidding logic requires complex (and fragile) heuristics like \texttt{Bid = Model_Prediction * 0.95}.
+    \item \textbf{Feedback Loop:} The system needs to capture not just the sales price of homes won, but specifically the delta between the bid and the eventual market price for homes \textit{lost}, to calibrate the "Winner's Curse" magnitude.
 \end{enumerate}
 
 \subsection{Why It Fails}
@@ -174,7 +174,7 @@ The failure of the symmetric model is not due to bad data or poor training; it i
 
 \subsubsection{The Mechanism of Failure}
 
-The failure happens because of **conditional expectation**.
+The failure happens because of \textbf{conditional expectation}.
 
 Let $\epsilon = \hat{y} - y$ be the error.
 
@@ -219,7 +219,7 @@ Even if Scenario A and Scenario B happen equally often (50/50), your average err
 
 \subsection{The Solution}
 
-The correct strategic decision in the interview is to **refuse to activate the auto-bidder** with the current model, despite the "no retraining" constraint, unless you can apply a statistically rigorous correction. The ideal engineering solution is to retrain.
+The correct strategic decision in the interview is to \textbf{refuse to activate the auto-bidder} with the current model, despite the "no retraining" constraint, unless you can apply a statistically rigorous correction. The ideal engineering solution is to retrain.
 
 \subsubsection{The Correct Approach: Asymmetric Training}
 
@@ -227,7 +227,7 @@ If retraining were allowed, we would train using Quantile Loss with a low $\tau$
 
 \subsubsection{The "No Retraining" Workaround: Bid Shading}
 
-Since the interview constraint forbids retraining, you must apply **Bid Shading**. You cannot simply blindly bid the model output.
+Since the interview constraint forbids retraining, you must apply \textbf{Bid Shading}. You cannot simply blindly bid the model output.
 
 \begin{tecbox}{Heuristic: Analytical Bid Shading}{bid-shading}
 If we assume the model errors are normally distributed $\mathcal{N}(0, \sigma^2)$, we can approximate the quantile prediction post-hoc:
@@ -283,7 +283,7 @@ Dixit, V., Holan, S. H., \& Wikle, C. K. (2024). \textit{Incorporating Asymmetri
 
 \subsubsection{Paper: The Winner's Curse in Forecasting}
 
-Haruvy, E., \& Popkowski Leszczyc, P. T. L. (2016). \textit{The Winner's Curse in Dynamic Forecasting of Auction Data}. Marketing Letters.
+Haruvy, E. (2016). \textit{The Winner's Curse in Dynamic Forecasting of Auction Data}. Marketing Letters.
 
 \textbf{Key Contribution:} Analyzing eBay data, this study shows that standard forecasting models that ignore the "winning condition" lead to 10-20\% overpayments.
 
@@ -294,7 +294,7 @@ Haruvy, E., \& Popkowski Leszczyc, P. T. L. (2016). \textit{The Winner's Curse i
 \begin{genbox}{The Answer That Gets You Hired}
 "I cannot recommend deploying this model as an auto-bidder in its current state.
 
-While a 1.5\% RMSE is impressive, it optimizes a symmetric metric. In an auction environment, this subjects us to **Adversarial Selection Bias**. We will systematically win bids where the model overestimated the value, filling our \$500M inventory with overpriced assets---a classic 'Winner's Curse.'
+While a 1.5\% RMSE is impressive, it optimizes a symmetric metric. In an auction environment, this subjects us to \textbf{Adversarial Selection Bias}. We will systematically win bids where the model overestimated the value, filling our \$500M inventory with overpriced assets{-}{-}{-}a classic 'Winner's Curse.'
 
 Since we cannot retrain the model, my deployment strategy is:
 
@@ -304,7 +304,7 @@ Since we cannot retrain the model, my deployment strategy is:
     \item \textbf{Simulation first:} Before spending a dollar, we run a backtest treating historical sales as 'sealed bids' to calibrate the discount factor $k$ until our projected portfolio yields a positive return, not just low RMSE.
 \end{enumerate}
 
-Long term, we must retrain the model using **Quantile Loss** (e.g., $\tau=0.1$) to natively learn conservative valuations."
+Long term, we must retrain the model using \textbf{Quantile Loss} (e.g., $\tau=0.1$) to natively learn conservative valuations."
 \end{genbox}
 
 \subsection{Key Takeaways}
@@ -316,17 +316,17 @@ Long term, we must retrain the model using **Quantile Loss** (e.g., $\tau=0.1$) 
     \item \textbf{Guardrails $\neq$ Safety:} Simple caps (like "max \$500k") don't fix the fundamental distribution error. Statistical correction (shading by uncertainty) is required.
 \end{itemize}
 
-% Question 5: The Multi-Objective Loss Trap
-\section{Question 5: The Multi-Objective Loss Trap}
+% The Multi-Objective Loss Trap
+\section{The Multi-Objective Loss Trap}
 \label{sec:q05}
 
 \textit{A mathematically elegant loss function can quietly destroy your real-time ranking system. Here's the architectural fix that actually works.}
 
 \subsection{The Interview Scenario}
 
-You are in a Senior Machine Learning Engineer interview at a company like DoorDash, Uber Eats, or Amazon. The atmosphere is professional but intense. The interviewer leans forward, sketching a simple diagram on the whiteboard---a user, a list of items, and two arrows pointing in different directions.
+You are in a Senior Machine Learning Engineer interview at a company like DoorDash, Uber Eats, or Amazon. The atmosphere is professional but intense. The interviewer leans forward, sketching a simple diagram on the whiteboard{-}{-}{-}a user, a list of items, and two arrows pointing in different directions.
 
-"Here is the situation," they begin. "We have a conflict in our ranking system. The Product Team wants to maximize \textbf{User Clicks} because high engagement drives retention. However, the Sales Team wants to maximize \textbf{High-Commission Orders} to boost immediate revenue. These goals often conflict---high-margin items aren't always what users want to click on."
+"Here is the situation," they begin. "We have a conflict in our ranking system. The Product Team wants to maximize \textbf{User Clicks} because high engagement drives retention. However, the Sales Team wants to maximize \textbf{High-Commission Orders} to boost immediate revenue. These goals often conflict{-}{-}{-}high-margin items aren't always what users want to click on."
 
 They pause, setting the trap:
 
@@ -340,7 +340,7 @@ Most candidates immediately start visualizing a loss landscape. They think back 
 
 \subsection{The Trap Explained}
 
-The candidate's instinct is almost always to propose a **Weighted Sum Loss Function** (often called Scalarization).
+The candidate's instinct is almost always to propose a \textbf{Weighted Sum Loss Function} (often called Scalarization).
 
 The reasoning goes like this: "We have two objectives. Let's create a joint loss function where we assign a weight $\alpha$ to the click loss and a weight $\beta$ to the profit loss. We can then tune $\alpha$ and $\beta$ as hyperparameters to find the 'sweet spot' between user engagement and revenue."
 
@@ -444,7 +444,7 @@ for batch in data_loader:
 
 \subsubsection{System Architecture}
 
-This approach implies a **Monolithic Architecture**.
+This approach implies a \textbf{Monolithic Architecture}.
 
 \begin{itemize}
     \item \textbf{Training:} Requires complex data pipelines that join click logs with financial ledgers before training can start.
@@ -492,13 +492,13 @@ Even if you normalize correctly, a single model $\theta^*$ is only optimal for \
 
 \subsection{The Solution}
 
-The correct approach separates **Prediction** (Learning) from **Policy** (Decision Making).
+The correct approach separates \textbf{Prediction} (Learning) from \textbf{Policy} (Decision Making).
 
 \subsubsection{The Key Insight}
 
-Machine Learning should be used to learn **facts** about the world (e.g., "What is the probability user $u$ clicks item $i$?"). Business logic should be used to determine the **value** of those facts.
+Machine Learning should be used to learn \textbf{facts} about the world (e.g., "What is the probability user $u$ clicks item $i$?"). Business logic should be used to determine the \textbf{value} of those facts.
 
-Do not bake the trade-off into the loss function. Bake it into the **ranking formula** at inference time.
+Do not bake the trade-off into the loss function. Bake it into the \textbf{ranking formula} at inference time.
 
 \subsubsection{Step-by-Step Implementation}
 
@@ -560,15 +560,15 @@ def rank_items(user, items):
 
 \subsubsection{Theoretical Justification}
 
-This approach relies on the principle of **Separation of Concerns**. In control theory, the "estimator" (the model) should be separate from the "controller" (the policy). The model provides an unbiased estimate of the state of the world ($P(\text{click})$), and the controller applies the utility function $U(\text{click}, \text{profit})$.
+This approach relies on the principle of \textbf{Separation of Concerns}. In control theory, the "estimator" (the model) should be separate from the "controller" (the policy). The model provides an unbiased estimate of the state of the world ($P(\text{click})$), and the controller applies the utility function $U(\text{click}, \text{profit})$.
 
 \subsubsection{Intuitive Explanation}
 
 Imagine a chef and a restaurant manager.
 
 \begin{itemize}
-    \item The **Chef (ML Model)** should focus on making the best tasting food possible.
-    \item The **Manager (Business Logic)** decides the menu prices and daily specials.
+    \item The \textbf{Chef (ML Model)} should focus on making the best tasting food possible.
+    \item The \textbf{Manager (Business Logic)} decides the menu prices and daily specials.
 \end{itemize}
 
 If you tell the Chef to "cook food that is tasty AND high margin," they might start putting cheap ingredients in the signature dish to save money, ruining the quality. Instead, let the Chef make the best dish, and let the Manager decide how prominently to feature it on the menu based on its margin.
@@ -604,7 +604,7 @@ Here is how you deliver the answer that gets you the Senior offer.
 \begin{genbox}{The Answer That Gets You Hired}
 "I would explicitly \textbf{avoid} baking the trade-off into the training loss function. Training a joint loss like $\alpha L_{click} + \beta L_{profit}$ tightly couples our model weights to current business priorities, meaning we'd have to retrain the entire model every time the business strategy changes.
 
-Instead, I propose a **Decoupled Objective** approach:
+Instead, I propose a \textbf{Decoupled Objective} approach:
 
 \begin{enumerate}
     \item \textbf{Training:} Train the model purely to predict the probability of a click ($P(\text{click})$). This allows the model to learn stable user preferences that are invariant to pricing changes.
@@ -628,8 +628,8 @@ This architecture allows us to treat $w_{click}$ and $w_{profit}$ as configurati
     \item \textbf{Scale Matters:} In high-throughput systems (millions of QPS), decoupling allows for more efficient caching of the heavy ML predictions, while the lightweight business logic is applied on top.
 \end{itemize}
 
-% Question 22: The Softmax Trap
-\section{Question 22: The Softmax Trap}
+% The Softmax Trap
+\section{The Softmax Trap}
 \label{sec:q22}
 
 \textit{Why writing "clean code" for softmax regression silently destroys your training run, and how LogSumExp saves you.}
@@ -640,14 +640,14 @@ You are in a Senior Machine Learning Engineer interview at a top-tier AI lab (th
 
 "Let's start with something fundamental," they say, their tone deceptively casual. "We're building a multiclass classification system. Can you implement the loss function for Softmax Regression from scratch? You can assume you have the raw logits from the final layer."
 
-This feels like a "FizzBuzz" question---a basic competence filter. You confidently step up. In your mind, the logic is crystal clear:
+This feels like a "FizzBuzz" question{-}{-}{-}a basic competence filter. You confidently step up. In your mind, the logic is crystal clear:
 
 \begin{enumerate}
     \item Turn logits into probabilities using Softmax.
     \item Compare probabilities to the target using Cross-Entropy.
 \end{enumerate}
 
-You begin writing a clean, modular solution, perhaps separating the `softmax` function from the `cross_entropy` calculation. You step back, satisfied with your readable, mathematically correct code.
+You begin writing a clean, modular solution, perhaps separating the \texttt{softmax} function from the \texttt{cross_entropy} calculation. You step back, satisfied with your readable, mathematically correct code.
 
 The interviewer pauses, looks at the board, and asks a single, devastating question:
 
@@ -663,14 +663,14 @@ The trap here is the "Siren Song of Modularity." In software engineering, we are
 The modular approach fails because it treats floating-point numbers as if they were real numbers ($\mathbb{R}$). In reality, IEEE 754 floating-point arithmetic has finite precision.
 \end{genbox}
 
-When you implement `probs = softmax(logits)` followed by `loss = -log(probs)`, you introduce a critical point of failure between the two operations. The Softmax function involves exponentiation ($e^x$), which grows incredibly fast.
+When you implement \texttt{probs = softmax(logits)} followed by \texttt{loss = -log(probs)}, you introduce a critical point of failure between the two operations. The Softmax function involves exponentiation ($e^x$), which grows incredibly fast.
 
 \begin{itemize}
-    \item If inputs are large positive numbers, $e^x$ overflows to `Infinity`.
-    \item If inputs are large negative numbers, $e^x$ underflows to `0.0`.
+    \item If inputs are large positive numbers, $e^x$ overflows to \texttt{Infinity}.
+    \item If inputs are large negative numbers, $e^x$ underflows to \texttt{0.0}.
 \end{itemize}
 
-If your softmax outputs a `0.0` for the target class due to underflow, the subsequent operation `log(0.0)` results in `-Infinity`. When you attempt to backpropagate from negative infinity, your gradients become `NaN` (Not a Number). Like a virus, these NaNs propagate backward through your network, destroying weights and ruining days of training time.
+If your softmax outputs a \texttt{0.0} for the target class due to underflow, the subsequent operation \texttt{log(0.0)} results in \texttt{-Infinity}. When you attempt to backpropagate from negative infinity, your gradients become \texttt{NaN} (Not a Number). Like a virus, these NaNs propagate backward through your network, destroying weights and ruining days of training time.
 
 \begin{notebox}
 \textbf{Production Consequence:} In large-scale training (like GPT-4 or BERT), this instability isn't just an edge case; it's a certainty. Without fused operations, training runs on thousands of GPUs would crash randomly, costing hundreds of thousands of dollars in wasted compute.
@@ -708,7 +708,7 @@ Equation (1) is the \textbf{LogSumExp} form. This is the crucial mathematical in
 
 \subsubsection{Algorithmic Details: The LogSumExp Trick}
 
-The term $\log(\sum_{j=1}^K e^{z_j})$ is still dangerous if $z_j$ is large (causing overflow). To fix this, we use the **LogSumExp (LSE) trick**. We rely on the identity that for any constant $c$:
+The term $\log(\sum_{j=1}^K e^{z_j})$ is still dangerous if $z_j$ is large (causing overflow). To fix this, we use the \textbf{LogSumExp (LSE) trick}. We rely on the identity that for any constant $c$:
 
 \[
 \log\left(\sum_{j=1}^K e^{z_j}\right) = \log\left(\sum_{j=1}^K e^{z_j - c} \cdot e^c\right) = \log\left(e^c \cdot \sum_{j=1}^K e^{z_j - c}\right) = c + \log\left(\sum_{j=1}^K e^{z_j - c}\right)
@@ -862,15 +862,15 @@ Blanchard, P., Higham, D., \& Higham, N. (2021). \textit{Accurate Computation of
 
 \subsubsection{Paper: LSEAttention}
 
-Anonymous Authors. (2024). \textit{LSEAttention is All You Need for Time Series Forecasting}. arXiv.
+Dizhen Liang. (2024). \textit{LSEAttention is All You Need for Time Series Forecasting}. arXiv.
 
 \textbf{Key Contribution:} This recent work links "entropy collapse" in Transformers to Softmax instability. They propose a variant of Attention that explicitly leverages the LSE formulation to prevent scores from vanishing in long-sequence forecasting.
 
-\textbf{Relevance:} It demonstrates that the "Softmax Trap" isn't just about crashing code---it's about model performance and convergence capability in complex architectures.
+\textbf{Relevance:} It demonstrates that the "Softmax Trap" isn't just about crashing code{-}{-}{-}it's about model performance and convergence capability in complex architectures.
 
 \subsubsection{Paper: Stochastic Optimization of LogSumExp}
 
-Anonymous Authors. (2025). \textit{Improved Stochastic Optimization of LogSumExp}. arXiv.
+Egor Gladin. (2025). \textit{Improved Stochastic Optimization of LogSumExp}. arXiv.
 
 \textbf{Key Contribution:} Introduces a "safe KL divergence" approach to approximate LSE in high-dimensional settings where exact computation is too expensive (common in Optimal Transport).
 
@@ -883,9 +883,9 @@ When you face this question, don't just write the code. Narrate the engineering 
 \begin{genbox}{The Answer That Gets You Hired}
 "I would implement this by fusing the Softmax and Cross-Entropy operations, effectively using the LogSumExp trick.
 
-If we implement them separately---calculating probabilities first and then the log---we risk numerical instability. Specifically, if logits are large positive numbers, the exponential overflows. If they are large negative numbers, the exponential underflows to zero, leading to `log(0)` which is negative infinity.
+If we implement them separately{-}{-}{-}calculating probabilities first and then the log{-}{-}{-}we risk numerical instability. Specifically, if logits are large positive numbers, the exponential overflows. If they are large negative numbers, the exponential underflows to zero, leading to \texttt{log(0)} which is negative infinity.
 
-By using the identity $\log(\sum e^{x_i}) = c + \log(\sum e^{x_i-c})$, where $c$ is the max logit, we ensure numerical stability. In PyTorch, I'd use `torch.nn.functional.cross_entropy` which handles this internally, but here is the scratch implementation of that fused operation\ldots"
+By using the identity $\log(\sum e^{x_i}) = c + \log(\sum e^{x_i-c})$, where $c$ is the max logit, we ensure numerical stability. In PyTorch, I'd use \texttt{torch.nn.functional.cross_entropy} which handles this internally, but here is the scratch implementation of that fused operation\ldots"
 \end{genbox}
 
 \subsection{Key Takeaways}
@@ -895,11 +895,11 @@ By using the identity $\log(\sum e^{x_i}) = c + \log(\sum e^{x_i-c})$, where $c$
     \item \textbf{The Trap:} Separating Softmax and Log operations creates a vulnerability to underflow/overflow.
     \item \textbf{The Fix:} Always subtract the maximum logit before exponentiation (Shift Invariance).
     \item \textbf{The Insight:} You rarely need actual probabilities for training; you need the \textit{log-probabilities}, which are more stable.
-    \item \textbf{Production Check:} If your loss curve suddenly hits `NaN`, check if you are manually computing softmax anywhere in your custom layers.
+    \item \textbf{Production Check:} If your loss curve suddenly hits \texttt{NaN}, check if you are manually computing softmax anywhere in your custom layers.
 \end{itemize}
 
-% Question 13: The Flat Loss Trap
-\section{Question 13: The Flat Loss Trap}
+% The Flat Loss Trap
+\section{The Flat Loss Trap}
 \label{sec:q13}
 
 \textit{Why tuning a broken model is pointless - and how the single-batch overfit saves you in every deep learning interview.}
@@ -920,7 +920,7 @@ The trap is set. Most candidates immediately jump into "optimization mode." They
 
 \textit{"I'd check the batch size."}
 
-This is the \textbf{common wrong answer}. By focusing on tuning, the candidate reveals a fundamental misunderstanding of how ML systems fail. They assume that because the code \textit{runs}, the implementation is \textit{correct}. In reality, a flat loss curve in the early stages almost never indicates a tuning problem---it indicates a broken system.
+This is the \textbf{common wrong answer}. By focusing on tuning, the candidate reveals a fundamental misunderstanding of how ML systems fail. They assume that because the code \textit{runs}, the implementation is \textit{correct}. In reality, a flat loss curve in the early stages almost never indicates a tuning problem{-}{-}{-}it indicates a broken system.
 
 \subsection{The Trap Explained}
 
@@ -932,7 +932,7 @@ Why is this trap so effective? It exploits the \textbf{Silent Failure Fallacy}. 
 ML systems are uniquely dangerous because they can absorb implementation errors and continue executing. A detached gradient tensor, a shape mismatch being broadcasted silently, or a data loader yielding constant zeros will not stop the Python interpreter. The training loop will happily churn through epochs, wasting compute and time, while the model remains statistically random.
 \end{notebox}
 
-The trap appeals to our "tinkering" instinct. We are used to seeing loss curves wiggle, so we assume a flat line is just a "stiff" optimization landscape that needs a nudge. This is a cognitive error known as \textit{anchoring}---we anchor on our experience with working models that need tuning, rather than considering that the engine itself might be disconnected from the wheels.
+The trap appeals to our "tinkering" instinct. We are used to seeing loss curves wiggle, so we assume a flat line is just a "stiff" optimization landscape that needs a nudge. This is a cognitive error known as \textit{anchoring}{-}{-}{-}we anchor on our experience with working models that need tuning, rather than considering that the engine itself might be disconnected from the wheels.
 
 Real-world consequences are severe. In 2021, Zillow's iBuying algorithms failed to generalize to market shifts, partly due to over-reliance on models that weren't robustly validated, leading to a \$569 million write-down. In a production setting, a "flat loss" bug that goes undetected can lead to the deployment of a model that outputs random noise, potentially affecting millions of users before metrics catch it.
 
@@ -1021,7 +1021,7 @@ for epoch in range(1000):
 
 \subsubsection{System Architecture Implications}
 
-In distributed systems, flat loss can arise from synchronization bugs. If you use `DistributedDataParallel` but fail to synchronize gradients correctly (e.g., toggling `no_sync` improperly), each GPU might update based on local noise or stale gradients, preventing convergence.
+In distributed systems, flat loss can arise from synchronization bugs. If you use \texttt{DistributedDataParallel} but fail to synchronize gradients correctly (e.g., toggling \texttt{no_sync} improperly), each GPU might update based on local noise or stale gradients, preventing convergence.
 
 Architecture-wise, this issue highlights the need for \textbf{unit testing components}. Just as you unit test a function, you must "unit test" the training loop's ability to reduce loss on trivial data.
 
@@ -1034,7 +1034,7 @@ Why does the "tuning" approach fail? Let's analyze specific failure modes with c
 A common bug in PyTorch is accidentally breaking the computation graph.
 
 \begin{exbox}{Example: The Detached Gradient}{detached-gradient}
-Imagine you implement a skip connection but accidentally use a NumPy operation or `tensor.item()` in the middle.
+Imagine you implement a skip connection but accidentally use a NumPy operation or \texttt{tensor.item()} in the middle.
 
 \textbf{Scenario:} Binary Classification ($y \in \{0, 1\}$).
 
@@ -1044,7 +1044,7 @@ Imagine you implement a skip connection but accidentally use a NumPy operation o
 
 If you attempt to tune the learning rate from $1e^{-3}$ to $1e^{-2}$ or $1e^{-4}$, the loss will remain exactly \textbf{0.693}.
 
-Why? Because `loss.backward()` computes gradients by tracing the graph from Loss to Inputs. If the graph is broken, the gradient $\nabla_\theta L$ is effectively zero or undefined for the parameters before the break. No amount of hyperparameter tuning can bridge a disconnect in the computational graph.
+Why? Because \texttt{loss.backward()} computes gradients by tracing the graph from Loss to Inputs. If the graph is broken, the gradient $\nabla_\theta L$ is effectively zero or undefined for the parameters before the break. No amount of hyperparameter tuning can bridge a disconnect in the computational graph.
 \end{exbox}
 
 \subsubsection{The "Label Mismatch" Failure}
@@ -1153,8 +1153,8 @@ By verifying the 'mechanics' of the model first, I avoid wasting days tuning a b
     \item \textbf{Check Gradients:} Use gradient norms to distinguish between "hard to learn" and "impossible to learn" (detached graph).
 \end{itemize}
 
-% Question 20: The Vanishing Update Paradox
-\section{Question 20: The Vanishing Update Paradox}
+% The Vanishing Update Paradox
+\section{The Vanishing Update Paradox}
 \label{sec:q20}
 
 \textit{Why increasing LoRA rank from 8 to 256 kills learning - and how rsLoRA fixes gradient collapse.}
@@ -1164,7 +1164,7 @@ By verifying the 'mechanics' of the model first, I avoid wasting days tuning a b
 You are sitting in a Senior ML Engineer interview at a top AI lab like OpenAI or Meta. The discussion turns to Parameter-Efficient Fine-Tuning (PEFT) for Large Language Models. The interviewer leans forward and presents a specific, troubling scenario:
 
 \begin{quote}
-"We were fine-tuning a Llama 2 model on a complex medical dataset. Standard LoRA with a rank of $r=8$ wasn't capturing the domain nuances---the model was underfitting. So, we decided to drastically increase the capacity by setting the rank to $r=256$. We expected better performance, or at worst, some overfitting. Instead, the loss curve flatlined immediately. The model stopped learning entirely. Why did this happen?"
+"We were fine-tuning a Llama 2 model on a complex medical dataset. Standard LoRA with a rank of $r=8$ wasn't capturing the domain nuances{-}{-}{-}the model was underfitting. So, we decided to drastically increase the capacity by setting the rank to $r=256$. We expected better performance, or at worst, some overfitting. Instead, the loss curve flatlined immediately. The model stopped learning entirely. Why did this happen?"
 \end{quote}
 
 Your instinct might be to rely on the classic bias-variance trade-off. You think: \textit{Rank 256 adds millions of parameters. The model is probably drowning in noise or overfitting.}
@@ -1234,7 +1234,7 @@ class LoRALayer(nn.Module):
         super().__init__()
         self.rank = rank
         self.alpha = alpha
-        self.scaling = alpha / rank  # <--- The Source of the Problem
+        self.scaling = alpha / rank  # <{-}{-}{-} The Source of the Problem
         
         # Matrix A: Gaussian Init
         self.lora_A = nn.Parameter(torch.randn(rank, in_dim))
@@ -1320,7 +1320,7 @@ In practice, this allows you to train ranks as high as $r=512$ or more without t
 \subsubsection{Step-by-Step Fix}
 
 \begin{enumerate}
-    \item \textbf{Identify the Scaling:} Locate the LoRA configuration (e.g., in Hugging Face PEFT `LoraConfig`).
+    \item \textbf{Identify the Scaling:} Locate the LoRA configuration (e.g., in Hugging Face PEFT \texttt{LoraConfig}).
     \item \textbf{Adjust Alpha:} If you cannot change the formula in the library, you can manually adjust $\alpha$ to simulate rsLoRA. Set $\alpha_{\text{new}} = \alpha_{\text{old}} \times \sqrt{r}$.
     \item \textbf{Verify Gradient Norms:} Monitor the gradient norms of the $A$ and $B$ matrices. They should remain stable ($\sim 10^{-3}$ to $10^{-2}$) as you increase $r$.
 \end{enumerate}
@@ -1389,8 +1389,8 @@ To fix this, we should switch to \textbf{rsLoRA (Rank-Stabilized LoRA)}, which c
 
 This chapter covers data leakage, imbalance, freshness, and distribution problems that can silently corrupt your ML pipeline.
 
-% Question 17: The Data Leakage Trap
-\section{Question 17: The Data Leakage Trap}
+% The Data Leakage Trap
+\section{The Data Leakage Trap}
 \label{sec:q17}
 
 \textit{The train-fit/test-transform discipline every ML engineer must know before touching a real pipeline.}
@@ -1400,7 +1400,7 @@ This chapter covers data leakage, imbalance, freshness, and distribution problem
 You are in a Senior Machine Learning Engineer interview at a top-tier tech company like Google DeepMind or Netflix. The atmosphere is intense but professional. The interviewer, a Staff Engineer, leans forward and presents a seemingly routine data preprocessing question:
 
 \begin{quote}
-"We have a user demographic dataset where the `Age` column has 15\% missing values. We're building a churn prediction model. How would you handle these missing values before we start training?"
+"We have a user demographic dataset where the \texttt{Age} column has 15\% missing values. We're building a churn prediction model. How would you handle these missing values before we start training?"
 \end{quote}
 
 Your instinct kicks in. This feels like standard Exploratory Data Analysis (EDA). You think, \textit{"I need to clean this data so the model doesn't crash."} You mentally visualize a Pandas DataFrame. You recall that mean imputation is bad for skewed distributions, so you opt for the median.
@@ -1430,7 +1430,7 @@ However, in predictive modeling, this introduces \textbf{Data Leakage}. By calcu
 When you use a global statistic, your training data "peeks" at the test data. It effectively travels to the future, looks at the distribution of users you haven't seen yet, and adjusts its own values based on that knowledge.
 \end{notebox}
 
-This seems harmless---after all, a median is just a single number. But this violation of the train-test isolation creates an illusion of performance. Your model learns to rely on statistical properties that it will not have access to in a production environment, leading to "over-optimistic" validation scores that collapse when the model goes live.
+This seems harmless{-}{-}{-}after all, a median is just a single number. But this violation of the train-test isolation creates an illusion of performance. Your model learns to rely on statistical properties that it will not have access to in a production environment, leading to "over-optimistic" validation scores that collapse when the model goes live.
 
 \subsection{Technical Deep Dive}
 
@@ -1559,7 +1559,7 @@ You must never touch the test set (or production data) to learn parameters. The 
 
 \subsubsection{Implementation Strategy}
 
-The robust way to implement this is using a `Pipeline` object, which enforces the boundary automatically.
+The robust way to implement this is using a \texttt{Pipeline} object, which enforces the boundary automatically.
 
 \begin{codebox}{Correct Implementation with Scikit-Learn}{sklearn-pipeline}
 \begin{amzcode}{python}
@@ -1628,7 +1628,7 @@ When the interviewer asks how you handle missing values, deliver this answer to 
 \begin{genbox}{The Answer That Gets You Hired}
 "I would be very careful not to perform imputation on the entire dataset before splitting, as that introduces data leakage.
 
-My approach is to split the data into training and test sets first. Then, I calculate the imputation statistic---in this case, the median---\textbf{only} on the training set. I use that specific value to fill missing data in the training set, and I use that \textit{same} stored value to fill missing data in the test set.
+My approach is to split the data into training and test sets first. Then, I calculate the imputation statistic{-}{-}{-}in this case, the median{-}{-}{-}\textbf{only} on the training set. I use that specific value to fill missing data in the training set, and I use that \textit{same} stored value to fill missing data in the test set.
 
 In production, I would treat the Imputer as part of the model pipeline. I'd serialize the fitted Imputer alongside the model so that incoming live data is processed using the exact same statistics that the model was trained on. This ensures our evaluation metrics reflect reality and the system is robust to distribution shifts."
 \end{genbox}
@@ -1643,8 +1643,8 @@ In production, I would treat the Imputer as part of the model pipeline. I'd seri
     \item \textbf{Production Parity:} Your offline training process must mirror the online inference process exactly.
 \end{itemize}
 
-% Question 3: The Gradient Drowning Trap
-\section{Question 3: The Gradient Drowning Trap}
+% The Gradient Drowning Trap
+\section{The Gradient Drowning Trap}
 \label{sec:q03}
 
 \textit{The hidden gradient dynamics that SMOTE, class weights, and oversampling can't fix.}
@@ -1655,7 +1655,7 @@ You are in a Senior Machine Learning Engineer interview at a top-tier tech compa
 
 The interviewer sets the stage:
 
-"We are processing millions of transactions a day. The dataset is severely imbalanced---about 1 fraud case for every 1,000 legitimate transactions. We trained a standard neural network using Weighted Cross-Entropy loss to handle the imbalance. However, the model is still failing. It achieves high accuracy by classifying almost everything as legitimate, but it's missing the subtle, high-value fraud cases---the 'hard' positives. We've tried increasing the class weights for fraud to 1000:1, but the model just becomes unstable or over-predicts fraud without improving recall on the hard cases."
+"We are processing millions of transactions a day. The dataset is severely imbalanced{-}{-}{-}about 1 fraud case for every 1,000 legitimate transactions. We trained a standard neural network using Weighted Cross-Entropy loss to handle the imbalance. However, the model is still failing. It achieves high accuracy by classifying almost everything as legitimate, but it's missing the subtle, high-value fraud cases{-}{-}{-}the 'hard' positives. We've tried increasing the class weights for fraud to 1000:1, but the model just becomes unstable or over-predicts fraud without improving recall on the hard cases."
 
 Then comes the trap question:
 
@@ -1673,7 +1673,7 @@ The trap lies in the assumption that \textbf{class imbalance} and \textbf{sample
 
 Candidates often believe that if a class is rare, we simply need to "shout louder" (increase weights) when we see it. While this works for moderate imbalances (e.g., 1:10), it fails in extreme scenarios (1:1000+) due to a phenomenon called Gradient Drowning.
 
-In a fraud detection dataset, the vast majority of legitimate transactions are "easy" negatives---obvious non-fraud cases (e.g., buying a coffee at your usual shop). Even though these examples produce very small individual gradients, there are so many of them that their aggregated gradients \textbf{drown out} the gradients from the rare, hard fraud cases.
+In a fraud detection dataset, the vast majority of legitimate transactions are "easy" negatives{-}{-}{-}obvious non-fraud cases (e.g., buying a coffee at your usual shop). Even though these examples produce very small individual gradients, there are so many of them that their aggregated gradients \textbf{drown out} the gradients from the rare, hard fraud cases.
 
 \begin{notebox}
 \textbf{The Core Misconception}
@@ -1795,7 +1795,7 @@ This calculation proves that without the focusing parameter $\gamma$, no reasona
 
 \subsection{The Solution}
 
-The correct approach to this interview question is to propose **Focal Loss** to explicitly dampen the contribution of easy examples.
+The correct approach to this interview question is to propose \textbf{Focal Loss} to explicitly dampen the contribution of easy examples.
 
 \subsubsection{Implementation Strategy}
 
@@ -1875,7 +1875,7 @@ Chawla, N. V., et al. (2002). \textit{SMOTE: Synthetic Minority Over-sampling Te
 \subsection{Interview Answer Template}
 
 \begin{genbox}{The Answer That Gets You Hired}
-"Standard Weighted Cross-Entropy handles class imbalance by scaling the loss magnitude, but it fails to account for \textbf{sample difficulty}. In a 1:1000 fraud scenario, we likely face 'Gradient Drowning': thousands of easy negatives---legitimate transactions that are easily classified---generate a massive aggregate gradient that overwhelms the signal from the few hard fraud cases, even with class weights.
+"Standard Weighted Cross-Entropy handles class imbalance by scaling the loss magnitude, but it fails to account for \textbf{sample difficulty}. In a 1:1000 fraud scenario, we likely face 'Gradient Drowning': thousands of easy negatives{-}{-}{-}legitimate transactions that are easily classified{-}{-}{-}generate a massive aggregate gradient that overwhelms the signal from the few hard fraud cases, even with class weights.
 
 I would solve this by implementing \textbf{Focal Loss}. By adding a modulating factor $(1-p_t)^\gamma$, we dynamically down-weight easy examples (where the model is confident) and focus training on the hard edge cases. For a production system, I'd start with $\gamma=2$ and monitor the gradient norms of the positive vs. negative classes to ensure the fraud signal is actually driving the updates. This is more efficient than SMOTE for large-scale systems and directly addresses the optimization dynamics."
 \end{genbox}
@@ -1890,8 +1890,8 @@ I would solve this by implementing \textbf{Focal Loss}. By adding a modulating f
     \item \textbf{Avoid Heuristics:} Don't just "add more weights" or "oversample" without analyzing gradient dynamics.
 \end{itemize}
 
-% Question 18: The Semantic Imbalance Trap
-\section{Question 18: The Semantic Imbalance Trap}
+% The Semantic Imbalance Trap
+\section{The Semantic Imbalance Trap}
 \label{sec:q18}
 
 \textit{Why rotating the same 45 deer won't save your classifier and how generative synthesis actually fixes class imbalance.}
@@ -1919,7 +1919,7 @@ The trap is deceptive because data augmentation is the correct answer for \texti
 \begin{notebox}
 \textbf{The Recency Bias}
 
-Candidates often fall into this trap due to \textbf{Recency Bias}. In standard MLOps tutorials, `torchvision.transforms` is the first tool taught to handle data generalization. Candidates conflate "preventing memorization of pixels" with "learning new semantic concepts."
+Candidates often fall into this trap due to \textbf{Recency Bias}. In standard MLOps tutorials, \texttt{torchvision.transforms} is the first tool taught to handle data generalization. Candidates conflate "preventing memorization of pixels" with "learning new semantic concepts."
 \end{notebox}
 
 In a safety-critical context like autonomous driving, this distinction is lethal. If your model only learns to recognize those specific 45 deer instances (even if rotated or jittered), it will fail to detect a deer with a slightly different pose or lighting condition in the real world. This is the \textbf{Semantic Imbalance Trap}.
@@ -1968,7 +1968,7 @@ In a Denoising Diffusion Probabilistic Model (DDPM), we reverse a noise process:
 x_{t-1} = \frac{1}{\sqrt{\alpha_t}} \left( x_t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}} \epsilon_\theta(x_t, t) \right) + \sigma_t z
 \]
 
-where $\epsilon_\theta$ predicts noise. By conditioning this process on the class label or text prompt, we generate entirely new instances---new poses, lighting, and occlusions---that physically do not exist in the training set.
+where $\epsilon_\theta$ predicts noise. By conditioning this process on the class label or text prompt, we generate entirely new instances{-}{-}{-}new poses, lighting, and occlusions{-}{-}{-}that physically do not exist in the training set.
 
 \subsubsection{System Architecture}
 
@@ -2021,7 +2021,7 @@ The solution that gets you hired is \textbf{Generative Data Augmentation (GDA)} 
 
 \subsubsection{The Key Insight}
 
-Instead of manipulating pixels ($x$), we manipulate latent representations ($z$) to generate valid data points that fill the gaps in the minority class distribution. We don't just want *more* deer; we want *different* deer in *different* contexts.
+Instead of manipulating pixels ($x$), we manipulate latent representations ($z$) to generate valid data points that fill the gaps in the minority class distribution. We don't just want \textit{more} deer; we want \textit{different} deer in \textit{different} contexts.
 
 \subsubsection{Step-by-Step Implementation}
 
@@ -2037,7 +2037,7 @@ Instead of manipulating pixels ($x$), we manipulate latent representations ($z$)
 
 \subsubsection{Implementation Details}
 
-Here is how you might implement the synthesis step using the `diffusers` library:
+Here is how you might implement the synthesis step using the \texttt{diffusers} library:
 
 \begin{codebox}{Generative Data Synthesis}{synthesis-code}
 \begin{amzcode}{python}
@@ -2118,7 +2118,7 @@ Kriukov, D., et al. (2024). \textit{DiffuPT: Class Imbalance Mitigation for Glau
 
 To fix this, I would implement a \textbf{Generative Data Augmentation} pipeline.
 
-First, I'd fine-tune a conditional generative model (like Stable Diffusion with LoRA) on the minority class. Then, I would use an inpainting workflow to synthesize new deer instances into our abundant 'empty street' images. This creates semantically diverse training samples---varying the deer's size, orientation, and interaction with the environment---while maintaining realistic background contexts.
+First, I'd fine-tune a conditional generative model (like Stable Diffusion with LoRA) on the minority class. Then, I would use an inpainting workflow to synthesize new deer instances into our abundant 'empty street' images. This creates semantically diverse training samples{-}{-}{-}varying the deer's size, orientation, and interaction with the environment{-}{-}{-}while maintaining realistic background contexts.
 
 I would validate the quality of these synthetic images using FID scores and by training a probe classifier. Finally, I'd train the production model on a balanced mix of real and validated synthetic data, likely improving recall on the minority class significantly more than simple oversampling would."
 \end{genbox}
@@ -2127,14 +2127,14 @@ I would validate the quality of these synthetic images using FID scores and by t
 
 \begin{itemize}
     \item \textbf{Geometric $\neq$ Semantic:} Geometric augmentation (rotations, flips) creates invariance. Generative augmentation creates diversity.
-    \item \textbf{The Trap is Recency Bias:} Don't just apply tools you used in your last tutorial (like `torchvision`). Analyze the data distribution first.
+    \item \textbf{The Trap is Recency Bias:} Don't just apply tools you used in your last tutorial (like \texttt{torchvision}). Analyze the data distribution first.
     \item \textbf{Pipeline Shift:} Solving this requires moving from a static Data Loader to a dynamic Generative ETL pipeline.
     \item \textbf{Validate Synthesis:} Always use metrics like FID or a "validity classifier" to ensure your synthetic data isn't hallucinating artifacts that will confuse the model.
     \item \textbf{Safety Critical:} In domains like autonomous driving or healthcare, "recall" on the minority class is often the safety metric. Standard augmentation rarely moves this needle enough.
 \end{itemize}
 
-% Question 21: The Silent Feature Death
-\section{Question 21: The Silent Feature Death}
+% The Silent Feature Death
+\section{The Silent Feature Death}
 \label{sec:q21}
 
 \textit{Why a perfectly healthy model can produce garbage A/B results when your feature freshness quietly collapses.}
@@ -2258,7 +2258,7 @@ Consider a ride-sharing pricing model.
 
 \textbf{The Failure:}
 
-The streaming pipeline calculating `Demand_Index` lags by 20 minutes due to a Kafka backlog. The Feature Store still has the pre-concert value of 100.
+The streaming pipeline calculating \texttt{Demand_Index} lags by 20 minutes due to a Kafka backlog. The Feature Store still has the pre-concert value of 100.
 
 \[
 \text{Predicted Price} = 5 + (0.5 \times 100) = \$55
@@ -2281,7 +2281,7 @@ All while the system reports "200 OK" and 15ms latency.
 \begin{enumerate}
     \item \textbf{The Frozen Feature:} Upstream ETL dies; values remain constant. Variance drops to 0.
     \item \textbf{The Feedback Loop:} In recommendation systems, if you recommend based on stale interests, users don't click. The model sees "no clicks" and assumes the user is inactive, further degrading recommendations.
-    \item \textbf{The Null Default:} A feature is missing, so the system fills it with `0` or `-1`. If `0` is a valid physical value (e.g., temperature), this biases the inference significantly.
+    \item \textbf{The Null Default:} A feature is missing, so the system fills it with \texttt{0} or \texttt{-1}. If \texttt{0} is a valid physical value (e.g., temperature), this biases the inference significantly.
 \end{enumerate}
 
 \subsection{The Solution}
@@ -2293,8 +2293,8 @@ The solution requires shifting from a "Model-First" to a "Data-First" reliabilit
 Every feature vector in the Feature Store must have metadata attached:
 
 \begin{itemize}
-    \item `generated_at`: When the ETL job finished.
-    \item `source_delay`: How far behind the real-time event stream was when processed.
+    \item \texttt{generated_at}: When the ETL job finished.
+    \item \texttt{source_delay}: How far behind the real-time event stream was when processed.
 \end{itemize}
 
 \subsubsection{2. Implementing Guardrails}
@@ -2319,7 +2319,7 @@ When a feature is stale, do not just predict anyway. Use a degradation strategy:
 
 \subsubsection{3. Monitoring Distribution Shift}
 
-Use tools like \textit{Evidently AI} or custom Prometheus exporters to track the KS-statistic or JSD of your features in real-time. If the distribution of `Demand_Index` shifts drastically compared to the training baseline, fire an alert.
+Use tools like \textit{Evidently AI} or custom Prometheus exporters to track the KS-statistic or JSD of your features in real-time. If the distribution of \texttt{Demand_Index} shifts drastically compared to the training baseline, fire an alert.
 
 \subsection{Why The Solution Works}
 
@@ -2362,7 +2362,7 @@ Shankar et al., 2021. UC Berkeley. \textit{Towards Observability for Production 
 
 I suspect we are dealing with \textbf{Feature Staleness}. In dynamic pricing, inputs like 'market demand' or 'competitor price' are highly time-sensitive. If the upstream ETL job populating the Feature Store has failed or lagged, the model service is likely retrieving valid-looking but outdated data (e.g., from yesterday). The model then outputs a mathematically correct prediction for the wrong state of the world.
 
-To confirm this, I would check the \textbf{Data Freshness} metric---specifically the age of the features being served.
+To confirm this, I would check the \textbf{Data Freshness} metric{-}{-}{-}specifically the age of the features being served.
 
 To fix this systematically, I would design a \textbf{Freshness SLO}. We should attach timestamps to feature vectors in the store. If the data age exceeds a threshold (e.g., 5 minutes for demand data), the inference service should trigger a circuit breaker and fall back to a safe heuristic or rule-based pricing, rather than making a low-confidence ML prediction. This converts a silent revenue bleed into a managed degradation."
 \end{genbox}
@@ -2377,8 +2377,8 @@ To fix this systematically, I would design a \textbf{Freshness SLO}. We should a
     \item \textbf{Graceful Degradation:} Always have a non-ML fallback when data quality checks fail.
 \end{itemize}
 
-% Question 24: The Silent Graveyard Effect
-\section{Question 24: The Silent Graveyard Effect}
+% The Silent Graveyard Effect
+\section{The Silent Graveyard Effect}
 \label{sec:q24}
 
 \textit{Why 5 years of "big data" at Walmart hides the customers your model most needs to learn from.}
@@ -2401,7 +2401,7 @@ You've just walked into the \textbf{Silent Graveyard}.
 
 \subsection{The Trap Explained}
 
-The trap here is \textbf{Survivorship Bias}. By taking the dataset at face value, you are likely conditioning your model on "survival"---training only on users who remained active enough to generate recent logs or who are still present in the "active users" database.
+The trap here is \textbf{Survivorship Bias}. By taking the dataset at face value, you are likely conditioning your model on "survival"{-}{-}{-}training only on users who remained active enough to generate recent logs or who are still present in the "active users" database.
 
 \begin{notebox}
 \textbf{The "More Data" Fallacy}
@@ -2546,7 +2546,7 @@ Let's look at two users, Alice and Bob, and see how a biased model fails.
 
 If you simply query the active users table for training data, \textbf{Bob does not exist}. The model sees Alice's stable behavior and learns "People buy \$100." It \textit{never} sees Bob's declining behavior (\$100 $\to$ \$10 $\to$ Churn).
 
-\textbf{Result:} When a new user, Charlie, drops his spending to \$10, the model---having never seen Bob's failure case---predicts Charlie is fine. \textbf{Result: Missed intervention, lost customer.}
+\textbf{Result:} When a new user, Charlie, drops his spending to \$10, the model{-}{-}{-}having never seen Bob's failure case{-}{-}{-}predicts Charlie is fine. \textbf{Result: Missed intervention, lost customer.}
 \end{exbox}
 
 \subsubsection{Numerical Impact}
@@ -2652,7 +2652,7 @@ Ren, K. et al. \textit{Deep Recurrent Survival Analysis}. AAAI 2018.
 \subsection{Interview Answer Template}
 
 \begin{genbox}{The Answer That Gets You Hired}
-"While 5 petabytes of history is impressive, using it directly creates a severe \textbf{Survivorship Bias} risk. If we simply train on the history of currently active users, we ignore the 'silent graveyard'---users who churned in the past. The model will learn to predict purchase behavior only for satisfied customers and will fail to detect risk signals in wavering ones.
+"While 5 petabytes of history is impressive, using it directly creates a severe \textbf{Survivorship Bias} risk. If we simply train on the history of currently active users, we ignore the 'silent graveyard'{-}{-}{-}users who churned in the past. The model will learn to predict purchase behavior only for satisfied customers and will fail to detect risk signals in wavering ones.
 
 To solve this, I would implement \textbf{Time-Travel Feature Engineering}. Instead of taking the current user base, I will generate training data by creating historical snapshots (e.g., the state of the user base on Jan 1st, Feb 1st, etc., for the last 5 years).
 
@@ -2676,8 +2676,8 @@ This ensures my training distribution $P(x, y)$ matches the real-world inference
     \item \textbf{Architecture over Algorithms:} The solution is often in the data pipeline design (snapshotting), not just the choice of loss function.
 \end{itemize}
 
-% Question 16: The P-Value Mirage
-\section{Question 16: The P-Value Mirage}
+% The P-Value Mirage
+\section{The P-Value Mirage}
 \label{sec:q16}
 
 \textit{Why KS tests fail at scale and how magnitude-based drift metrics save your retraining pipeline.}
@@ -2714,7 +2714,7 @@ Why is the KS test answer so dangerous? It appeals to our desire for scientific 
 
 However, this approach relies on a fundamental misunderstanding of what hypothesis tests do at scale. In a production ML context, you aren't dealing with $N=100$ samples from a clinical trial; you are dealing with $N=1,000,000+$ inference requests.
 
-At this scale, the KS test becomes \textbf{hypersensitive}. As sample size approaches infinity, the standard error of the test statistic approaches zero. This means that even the tiniest, most irrelevant discrepancy between your training data and live data---a shift so small it has zero impact on your model's predictions---will yield a p-value of $0.0000001$.
+At this scale, the KS test becomes \textbf{hypersensitive}. As sample size approaches infinity, the standard error of the test statistic approaches zero. This means that even the tiniest, most irrelevant discrepancy between your training data and live data{-}{-}{-}a shift so small it has zero impact on your model's predictions{-}{-}{-}will yield a p-value of $0.0000001$.
 
 By using a fixed p-value threshold, you have built a system that is essentially an alarm that never stops ringing. You will trigger expensive retraining jobs constantly, wasting thousands of dollars in compute and causing "alert fatigue" for the on-call engineers, all while the model's actual performance remains stable.
 
@@ -2907,7 +2907,7 @@ Merkow et al., 2024. \textit{Scalable Drift Monitoring in Medical Imaging AI}. a
 
 \subsubsection{Paper: Goodness-of-Fit Tests for Large Datasets}
 
-Vladimir Vovk, 2018. \textit{Goodness-of-Fit Tests for Large Datasets}. arXiv:1810.09753.
+Taras Lazariv, 2018. \textit{Goodness-of-Fit Tests for Large Datasets}. arXiv:1810.09753.
 
 \textbf{Key Contribution:} Directly addresses the "Large N" paradox where standard tests reject true null hypotheses too often due to hypersensitivity.
 
@@ -2943,8 +2943,8 @@ To make this actionable, I would calibrate the threshold empirically. I'd analyz
 
 This chapter explores model design, fine-tuning, capacity, and learning dynamics that determine whether your model succeeds or fails.
 
-% Question 2: When Data Is Small, Representation Is King
-\section{Question 2: When Data Is Small, Representation Is King}
+% When Data Is Small, Representation Is King
+\section{When Data Is Small, Representation Is King}
 \label{sec:q02}
 
 \textit{The counterintuitive redesign that lets you beat overfitting and ship a bot detector by Friday.}
@@ -2965,9 +2965,9 @@ But the interviewer is frowning. Why? Because the candidate has just proposed tr
 
 \subsection{The Trap Explained}
 
-The trap here is the **availability heuristic** combined with **domain fixation**.
+The trap here is the \textbf{availability heuristic} combined with \textbf{domain fixation}.
 
-Because the data comes in a sequence format (time-series), candidates reflexively reach for sequence models. We are taught that text, audio, and sensor readings---anything with a time dimension---require LSTMs, GRUs, or Transformers.
+Because the data comes in a sequence format (time-series), candidates reflexively reach for sequence models. We are taught that text, audio, and sensor readings{-}{-}{-}anything with a time dimension{-}{-}{-}require LSTMs, GRUs, or Transformers.
 
 \begin{notebox}
 \textbf{The Trap}
@@ -3098,7 +3098,7 @@ Instead of feeding raw numbers into an LSTM, we render the mouse trajectory as a
     \item \textbf{Encode} velocity or time using color (e.g., red = fast, blue = slow) or line thickness.
 \end{enumerate}
 
-Once we have an image, we can use a standard Computer Vision model (like ResNet or MobileNet) that has been **pre-trained on ImageNet**.
+Once we have an image, we can use a standard Computer Vision model (like ResNet or MobileNet) that has been \textbf{pre-trained on ImageNet}.
 
 \begin{tecbox}{The Solution Pipeline}{solution-pipeline}
 \begin{enumerate}
@@ -3139,7 +3139,7 @@ freeze_parameters(base_model.features) # Freeze backbone
 
 \subsubsection{Leveraging Inductive Biases}
 
-Humans and bots move differently in space. Bots often use linear interpolation (perfect straight lines) or Bezier curves (perfect mathematical arcs). Humans have biomechanical constraints---our hands shake, we overshoot targets, and we have reaction delays.
+Humans and bots move differently in space. Bots often use linear interpolation (perfect straight lines) or Bezier curves (perfect mathematical arcs). Humans have biomechanical constraints{-}{-}{-}our hands shake, we overshoot targets, and we have reaction delays.
 
 These differences are geometric. A CNN is designed specifically to detect geometric patterns like edges, curves, and textures.
 
@@ -3149,7 +3149,7 @@ This is the critical "save" for the small dataset.
 
 A ResNet trained on ImageNet (14 million images) already knows how to detect curves, straight lines, and noisy textures. It has learned these "feature detectors" in its lower layers.
 
-By converting our data to images, we allow our model to reuse this vast repository of knowledge. We aren't training a model to see; we are just teaching a model that *already knows how to see* what a "bot line" looks like versus a "human squiggle."
+By converting our data to images, we allow our model to reuse this vast repository of knowledge. We aren't training a model to see; we are just teaching a model that \textit{already knows how to see} what a "bot line" looks like versus a "human squiggle."
 
 \begin{thmbox}{Transfer Learning Efficiency}{transfer-learning}
 Let $\theta_{pre}$ be the pre-trained parameters. We only need to learn a small perturbation $\Delta \theta$ or just the final weight matrix $W_{final}$.
@@ -3161,21 +3161,13 @@ The effective degrees of freedom drop from millions to a few hundred (the size o
 
 \subsection{Related Research Papers}
 
-\subsubsection{Paper: Deep Learning with Splunk and TensorFlow}
-
-\textbf{Citation:} Golubev, A., \& Kulikov, A. (2017). \textit{Deep Learning with Splunk and TensorFlow for Security}. Splunk Blog.
-
-\textbf{Key Contribution:} This is the seminal industry blog post that popularized this technique. The authors demonstrated that converting mouse interaction logs into images allows security teams to use off-the-shelf CNNs for fraud detection.
-
-\textbf{Relevance:} They achieved \textbf{81\% accuracy} on a small dataset of just 2,000 images, proving the viability of this approach in resource-constrained environments.
-
 \subsubsection{Paper: BeCAPTCHA-Mouse}
 
 \textbf{Citation:} Nepomuceno, J. A., et al. (2022). \textit{Synthetic Mouse Trajectories and Improved Bot Detection}. Pattern Recognition.
 
 \textbf{Key Contribution:} The authors propose a system that generates synthetic mouse trajectories to augment small datasets and uses neuromotor features for detection.
 
-\textbf{Relevance:} It highlights the "arms race" aspect---simple bots are easy to catch with images, but advanced bots (mimicking human motor noise) require more sophisticated features or synthetic data augmentation (GANs).
+\textbf{Relevance:} It highlights the "arms race" aspect{-}{-}{-}simple bots are easy to catch with images, but advanced bots (mimicking human motor noise) require more sophisticated features or synthetic data augmentation (GANs).
 
 \subsection{Interview Answer Template}
 
@@ -3198,8 +3190,8 @@ This approach drastically reduces the data requirements, allowing us to build a 
     \item \textbf{Geometric priors:} For mouse movements, spatial geometry (shapes) is often a stronger signal than pure temporal sequence logic.
 \end{itemize}
 
-% Question 9: The Catastrophic Forgetting Trap
-\section{Question 9: The Catastrophic Forgetting Trap}
+% The Catastrophic Forgetting Trap
+\section{The Catastrophic Forgetting Trap}
 \label{sec:q09}
 
 \textit{Why fine-tuning on new data without old samples silently erases your model - and how EWC saves the day.}
@@ -3216,7 +3208,7 @@ Your instinct kicks in. You've done this a hundred times in transfer learning tu
 
 "That's straightforward," you reply. "I would load the latest model checkpoint, perhaps freeze the lower layers to preserve feature extraction, and fine-tune the model on the new dataset using a small learning rate."
 
-The interviewer smiles faintly and makes a note. You just walked into the \textbf{Catastrophic Forgetting} trap. By the time you finish "fine-tuning," your model will recognize the new class perfectly---but it will have completely forgotten everything it learned before.
+The interviewer smiles faintly and makes a note. You just walked into the \textbf{Catastrophic Forgetting} trap. By the time you finish "fine-tuning," your model will recognize the new class perfectly{-}{-}{-}but it will have completely forgotten everything it learned before.
 
 \subsection{The Trap Explained}
 
@@ -3415,13 +3407,13 @@ The term $\log p(\theta | \mathcal{D}_A)$ acts as the \textbf{prior} for Task B.
 
 To solve this, I would implement \textbf{Elastic Weight Consolidation (EWC)}.
 
-The core idea is to regularize the loss function based on parameter importance. Before deleting the old data (or using a retained validation set), I would compute the \textbf{Fisher Information Matrix} diagonal. This tells us which weights are 'load-bearing'---having high curvature in the loss landscape.
+The core idea is to regularize the loss function based on parameter importance. Before deleting the old data (or using a retained validation set), I would compute the \textbf{Fisher Information Matrix} diagonal. This tells us which weights are 'load-bearing'{-}{-}{-}having high curvature in the loss landscape.
 
 When training on the new data, I'd add a quadratic penalty term to the loss:
 
 \[ L_{total} = L_{new} + \frac{\lambda}{2} \sum F_i (\theta_i - \theta_{old,i}^*)^2 \]
 
-This forces the model to learn the new task using the 'free capacity' of the network---changing mostly the parameters that $F_i$ identified as unimportant for the previous task. This allows us to learn the new class while mathematically constraining the model to stay in a low-error region for the deleted data."
+This forces the model to learn the new task using the 'free capacity' of the network{-}{-}{-}changing mostly the parameters that $F_i$ identified as unimportant for the previous task. This allows us to learn the new class while mathematically constraining the model to stay in a low-error region for the deleted data."
 \end{genbox}
 
 \subsection{Key Takeaways}
@@ -3434,8 +3426,8 @@ This forces the model to learn the new task using the 'free capacity' of the net
     \item \textbf{Real World:} Essential for privacy-preserving AI (GDPR) and edge devices where storing history is impossible.
 \end{itemize}
 
-% Question 12: The LoRA Knowledge Trap
-\section{Question 12: The LoRA Knowledge Trap}
+% The LoRA Knowledge Trap
+\section{The LoRA Knowledge Trap}
 \label{sec:q12}
 
 \textit{Why standard LoRA only teaches "doctor style," not medical expertise - and how the Hyper-Adaptation Trifecta fixes it.}
@@ -3445,7 +3437,7 @@ This forces the model to learn the new task using the 'free capacity' of the net
 You are in a Senior ML System Design interview at a company like Meta or a specialized AI healthcare startup. The interviewer leans forward, presenting a constrained but critical challenge:
 
 \begin{quote}
-"We need to adapt Llama-3 70B for a specialized medical application. The model needs to internalize complex oncology terminology, diagnostic reasoning, and recent clinical guidelines. However, we are strictly constrained on compute---we cannot afford full fine-tuning. We have a cluster of A100s, but memory is tight. How do you proceed?"
+"We need to adapt Llama-3 70B for a specialized medical application. The model needs to internalize complex oncology terminology, diagnostic reasoning, and recent clinical guidelines. However, we are strictly constrained on compute{-}{-}{-}we cannot afford full fine-tuning. We have a cluster of A100s, but memory is tight. How do you proceed?"
 \end{quote}
 
 Your mind immediately jumps to the industry standard for efficiency. You confidently reply:
@@ -3460,7 +3452,7 @@ The interviewer pauses, looking unimpressed. "So," they ask, "you're assuming th
 
 \subsection{The Trap Explained}
 
-This trap is deceptive because LoRA \textit{is} fantastic---for specific tasks. It has become the default tool for instruction tuning (e.g., making a base model chat like a helpful assistant). Because it works so well for changing the model's \textit{behavior}, engineers assume it works equally well for adding \textit{substance}.
+This trap is deceptive because LoRA \textit{is} fantastic{-}{-}{-}for specific tasks. It has become the default tool for instruction tuning (e.g., making a base model chat like a helpful assistant). Because it works so well for changing the model's \textit{behavior}, engineers assume it works equally well for adding \textit{substance}.
 
 The fallacy lies in the nature of the updates.
 
@@ -3517,7 +3509,7 @@ If you perform Singular Value Decomposition (SVD) on a full fine-tuning update $
 \Delta W_{\text{full}} = U \Sigma V^T
 \]
 
-You will observe that the singular values in $\Sigma$ decay slowly. This indicates the update is \textit{high-rank}---information is spread across many dimensions. Standard LoRA forces this into a rank-$r$ approximation, effectively truncating the "tail" of the spectrum where much of the subtle factual knowledge resides.
+You will observe that the singular values in $\Sigma$ decay slowly. This indicates the update is \textit{high-rank}{-}{-}{-}information is spread across many dimensions. Standard LoRA forces this into a rank-$r$ approximation, effectively truncating the "tail" of the spectrum where much of the subtle factual knowledge resides.
 
 \subsubsection{Algorithmic Implementation}
 
@@ -3557,7 +3549,7 @@ The failure of standard LoRA in knowledge injection scenarios is twofold: \textb
 
 \subsubsection{Mechanism 1: The Subspace Constraint}
 
-If you use a standard rank (e.g., $r=8$), you are mathematically restricting the model's ability to learn. It cannot encode thousands of new medical definitions because the update matrix $BA$ has a maximum rank of 8. The model compensates by overfitting to the \textit{features} it can represent---mostly linguistic style and common token co-occurrences---while ignoring the complex "long tail" of factual data.
+If you use a standard rank (e.g., $r=8$), you are mathematically restricting the model's ability to learn. It cannot encode thousands of new medical definitions because the update matrix $BA$ has a maximum rank of 8. The model compensates by overfitting to the \textit{features} it can represent{-}{-}{-}mostly linguistic style and common token co-occurrences{-}{-}{-}while ignoring the complex "long tail" of factual data.
 
 \subsubsection{Mechanism 2: The Scaling Collapse}
 
@@ -3699,14 +3691,14 @@ Biderman, D. et al. (2024). \textit{LoRA Learns Less and Forgets Less}. TMLR.
 
 \textbf{Key Contribution:} Empirically demonstrates that low-rank adapters are inferior to full fine-tuning for learning new domains ("learning less") but are better at retaining pre-trained knowledge ("forgetting less").
 
-\textbf{Relevance:} Validates the "trap" premise---confirming that standard LoRA struggles with substantial domain shifts.
+\textbf{Relevance:} Validates the "trap" premise{-}{-}{-}confirming that standard LoRA struggles with substantial domain shifts.
 
 \subsection{Interview Answer Template}
 
 \begin{genbox}{The Answer That Gets You Hired}
 "While Standard LoRA is excellent for instruction tuning, it creates a 'Knowledge Trap' when applied to continual pre-training for a complex domain like medicine. The low-rank constraint ($r \ll d$) often fails to capture the high-rank updates required for injecting new facts and terminology, leading to a model that mimics the \textit{style} of a doctor but hallucinates the \textit{science}.
 
-To solve this under our memory constraints, I would implement a **Hyper-Adaptation Trifecta**:
+To solve this under our memory constraints, I would implement a \textbf{Hyper-Adaptation Trifecta}:
 
 \begin{enumerate}
     \item \textbf{RS-LoRA Scaling:} Instead of standard $\alpha/r$ scaling, I'll use $\alpha/\sqrt{r}$. This mathematically stabilizes the gradient norms, allowing us to scale the rank up to 256 or 512 to capture deep domain knowledge without optimization collapse.
@@ -3726,8 +3718,8 @@ This approach matches the performance of full fine-tuning while retaining the me
     \item \textbf{Initialization is Key:} In quantized regimes, how you initialize your adapters (LoftQ) determines your convergence ceiling.
 \end{itemize}
 
-% Question 23: The Curse of Multilinguality
-\section{Question 23: The Curse of Multilinguality}
+% The Curse of Multilinguality
+\section{The Curse of Multilinguality}
 \label{sec:q23}
 
 \textit{Why adding 90 languages can tank your English benchmarks - and how Adapter Modules prevent capacity dilution.}
@@ -3801,7 +3793,7 @@ In a shared parameter space $\theta$, the gradient update is a weighted sum of g
 The "Curse" manifests as \textbf{Gradient Interference}. The gradient direction that minimizes loss for English ($\nabla_\theta \mathcal{L}_{\text{EN}}$) might be orthogonal or even opposite to the gradient direction for a linguistically distant language like Yoruba ($\nabla_\theta \mathcal{L}_{\text{YO}}$).
 
 \begin{thmbox}{The Capacity Dilution Theorem (Informal)}{capacity-dilution}
-For a fixed parameter set $\theta$ with $|\theta| = P$, there exists a critical number of languages $L^*$ such that for $L > L^*$, the interference term in the gradient update dominates the positive transfer term for high-resource languages, causing $\mathcal{L}_{\text{high-resource}}$ to increase.
+For a fixed parameter set $\theta$ with $|\theta| = P$, there exists a critical number of languages $L^\textit{$ such that for $L > L^}$, the interference term in the gradient update dominates the positive transfer term for high-resource languages, causing $\mathcal{L}_{\text{high-resource}}$ to increase.
 \end{thmbox}
 
 \subsubsection{Algorithmic Details}
@@ -3994,8 +3986,8 @@ We freeze the shared 1B backbone to preserve the high-quality English representa
     \item \textbf{Freeze the Backbone:} The safest way to ensure zero regression on legacy tasks is to freeze the weights that solve them.
 \end{itemize}
 
-% Question 15: The Counterintuitive Truth About Quantization and Robustness
-\section{Question 15: The Counterintuitive Truth About Quantization and Robustness}
+% The Counterintuitive Truth About Quantization and Robustness
+\section{The Counterintuitive Truth About Quantization and Robustness}
 \label{sec:q15}
 
 \textit{How "dumbing down" your model creates a natural shield against small-scale adversarial noise.}
@@ -4004,7 +3996,7 @@ We freeze the shared 1B backbone to preserve the high-quality English representa
 
 You are interviewing for a Senior Machine Learning Engineer role at an autonomous robotics company (e.g., a drone delivery startup or an autonomous vehicle division). The team is building edge deployment systems where safety and latency are paramount.
 
-The interviewer leans forward, sketching a constraint on the whiteboard: "We are deploying a computer vision model to a low-power edge device. We've noticed that our current model is vulnerable to adversarial noise---small perturbations in the camera feed cause it to misclassify stop signs."
+The interviewer leans forward, sketching a constraint on the whiteboard: "We are deploying a computer vision model to a low-power edge device. We've noticed that our current model is vulnerable to adversarial noise{-}{-}{-}small perturbations in the camera feed cause it to misclassify stop signs."
 
 They pause, setting the trap:
 
@@ -4012,7 +4004,7 @@ They pause, setting the trap:
 "We have strict latency limits, so we are considering optimization. However, given that the model is already struggling with noise, should we strictly avoid quantization? My intuition is that reducing precision from Float32 to Int8 adds round-off error, which will only compound the existing noise and make the stability issues worse. What is your recommendation?"
 \end{quote}
 
-In your head, the logic seems sound. You know that quantization introduces information loss. You know that `Float32` has higher fidelity than `Int8`. It feels safer to recommend keeping the high precision to preserve every bit of signal quality, perhaps suggesting model pruning instead.
+In your head, the logic seems sound. You know that quantization introduces information loss. You know that \texttt{Float32} has higher fidelity than \texttt{Int8}. It feels safer to recommend keeping the high precision to preserve every bit of signal quality, perhaps suggesting model pruning instead.
 
 But if you agree with the interviewer's premise, you walk right into the trap.
 
@@ -4030,7 +4022,7 @@ Candidates often fall for this because of \textbf{Anchoring Bias}. We are traine
 
 Here is the counterintuitive reality: High precision (Float32) allows the model to react to microscopic variations in the input. In the context of adversarial attacks, this "high resolution" is actually a liability. It allows the model to propagate and amplify noise that a lower-precision model would simply ignore.
 
-By recommending against quantization, you are inadvertently arguing for a system that is slower, more power-hungry, and---crucially---often \textit{more} brittle against adversarial attacks.
+By recommending against quantization, you are inadvertently arguing for a system that is slower, more power-hungry, and{-}{-}{-}crucially{-}{-}{-}often \textit{more} brittle against adversarial attacks.
 
 \subsection{Technical Deep Dive}
 
@@ -4209,7 +4201,7 @@ Neshaei, S. P., et al. 2024. \textit{The Impact of Quantization on the Robustnes
 \begin{genbox}{The Answer That Gets You Hired}
 "Actually, I would recommend we move forward with quantization, specifically an 8-bit model, but with a specific training strategy.
 
-While intuition suggests that reducing precision adds noise, in adversarial settings, high precision (Float32) is often a liability because it captures and amplifies high-frequency adversarial perturbations. Quantization can actually act as a defensive 'bucketing' mechanism---effectively a low-pass filter that absorbs small perturbations into the same discrete bin, neutralizing the attack.
+While intuition suggests that reducing precision adds noise, in adversarial settings, high precision (Float32) is often a liability because it captures and amplifies high-frequency adversarial perturbations. Quantization can actually act as a defensive 'bucketing' mechanism{-}{-}{-}effectively a low-pass filter that absorbs small perturbations into the same discrete bin, neutralizing the attack.
 
 However, blind quantization isn't enough. I would implement \textbf{Defensive Quantization} by applying Lipschitz regularization during training. This constrains the model's sensitivity, ensuring that the quantization error doesn't propagate and expand through the layers. This gives us a 'free lunch': we meet our strict sub-100ms latency requirement by using Int8, while simultaneously making the model more robust to the noise you're concerned about."
 \end{genbox}
@@ -4231,8 +4223,8 @@ However, blind quantization isn't enough. I would implement \textbf{Defensive Qu
 
 This chapter examines metrics, testing, and validation strategies that can mislead you into thinking your model works when it doesn't.
 
-% Question 11: The ROC Curve Mirage
-\section{Question 11: The ROC Curve Mirage}
+% The ROC Curve Mirage
+\section{The ROC Curve Mirage}
 \label{sec:q11}
 
 \textit{Why a "perfect" 0.98 ROC AUC can be worthless in fraud detection - and how PR AUC exposes the truth.}
@@ -4257,16 +4249,16 @@ The VP frowns. You just approved a model that could cost the company millions in
 
 \subsection{The Trap Explained}
 
-The trap here is the **Class Imbalance Illusion**.
+The trap here is the \textbf{Class Imbalance Illusion}.
 
-In fraud detection, legitimate transactions vastly outnumber fraudulent ones---often by a ratio of 100,000 to 1 (a prevalence of $\phi = 0.001\%$). The Receiver Operating Characteristic (ROC) curve plots the True Positive Rate (TPR) against the False Positive Rate (FPR).
+In fraud detection, legitimate transactions vastly outnumber fraudulent ones{-}{-}{-}often by a ratio of 100,000 to 1 (a prevalence of $\phi = 0.001\%$). The Receiver Operating Characteristic (ROC) curve plots the True Positive Rate (TPR) against the False Positive Rate (FPR).
 
 The deception lies in the FPR denominator. Because the number of legitimate transactions (True Negatives) is massive, even a huge number of False Positives results in a tiny FPR. This allows the ROC curve to stay near the "perfect" top-left corner, masking the fact that the model might be drowning operations teams in false alerts or missing a significant portion of actual fraud.
 
 \begin{notebox}
 \textbf{The Cognitive Anchor}
 
-This trap exploits **Anchoring Bias**. Candidates are trained on balanced academic datasets (like MNIST or CIFar-10) where 0.98 is genuinely excellent. In highly skewed domains, "good" scores are relative to the prevalence of the positive class.
+This trap exploits \textbf{Anchoring Bias}. Candidates are trained on balanced academic datasets (like MNIST or CIFar-10) where 0.98 is genuinely excellent. In highly skewed domains, "good" scores are relative to the prevalence of the positive class.
 \end{notebox}
 
 Real-world consequences are severe. In the 2010s, during the EMV chip transition, banking models with 0.99 ROC scores failed to detect account takeovers, resulting in losses exceeding \$100 million annually for some institutions. The model looked great on paper but failed to isolate the "needle" (fraud) from the massive "haystack" (legitimate activity).
@@ -4311,7 +4303,7 @@ This formulation shows that the score is heavily weighted by the overwhelming nu
 Designing for fraud detection requires more than just the right metric; it requires specific architectural patterns to handle the "needle in a haystack" problem.
 
 \begin{genbox}{Architectural Pattern: The Funnel}
-Successful fraud systems often use a **cascade architecture**:
+Successful fraud systems often use a \textbf{cascade architecture}:
 
 \begin{enumerate}
     \item \textbf{Hard Rules / Heuristics:} High-precision filters (e.g., "Transaction > \$10k from new IP") run first.
@@ -4369,7 +4361,7 @@ The ROC score suggests near-perfection. The reality is that for every 100 times 
 
 \subsection{The Solution}
 
-The correct approach is to discard ROC in favor of the **Precision-Recall (PR) Curve** and the **Area Under the Precision-Recall Curve (AUPRC)**.
+The correct approach is to discard ROC in favor of the \textbf{Precision-Recall (PR) Curve} and the \textbf{Area Under the Precision-Recall Curve (AUPRC)}.
 
 \subsubsection{Key Insight}
 
@@ -4387,7 +4379,7 @@ In your interview, propose this workflow:
 
 \begin{enumerate}
     \item \textbf{Baseline Check:} Calculate the "No-Skill" line on the PR plot. While the baseline for ROC is always 0.5, the baseline for PR is the prevalence $\phi$ (e.g., $0.0001$).
-    \item \textbf{Model Selection:} Optimize hyperparameters (e.g., `scale_pos_weight` in XGBoost) to maximize AUPRC, not AUROC.
+    \item \textbf{Model Selection:} Optimize hyperparameters (e.g., \texttt{scale_pos_weight} in XGBoost) to maximize AUPRC, not AUROC.
     \item \textbf{Threshold Tuning:} Pick a threshold based on business costs.
     \begin{itemize}
         \item If fraud cost is high, tune for high Recall.
@@ -4427,7 +4419,7 @@ If you claim to find 1,050 needles, but 1,000 are actually hay, ROC forgives you
 
 \subsubsection{Theoretical Foundation}
 
-Davis and Goadrich (2006) proved that for a given dataset, a curve dominates in ROC space if and only if it dominates in PR space. However, **AUPRC is more sensitive to class distribution**.
+Davis and Goadrich (2006) proved that for a given dataset, a curve dominates in ROC space if and only if it dominates in PR space. However, \textbf{AUPRC is more sensitive to class distribution}.
 
 Mathematically, AUPRC can be interpreted as the expected precision at all recall levels:
 
@@ -4475,8 +4467,8 @@ I would not ship this based on ROC alone. Instead, I would calculate the \textbf
     \item \textbf{Nuance wins:} Acknowledge that while AUPRC is better for optimization, recent research (McDermott 2024) suggests inspecting both to ensure fairness across subgroups.
 \end{itemize}
 
-% Question 14: The Gallbladder Illusion
-\section{Question 14: The Gallbladder Illusion}
+% The Gallbladder Illusion
+\section{The Gallbladder Illusion}
 \label{sec:q14}
 
 \textit{Why a 99.2\% medical-AI model nearly killed a patient - and how the Black Patch Protocol exposes false understanding.}
@@ -4509,7 +4501,7 @@ If you give this answer, the interview is likely over. You walked right into the
 
 The interviewer wasn't asking about MLOps or latency optimization. She was testing your understanding of \textbf{model reliability} and \textbf{causality}.
 
-The trap is the assumption that \textbf{high test set accuracy implies the model has learned the correct features}. In high-stakes domains like medical imaging, datasets are often riddled with "spurious correlations"---artifacts that are strongly correlated with the label but have no causal link to the anatomy.
+The trap is the assumption that \textbf{high test set accuracy implies the model has learned the correct features}. In high-stakes domains like medical imaging, datasets are often riddled with "spurious correlations"{-}{-}{-}artifacts that are strongly correlated with the label but have no causal link to the anatomy.
 
 This is known as the \textbf{Clever Hans Effect}.
 
@@ -4523,7 +4515,7 @@ In AI, a "Clever Hans" predictor achieves high performance by relying on spuriou
 
 In the gallbladder scenario, the "Clever Hans" moment often looks like this: The model isn't detecting the gallbladder based on its texture or shape. Instead, it has learned that \textbf{metal surgical tools} usually appear in images where the gallbladder is being operated on. If the tool is present, the model predicts "gallbladder." If the tool is absent, it predicts "background."
 
-Because the test set shares the same data collection biases as the training set (e.g., most positive samples contain surgical tools), the model scores 99.2\%. But deploy it in a surgery where the tool is temporarily out of frame, or a different tool is used, and the model collapses---potentially blinding the surgeon to critical anatomy.
+Because the test set shares the same data collection biases as the training set (e.g., most positive samples contain surgical tools), the model scores 99.2\%. But deploy it in a surgery where the tool is temporarily out of frame, or a different tool is used, and the model collapses{-}{-}{-}potentially blinding the surgeon to critical anatomy.
 
 \subsection{Technical Deep Dive}
 
@@ -4635,7 +4627,7 @@ The model essentially acts as a "metal detector" rather than an "organ detector.
     \item \textbf{Model Input:} Image with $A=0$ (No Gallbladder), $Z=1$ (Tool present).
     \item \textbf{Model Prediction:} Confidence spikes to $0.95$.
     \item \textbf{Result:} The model segments the liver as the gallbladder.
-    \item \textbf{Consequence:} If the surgeon relies on this overlay, they might cut the "Golden Triangle" incorrectly, leading to bile duct injury---a catastrophic medical error.
+    \item \textbf{Consequence:} If the surgeon relies on this overlay, they might cut the "Golden Triangle" incorrectly, leading to bile duct injury{-}{-}{-}a catastrophic medical error.
 \end{itemize}
 \end{exbox}
 
@@ -4643,7 +4635,7 @@ Real-world evidence supports this. In the BraTS (Brain Tumor Segmentation) chall
 
 \subsection{The Solution}
 
-To answer the interview question correctly, you must propose a validation protocol that specifically tests for the Clever Hans effect. This is the **Black Patch Protocol** (or Artifact Occlusion Testing).
+To answer the interview question correctly, you must propose a validation protocol that specifically tests for the Clever Hans effect. This is the \textbf{Black Patch Protocol} (or Artifact Occlusion Testing).
 
 \subsubsection{The Key Insight}
 
@@ -4728,7 +4720,7 @@ Afshar et al., 2024. \textit{IBO: Inpainting-Based Occlusion to Enhance Explaina
 \subsection{Interview Answer Template}
 
 \begin{genbox}{The Answer That Gets You Hired}
-"While 99.2\% accuracy is impressive, it is a necessary but insufficient condition for deployment in a high-stakes surgical environment. My primary concern is the \textbf{Clever Hans effect}---the risk that the model is relying on spurious correlations, such as surgical tools or specific lighting artifacts, rather than the anatomy itself.
+"While 99.2\% accuracy is impressive, it is a necessary but insufficient condition for deployment in a high-stakes surgical environment. My primary concern is the \textbf{Clever Hans effect}{-}{-}{-}the risk that the model is relying on spurious correlations, such as surgical tools or specific lighting artifacts, rather than the anatomy itself.
 
 To validate this, I would not rely solely on the hold-out set. I would implement the \textbf{Black Patch Protocol} (or artifact occlusion testing).
 
@@ -4749,8 +4741,8 @@ Only after these causal sanity checks pass would I proceed to a shadow deploymen
     \item \textbf{Safety First:} In domain-specific interviews (Health, Finance, Auto), prioritizing robustness over raw metrics demonstrates seniority.
 \end{itemize}
 
-% Question 10: The SOTA Trap
-\section{Question 10: The SOTA Trap}
+% The SOTA Trap
+\section{The SOTA Trap}
 \label{sec:q10}
 
 \textit{The trap almost every ML engineer falls into when designing LinkedIn-scale recommendation systems.}
@@ -4892,7 +4884,7 @@ The GNN approach is nearly \textbf{1,000x more expensive} for a marginal gain in
 
 \subsection{The Solution}
 
-The correct answer is not to discard complexity, but to \textit{earn} it. You should propose a **Tiered Funnel Architecture**.
+The correct answer is not to discard complexity, but to \textit{earn} it. You should propose a \textbf{Tiered Funnel Architecture}.
 
 \subsubsection{The Logic of the Funnel}
 
@@ -4913,7 +4905,7 @@ Use simple logic to reduce the 500M user space to $\sim$1,000 candidates.
 \begin{itemize}
     \item \textbf{Logic:} "Friends of Friends" (2-hop).
     \item \textbf{Implementation:} Optimized adjacency list lookups or pre-computed inverted indices.
-    \item \textbf{Rule:} If `mutual_friends(u, v) > 10`, add to candidate set.
+    \item \textbf{Rule:} If \texttt{mutual_friends(u, v) > 10}, add to candidate set.
 \end{itemize}
 
 \textbf{Step 2: Feature Engineering}
@@ -4988,7 +4980,7 @@ You, J., et al. (2024). \textit{PHLP: Sole Persistent Homology for Link Predicti
 
 \textbf{Key Contribution:} Introduces a method to extract topological features using persistent homology (from Topological Data Analysis) to feed into simple classifiers.
 
-\textbf{Relevance:} It offers a middle ground---capturing complex topology (like GNNs) but generating static features that can be used in efficient tree-based models (like the solution proposed).
+\textbf{Relevance:} It offers a middle ground{-}{-}{-}capturing complex topology (like GNNs) but generating static features that can be used in efficient tree-based models (like the solution proposed).
 
 \textbf{Key Technique:} (k,l)-angle hop subgraphs and Rips filtrations.
 
@@ -5026,8 +5018,8 @@ I would only introduce a GNN later, perhaps in an offline batch process to gener
 
 This chapter covers real-time systems, streaming, queues, and infrastructure design patterns that make or break production ML systems.
 
-% Question 4: The Infinite Stream Trap
-\section{Question 4: The Infinite Stream Trap}
+% The Infinite Stream Trap
+\section{The Infinite Stream Trap}
 \label{sec:q04}
 
 \textit{Why batch thinking fails in infinite streams - and how Reservoir Sampling saves you.}
@@ -5036,7 +5028,7 @@ This chapter covers real-time systems, streaming, queues, and infrastructure des
 
 You are in a Senior Machine Learning Infrastructure interview at a company like X (formerly Twitter) or a high-frequency trading firm. The interviewer leans forward and sketches a simple data pipeline on the whiteboard.
 
-"We have a firehose of tweets arriving at 50,000 transactions per second (TPS). This stream is effectively infinite---it never stops, and we cannot store the full history due to storage costs and privacy policies."
+"We have a firehose of tweets arriving at 50,000 transactions per second (TPS). This stream is effectively infinite{-}{-}{-}it never stops, and we cannot store the full history due to storage costs and privacy policies."
 
 They pause, then set the trap:
 
@@ -5076,7 +5068,7 @@ In an infinite stream, $N$ is constantly growing ($N \to \infty$). This breaks t
 
 \subsection{Technical Deep Dive}
 
-To solve this, we need an algorithm that guarantees uniform probability $k/N$ for all seen items, using only $O(k)$ memory, in a single pass. This is known as **Reservoir Sampling**.
+To solve this, we need an algorithm that guarantees uniform probability $k/N$ for all seen items, using only $O(k)$ memory, in a single pass. This is known as \textbf{Reservoir Sampling}.
 
 \subsubsection{Mathematical Foundation}
 
@@ -5119,7 +5111,7 @@ P(x_i \in S_t) = \frac{k}{t-1} \times \frac{t-1}{t} = \frac{k}{t}
 
 \subsubsection{Algorithmic Details}
 
-The standard implementation is **Algorithm R** (Waterman, 1975).
+The standard implementation is \textbf{Algorithm R} (Waterman, 1975).
 
 \begin{codebox}{Python Implementation: Reservoir Sampling}{reservoir-sampling}
 \begin{amzcode}{python}
@@ -5151,11 +5143,11 @@ def reservoir_sample(stream, k):
 
 \subsubsection{System Architecture}
 
-In a production environment like Kafka or Flink, the architecture changes slightly. You don't have a simple `for` loop.
+In a production environment like Kafka or Flink, the architecture changes slightly. You don't have a simple \texttt{for} loop.
 
 \begin{itemize}
     \item \textbf{State Management:} The "reservoir" is state. If the service crashes, you lose the sample. You must persist the reservoir (e.g., to Redis or RocksDB) periodically.
-    \item \textbf{Concurrency:} If you have 50k TPS, a single thread running `random.randint()` might be a bottleneck.
+    \item \textbf{Concurrency:} If you have 50k TPS, a single thread running \texttt{random.randint()} might be a bottleneck.
 \end{itemize}
 
 \begin{tecbox}{Optimization: Vitter's Algorithm Z}{vitter-algorithm}
@@ -5188,7 +5180,7 @@ The actual sample size $S$ follows a Binomial distribution $B(N, P)$.
 You will rarely get exactly 1,000 items. You might get 930 or 1,070.
 
 \begin{itemize}
-    \item If your downstream ML training code expects tensor shape `[1000, features]`, it will crash.
+    \item If your downstream ML training code expects tensor shape \texttt{[1000, features]}, it will crash.
     \item If the stream slows down, your sample size shrinks to near zero.
     \item If the stream spikes, your memory usage explodes.
 \end{itemize}
@@ -5206,7 +5198,7 @@ Periodic sampling is not random; it is deterministic and vulnerable to cyclic pa
 
 \subsection{The Solution}
 
-The correct solution is to implement **Reservoir Sampling**, ideally wrapped in a stream processing framework.
+The correct solution is to implement \textbf{Reservoir Sampling}, ideally wrapped in a stream processing framework.
 
 \subsubsection{The Aha Moment}
 
@@ -5221,7 +5213,7 @@ The key insight is that we can achieve the effect of "shuffling the entire infin
     \begin{itemize}
         \item If $t < k$, add to array.
         \item If $t \ge k$, generate $r = \text{random}(0, t)$.
-        \item If $r < k$, replace `array[r]` with the new message.
+        \item If $r < k$, replace \texttt{array[r]} with the new message.
     \end{itemize}
     \item \textbf{Serve:} Whenever the training service requests a batch, return the current state of the array.
 \end{enumerate}
@@ -5287,8 +5279,8 @@ This guarantees that at any point $t$, every item seen so far has an equal proba
     \item \textbf{Scale via Skipping:} Naive implementation is $O(N)$ random calls; optimized (Algorithm Z) is much faster.
 \end{itemize}
 
-% Question 6: The Streaming Median Trap
-\section{Question 6: The Streaming Median Trap}
+% The Streaming Median Trap
+\section{The Streaming Median Trap}
 \label{sec:q06}
 
 \textit{Why exact statistics crash real-time fraud systems - and how sketching algorithms save you from OOM failure.}
@@ -5357,7 +5349,7 @@ We are not looking for the exact median transaction of \$50.00. We are looking f
 
 \subsubsection{Algorithmic Details: Sketching}
 
-To achieve this in sub-linear space, we use \textbf{Probabilistic Data Structures} known as sketches. The two industry standards are the **T-Digest** and the **KLL Sketch**.
+To achieve this in sub-linear space, we use \textbf{Probabilistic Data Structures} known as sketches. The two industry standards are the \textbf{T-Digest} and the \textbf{KLL Sketch}.
 
 \textbf{1. The T-Digest}
 
@@ -5393,7 +5385,7 @@ This means for a fixed error rate $\epsilon$, the memory usage is practically co
 
 \subsubsection{System Architecture}
 
-In a distributed system (like Apache Flink or Spark Streaming), sketches offer a massive architectural advantage: **Mergeability**.
+In a distributed system (like Apache Flink or Spark Streaming), sketches offer a massive architectural advantage: \textbf{Mergeability}.
 
 You can compute a T-Digest on Node A and another on Node B. To get the global median, you simply merge the two T-Digests. This is mathematically impossible with a standard "list of numbers" without transferring the entire dataset across the network.
 
@@ -5493,7 +5485,7 @@ class StreamingFraudDetector:
 
 \begin{itemize}
     \item \textbf{Accuracy vs. Space:} By tuning the $\delta$ (compression) parameter, we can bound the size of the sketch. A sketch size of $\sim$5KB can yield 99.9\% accuracy for millions of points.
-    \item \textbf{Latency:} The `add` operation is extremely fast (microseconds), ensuring we don't block the ingestion pipeline.
+    \item \textbf{Latency:} The \texttt{add} operation is extremely fast (microseconds), ensuring we don't block the ingestion pipeline.
     \item \textbf{Mergeability:} If we scale to 100 partitions in Kafka, we can simply merge the sketches from all partitions to get the global view.
 \end{itemize}
 
@@ -5550,7 +5542,7 @@ Karnin, Z., Lang, K., \& Liberty, E. (2016). \textit{Optimal Quantile Approximat
 
 Instead, I would use a \textbf{probabilistic data structure}, specifically a quantile sketch like a \textbf{T-Digest} or \textbf{KLL}.
 
-These structures allow us to maintain an approximate distribution of the data using constant memory---typically just a few kilobytes---regardless of how much data we process. They work by clustering similar values into centroids (in T-Digest) or using hierarchical compaction (in KLL).
+These structures allow us to maintain an approximate distribution of the data using constant memory{-}{-}{-}typically just a few kilobytes{-}{-}{-}regardless of how much data we process. They work by clustering similar values into centroids (in T-Digest) or using hierarchical compaction (in KLL).
 
 This gives us a tunable error bound (e.g., 0.1\%) which is perfectly acceptable for fraud baselines, and crucially, these sketches are \textbf{mergeable}. This allows us to scale the system horizontally: we can compute sketches on distributed shards and merge them centrally to get a global median without moving the raw data."
 \end{genbox}
@@ -5564,15 +5556,15 @@ This gives us a tunable error bound (e.g., 0.1\%) which is perfectly acceptable 
     \item \textbf{Mergeability:} Always consider how your data structure works in a distributed environment. Can you merge the results from two different servers?
 \end{itemize}
 
-% Question 7: The 10-Minute Horizon
-\section{Question 7: The 10-Minute Horizon}
+% The 10-Minute Horizon
+\section{The 10-Minute Horizon}
 \label{sec:q07}
 
 \textit{Why TikTok-level recommendation systems retrain every few minutes - not nightly.}
 
 \subsection{The Interview Scenario}
 
-You are in a Senior Machine Learning System Design interview at a top-tier tech company known for high-velocity user interaction---think TikTok, Instagram Reels, or YouTube Shorts. The interviewer leans forward and asks a seemingly standard MLOps question:
+You are in a Senior Machine Learning System Design interview at a top-tier tech company known for high-velocity user interaction{-}{-}{-}think TikTok, Instagram Reels, or YouTube Shorts. The interviewer leans forward and asks a seemingly standard MLOps question:
 
 \begin{quote}
 "We have over a billion daily active users generating petabytes of interaction logs. To keep our recommendation engine relevant, how often should we retrain the core ranking model?"
@@ -5590,7 +5582,7 @@ You've just walked into the \textbf{Batch Training Trap}.
 
 \subsection{The Trap Explained}
 
-The trap here is deceptive because the "wrong" answer---nightly or weekly retraining---is actually the \textit{correct} answer for 90\% of machine learning applications. In domains like fraud detection, credit scoring, or even standard e-commerce, user behavior evolves slowly. A nightly batch job is the industry standard for balancing infrastructure costs with model performance.
+The trap here is deceptive because the "wrong" answer{-}{-}{-}nightly or weekly retraining{-}{-}{-}is actually the \textit{correct} answer for 90\% of machine learning applications. In domains like fraud detection, credit scoring, or even standard e-commerce, user behavior evolves slowly. A nightly batch job is the industry standard for balancing infrastructure costs with model performance.
 
 However, high-velocity content platforms are different. They are governed by \textbf{rapid concept drift}.
 
@@ -5626,7 +5618,7 @@ In a \textbf{streaming} setting, the data distribution $P_t(X, Y)$ changes over 
 \]
 \end{thmbox}
 
-Here, $\eta$ is the learning rate. The term $\mathcal{R}(\theta, \theta_{t-1})$ is crucial---it is a regularization term (often essentially a "proximity constraint" or KL-divergence in more complex setups) that prevents \textit{Catastrophic Forgetting}. It ensures the model learns from new data $\mathcal{D}_t$ without wildly diverging from the knowledge encoded in $\theta_{t-1}$.
+Here, $\eta$ is the learning rate. The term $\mathcal{R}(\theta, \theta_{t-1})$ is crucial{-}{-}{-}it is a regularization term (often essentially a "proximity constraint" or KL-divergence in more complex setups) that prevents \textit{Catastrophic Forgetting}. It ensures the model learns from new data $\mathcal{D}_t$ without wildly diverging from the knowledge encoded in $\theta_{t-1}$.
 
 \subsubsection{Algorithmic Details: Online Learning Loop}
 
@@ -5665,7 +5657,7 @@ while stream_is_active:
 
 \subsubsection{System Architecture: The Worker-PS Pattern}
 
-Implementing this requires a specific architecture. You cannot simply save a `model.pt` file to S3 and reload it. You need a \textbf{Parameter Server (PS)} architecture.
+Implementing this requires a specific architecture. You cannot simply save a \texttt{model.pt} file to S3 and reload it. You need a \textbf{Parameter Server (PS)} architecture.
 
 \begin{genbox}{Architectural Components}
 \begin{itemize}
@@ -5762,9 +5754,9 @@ Online learning minimizes the \textit{dynamic regret}:
 R_T = \sum_{t=1}^T \mathcal{L}_t(\theta_t) - \sum_{t=1}^T \mathcal{L}_t(\theta_t^*)
 \]
 
-where $\theta_t^*$ is the optimal parameter for time $t$. By taking gradient steps on $\mathcal{D}_t$, we keep $\theta_t$ within a small neighborhood of $\theta_t^*$, assuming the distribution drift is bounded (Lipschitz continuity).
+where $\theta_t^\textit{$ is the optimal parameter for time $t$. By taking gradient steps on $\mathcal{D}_t$, we keep $\theta_t$ within a small neighborhood of $\theta_t^}$, assuming the distribution drift is bounded (Lipschitz continuity).
 
-Empirically, ByteDance's "Monolith" system showed that this approach yields a roughly \textbf{14-18\% improvement in AUC} compared to batch training---a massive leap in the recommendation domain where 1\% is considered significant.
+Empirically, ByteDance's "Monolith" system showed that this approach yields a roughly \textbf{14-18\% improvement in AUC} compared to batch training{-}{-}{-}a massive leap in the recommendation domain where 1\% is considered significant.
 
 \subsection{Related Research Papers}
 
@@ -5793,7 +5785,7 @@ Empirically, ByteDance's "Monolith" system showed that this approach yields a ro
 
 I propose an \textbf{Online Learning architecture} with a '10-minute horizon'. We will ingest interaction logs via a streaming pipeline (like Kafka/Flink) and perform incremental updates on the model.
 
-Specifically, we'll use a \textbf{Parameter Server architecture}. We accumulate micro-batches of data---say, every 10 minutes. We compute gradients on these batches and update the serving model's embedding tables in near-real-time. This ensures that when a new trend spikes at 2 PM, our embeddings reflect that signal by 2:10 PM, capturing the engagement lift that a nightly batch job would miss entirely.
+Specifically, we'll use a \textbf{Parameter Server architecture}. We accumulate micro-batches of data{-}{-}{-}say, every 10 minutes. We compute gradients on these batches and update the serving model's embedding tables in near-real-time. This ensures that when a new trend spikes at 2 PM, our embeddings reflect that signal by 2:10 PM, capturing the engagement lift that a nightly batch job would miss entirely.
 
 We will handle the infinite growth of embeddings using \textbf{probabilistic admission} (only adding IDs after threshold occurrences) and \textbf{time-to-live expiration} to keep memory costs bounded."
 \end{genbox}
@@ -5808,8 +5800,8 @@ We will handle the infinite growth of embeddings using \textbf{probabilistic adm
     \item \textbf{Business Impact:} Quantify the failure of batch systems in terms of missed engagement (revenue) during viral events.
 \end{itemize}
 
-% Question 19: The Database-as-Queue Trap
-\section{Question 19: The Database-as-Queue Trap}
+% The Database-as-Queue Trap
+\section{The Database-as-Queue Trap}
 \label{sec:q19}
 
 \textit{How relying on a persistence layer for real-time inference creates silent bottlenecks, and how event brokers fix them.}
@@ -5819,7 +5811,7 @@ We will handle the infinite growth of embeddings using \textbf{probabilistic adm
 You are in a Senior Machine Learning Systems interview at a high-growth fintech company. The interviewer draws a simple diagram on the whiteboard: three upstream microservices (User Actions, Transaction Logs, External Feeds) are generating feature data in real-time.
 
 \begin{quote}
-"We need to build an inference engine," the interviewer says. "These services write features to a central PostgreSQL database. Your ML service needs to read these features to construct a vector and serve a prediction. We are scaling from 1,000 requests per second (RPS) to 50,000 RPS. The business requires near-real-time freshness---the model must see the latest user actions within milliseconds. How do you scale this architecture?"
+"We need to build an inference engine," the interviewer says. "These services write features to a central PostgreSQL database. Your ML service needs to read these features to construct a vector and serve a prediction. We are scaling from 1,000 requests per second (RPS) to 50,000 RPS. The business requires near-real-time freshness{-}{-}{-}the model must see the latest user actions within milliseconds. How do you scale this architecture?"
 \end{quote}
 
 The trap is set. The diagram looks deceptively standard: Services $\to$ Database $\to$ ML Service.
@@ -5991,7 +5983,7 @@ The solution is to separate the concern of \textbf{moving data} from \textbf{sto
 \subsubsection{The Correct Approach}
 
 \begin{enumerate}
-    \item \textbf{Upstream Services} publish events to a Kafka topic (e.g., `user-features`).
+    \item \textbf{Upstream Services} publish events to a Kafka topic (e.g., \texttt{user-features}).
     \item \textbf{ML Service} acts as a consumer group, reading events from the log in memory. It assembles the vector locally or in a fast state store (like Redis, but populated by the stream, not polled).
     \item \textbf{Database} becomes just another consumer (a "sink") for archival and offline training, not for the online critical path.
 \end{enumerate}
@@ -6039,7 +6031,7 @@ Unlike the DB, which requires locking (serialization), the Log is append-only. W
 
 \subsubsection{Empirical Evidence}
 
-Benchmarks consistently show the difference. A single Kafka broker can handle writes in excess of 2 million writes/second. In contrast, a tuned PostgreSQL instance often saturates around 5,000---10,000 TPS for complex transactional writes.
+Benchmarks consistently show the difference. A single Kafka broker can handle writes in excess of 2 million writes/second. In contrast, a tuned PostgreSQL instance often saturates around 5,000{-}{-}{-}10,000 TPS for complex transactional writes.
 
 In a LinkedIn case study (where Kafka originated), moving from DB-based queues to log-centric pipelines reduced latency variance by over 99\% and allowed throughput to scale linearly with hardware.
 
@@ -6096,8 +6088,8 @@ This ensures that the inference path is limited only by network bandwidth and CP
 
 This chapter explores production challenges, feedback loops, and decoding strategies that determine real-world system performance.
 
-% Question 8: The CTR Feedback Loop Trap
-\section{Question 8: The CTR Feedback Loop Trap}
+% The CTR Feedback Loop Trap
+\section{The CTR Feedback Loop Trap}
 \label{sec:q08}
 
 \textit{When "High Engagement" Is a Lie: The Hidden Failure Mode of Recommender Systems}
@@ -6108,7 +6100,7 @@ You are in a final-round system design interview for a Senior Machine Learning r
 
 "Our core recommendation model is technically performing better than ever," she says, pointing to the upward-trending line. "Daily Click-Through Rate (CTR) has hit an all-time high of 8\%. The engineering team is celebrating."
 
-She pauses, then taps the downward-trending line. "But user retention has dropped by 15\% over the last quarter. People are clicking, watching one video, and then closing the app. My question to you is: **Why is our 'successful' model destroying the product, and how do we fix it?**"
+She pauses, then taps the downward-trending line. "But user retention has dropped by 15\% over the last quarter. People are clicking, watching one video, and then closing the app. My question to you is: \textbf{Why is our 'successful' model destroying the product, and how do we fix it?}"
 
 You pause to think. A junior engineer might suggest the content quality has dropped or that the UI is laggy. But you know this is a trap. The system isn't failing due to external factors; it is failing \textit{because} of its own optimization strategy.
 
@@ -6120,7 +6112,7 @@ The most dangerous failure modes in ML are not when the model crashes, but when 
 
 \subsection{The Trap Explained}
 
-The trap here is the **Feedback Loop Bias** (often called the "Echo Chamber" effect).
+The trap here is the \textbf{Feedback Loop Bias} (often called the "Echo Chamber" effect).
 
 In a recommender system, the model controls the training data it will learn from in the future. By selecting which items to show users today, the model determines which items generate feedback (clicks/watches) for tomorrow's retraining.
 
@@ -6134,7 +6126,7 @@ Users eventually get bored (saturation). Even if you love action movies, you don
 
 \subsection{Technical Deep Dive}
 
-To solve this, we must move from standard supervised learning to **Counterfactual Evaluation**. We need to formalize why the standard approach fails mathematically.
+To solve this, we must move from standard supervised learning to \textbf{Counterfactual Evaluation}. We need to formalize why the standard approach fails mathematically.
 
 \subsubsection{Mathematical Foundation}
 
@@ -6158,7 +6150,7 @@ The summation in $L_{naive}$ is over $O_{u,i}=1$. However, the observation mecha
 
 Because we only sum over shown items, we implicitly assume that the error on unshown items is zero or irrelevant. The model effectively hallucinates that items it didn't show are bad, or simply ignores them, reinforcing the bias.
 
-To correct this, we use **Inverse Propensity Weighting (IPW)**. We weight each observed sample by the inverse of the probability that it was observed (the propensity $\pi_{u,i}$).
+To correct this, we use \textbf{Inverse Propensity Weighting (IPW)}. We weight each observed sample by the inverse of the probability that it was observed (the propensity $\pi_{u,i}$).
 
 The unbiased estimator for the true loss is:
 
@@ -6170,7 +6162,7 @@ where $\pi_{u,i} = P(O_{u,i}=1 | x_u, x_i)$. By dividing by $\pi$, we upweight "
 
 \subsubsection{Algorithmic Implementation}
 
-To implement this, you cannot just use a greedy ranking algorithm. You must inject **Exploration** to ensure $\pi_{u,i} > 0$ for all items (Positivity Assumption).
+To implement this, you cannot just use a greedy ranking algorithm. You must inject \textbf{Exploration} to ensure $\pi_{u,i} > 0$ for all items (Positivity Assumption).
 
 \begin{tecbox}{Exploration Strategy: $\epsilon$-Greedy}{epsilon-greedy}
 The simplest approach to ensure we generate unbiased data is $\epsilon$-greedy exploration.
@@ -6198,7 +6190,7 @@ def compute_loss(batch_data, model):
         # Clip propensity to avoid exploding gradients
         weight = 1.0 / max(pi, 0.01) 
         
-        loss += weight * (y_true - y_pred)**2
+        loss += weight * (y_true - y_pred)\textbf{2
         
     return loss
 \end{amzcode}
@@ -6209,7 +6201,7 @@ def compute_loss(batch_data, model):
 Implementing this requires changes to both Serving and Training pipelines:
 
 \begin{enumerate}
-    \item \textbf{Serving Layer:} Must log not just the User-Item interaction, but the **Propensity Score** ($\pi$) used at that moment. If you use $\epsilon$-greedy, the propensity for a random item is roughly $\epsilon / |I|$.
+    \item \textbf{Serving Layer:} Must log not just the User-Item interaction, but the \textbf{Propensity Score} ($\pi$) used at that moment. If you use $\epsilon$-greedy, the propensity for a random item is roughly $\epsilon / |I|$.
     \item \textbf{Data Pipeline:} Requires a "Debiasing" job that joins impression logs with propensity scores before feeding them to the trainer.
     \item \textbf{Monitoring:} You typically run two models:
     \begin{itemize}
@@ -6331,13 +6323,13 @@ Schnabel et al., 2016. \textit{Recommendations as Treatments: Debiasing Learning
 \begin{genbox}{The Answer That Gets You Hired}
 "The issue is that our model is suffering from \textbf{feedback loop bias}. We are optimizing for short-term engagement on a shrinking pool of content, creating an echo chamber that boosts CTR but kills discovery, leading to churn.
 
-The high CTR is a false signal---it's conditional on the items we've biased the user towards. To fix this, we need to treat recommendations as a causal inference problem, not just a prediction problem.
+The high CTR is a false signal{-}{-}{-}it's conditional on the items we've biased the user towards. To fix this, we need to treat recommendations as a causal inference problem, not just a prediction problem.
 
 \textbf{My proposed solution is:}
 
 \begin{enumerate}
     \item \textbf{Exploration:} Introduce an $\epsilon$-greedy strategy or Thompson Sampling to dedicate 5-10\% of traffic to exploring uncertain items. This generates the necessary training data for the 'unseen' space.
-    \item \textbf{Debiasing:} Switch our loss function from standard MSE/LogLoss to **Inverse Propensity Weighting (IPW)**. We will log the propensity scores during serving and use them to upweight feedback from rare/explored items during training.
+    \item \textbf{Debiasing:} Switch our loss function from standard MSE/LogLoss to \textbf{Inverse Propensity Weighting (IPW)}. We will log the propensity scores during serving and use them to upweight feedback from rare/explored items during training.
 \end{enumerate}
 
 This will likely cause a slight dip in CTR initially (due to exploration), but it will stabilize retention by ensuring the model adapts to evolving user tastes and maintains content diversity."
@@ -6353,8 +6345,8 @@ This will likely cause a slight dip in CTR initially (due to exploration), but i
     \item \textbf{Trade-offs:} You trade short-term accuracy (exploration cost) for long-term system health and stability.
 \end{itemize}
 
-% Question 25: The Greedy Search Trap
-\section{Question 25: The Greedy Search Trap}
+% The Greedy Search Trap
+\section{The Greedy Search Trap}
 \label{sec:q25}
 
 \textit{The hidden failure mode behind greedy decoding and why minimal beam search fixes hallucinated factual answers.}
@@ -6364,7 +6356,7 @@ This will likely cause a slight dip in CTR initially (due to exploration), but i
 You are in a Senior ML Engineer interview at a leading AI lab like OpenAI or Anthropic. The interviewer leans forward and presents a specific system design challenge:
 
 \begin{quote}
-"We are building a low-latency geography trivia bot. The questions are purely factual---things like 'Where is the Liberty Bell located?'. Since we need the system to be snappy and compute-efficient, should we just use Greedy Search for decoding?"
+"We are building a low-latency geography trivia bot. The questions are purely factual{-}{-}{-}things like 'Where is the Liberty Bell located?'. Since we need the system to be snappy and compute-efficient, should we just use Greedy Search for decoding?"
 \end{quote}
 
 The question feels like a soft toss. You know that Greedy Search is the fastest decoding method. It selects the single most probable token at each step. You consider the constraints: factual answers don't require the "creativity" of sampling methods (like Top-$p$ or Temperature), and low latency is a hard requirement.
@@ -6585,7 +6577,7 @@ Here is how you synthesize this into a "Hire Me" response.
 \begin{genbox}{The Answer That Gets You Hired}
 "For a factual trivia bot where accuracy is paramount, I would strongly advise \textbf{against} using pure Greedy Search, despite its latency benefits.
 
-The problem with Greedy Search is that it optimizes locally. In factual QA, this often leads to 'Garden Path' errors---where a high-probability prefix (like 'New...') leads to a dead end or hallucination because the model commits too early.
+The problem with Greedy Search is that it optimizes locally. In factual QA, this often leads to 'Garden Path' errors{-}{-}{-}where a high-probability prefix (like 'New...') leads to a dead end or hallucination because the model commits too early.
 
 Instead, I recommend using \textbf{Beam Search with a small width ($k=3$ to $k=5$)}. This provides a safety buffer, allowing the model to explore multiple valid prefixes before committing, effectively solving the 'New vs. Pennsylvania' ambiguity.
 

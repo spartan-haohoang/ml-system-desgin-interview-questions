@@ -2,22 +2,21 @@
 \contentsline {tcolorbox}{\numberline {1.2.1}The Gradient Coupling Theorem}{15}{amzboxcounter.1.2.1}%
 \contentsline {tcolorbox}{\numberline {1.2.6}Pareto Optimality in Ranking}{19}{amzboxcounter.1.2.6}%
 \contentsline {tcolorbox}{\numberline {1.3.6}Theorem: Stability of LogSumExp}{27}{amzboxcounter.1.3.6}%
-\contentsline {tcolorbox}{\numberline {1.5.4}Theorem: Stability of rsLoRA}{41}{amzboxcounter.1.5.4}%
-\contentsline {tcolorbox}{\numberline {2.1.4}Vapnik's Principle}{49}{amzboxcounter.2.1.4}%
-\contentsline {tcolorbox}{\numberline {2.4.5}Statistical Learning Guarantee}{72}{amzboxcounter.2.4.5}%
-\contentsline {tcolorbox}{\numberline {2.5.1}Survival Function Definition}{76}{amzboxcounter.2.5.1}%
-\contentsline {tcolorbox}{\numberline {2.6.1}The Scaling Law of Significance}{85}{amzboxcounter.2.6.1}%
-\contentsline {tcolorbox}{\numberline {3.1.1}Parameter Explosion}{94}{amzboxcounter.3.1.1}%
-\contentsline {tcolorbox}{\numberline {3.1.6}Transfer Learning Efficiency}{98}{amzboxcounter.3.1.6}%
-\contentsline {tcolorbox}{\numberline {3.4.2}The Capacity Dilution Theorem (Informal)}{118}{amzboxcounter.3.4.2}%
-\contentsline {tcolorbox}{\numberline {3.5.1}The Lipschitz Connection}{126}{amzboxcounter.3.5.1}%
-\contentsline {tcolorbox}{\numberline {4.1.1}The Imbalance Dilution}{134}{amzboxcounter.4.1.1}%
-\contentsline {tcolorbox}{\numberline {4.2.1}The Spurious Correlation Problem}{141}{amzboxcounter.4.2.1}%
-\contentsline {tcolorbox}{\numberline {4.3.4}Triadic Closure Property}{153}{amzboxcounter.4.3.4}%
-\contentsline {tcolorbox}{\numberline {5.1.1}Theorem: Preservation of Uniformity}{158}{amzboxcounter.5.1.1}%
-\contentsline {tcolorbox}{\numberline {5.2.5}Approximation Guarantee}{170}{amzboxcounter.5.2.5}%
-\contentsline {tcolorbox}{\numberline {5.3.1}Incremental Update Objective}{173}{amzboxcounter.5.3.1}%
-\contentsline {tcolorbox}{\numberline {5.4.1}The Stability Cliff}{181}{amzboxcounter.5.4.1}%
-\contentsline {tcolorbox}{\numberline {6.1.1}The Problem of Selection Bias}{190}{amzboxcounter.6.1.1}%
-\contentsline {tcolorbox}{\numberline {6.2.1}Sequence Probability Objective}{197}{amzboxcounter.6.2.1}%
-\contentsline {tcolorbox}{\numberline {6.2.6}Approximation of Global Maximum}{201}{amzboxcounter.6.2.6}%
+\contentsline {tcolorbox}{\numberline {1.5.4}Theorem: Stability of rsLoRA}{43}{amzboxcounter.1.5.4}%
+\contentsline {tcolorbox}{\numberline {2.1.4}Vapnik's Principle}{52}{amzboxcounter.2.1.4}%
+\contentsline {tcolorbox}{\numberline {2.4.5}Statistical Learning Guarantee}{76}{amzboxcounter.2.4.5}%
+\contentsline {tcolorbox}{\numberline {2.5.1}Survival Function Definition}{80}{amzboxcounter.2.5.1}%
+\contentsline {tcolorbox}{\numberline {2.6.1}The Scaling Law of Significance}{90}{amzboxcounter.2.6.1}%
+\contentsline {tcolorbox}{\numberline {3.1.1}Parameter Explosion}{99}{amzboxcounter.3.1.1}%
+\contentsline {tcolorbox}{\numberline {3.1.6}Transfer Learning Efficiency}{103}{amzboxcounter.3.1.6}%
+\contentsline {tcolorbox}{\numberline {3.4.2}The Capacity Dilution Theorem (Informal)}{125}{amzboxcounter.3.4.2}%
+\contentsline {tcolorbox}{\numberline {3.5.1}The Lipschitz Connection}{133}{amzboxcounter.3.5.1}%
+\contentsline {tcolorbox}{\numberline {4.1.1}The Imbalance Dilution}{141}{amzboxcounter.4.1.1}%
+\contentsline {tcolorbox}{\numberline {4.2.1}The Spurious Correlation Problem}{149}{amzboxcounter.4.2.1}%
+\contentsline {tcolorbox}{\numberline {4.3.4}Triadic Closure Property}{161}{amzboxcounter.4.3.4}%
+\contentsline {tcolorbox}{\numberline {5.1.1}Theorem: Preservation of Uniformity}{165}{amzboxcounter.5.1.1}%
+\contentsline {tcolorbox}{\numberline {5.2.5}Approximation Guarantee}{177}{amzboxcounter.5.2.5}%
+\contentsline {tcolorbox}{\numberline {5.3.1}Incremental Update Objective}{180}{amzboxcounter.5.3.1}%
+\contentsline {tcolorbox}{\numberline {6.1.1}The Problem of Selection Bias}{187}{amzboxcounter.6.1.1}%
+\contentsline {tcolorbox}{\numberline {6.2.1}Sequence Probability Objective}{194}{amzboxcounter.6.2.1}%
+\contentsline {tcolorbox}{\numberline {6.2.6}Approximation of Global Maximum}{198}{amzboxcounter.6.2.6}%

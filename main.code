@@ -1,30 +1,28 @@
 \contentsline {tcolorbox}{\numberline {1.1.2}PyTorch Implementation of Quantile Loss}{7}{amzboxcounter.1.1.2}%
 \contentsline {tcolorbox}{\numberline {1.2.2}Monolithic Training Loop (Trap)}{15}{amzboxcounter.1.2.2}%
 \contentsline {tcolorbox}{\numberline {1.2.5}Decoupled Serving Logic (Python/Pseudocode)}{18}{amzboxcounter.1.2.5}%
-\contentsline {tcolorbox}{\numberline {1.3.5}Python Implementation (NumPy)}{25}{amzboxcounter.1.3.5}%
+\contentsline {tcolorbox}{\numberline {1.3.5}Python Implementation (NumPy)}{26}{amzboxcounter.1.3.5}%
 \contentsline {tcolorbox}{\numberline {1.4.2}Pseudocode: Overfit Protocol}{32}{amzboxcounter.1.4.2}%
-\contentsline {tcolorbox}{\numberline {1.5.1}Standard LoRA Implementation (simplified)}{39}{amzboxcounter.1.5.1}%
-\contentsline {tcolorbox}{\numberline {2.1.3}Correct Implementation with Scikit-Learn}{48}{amzboxcounter.2.1.3}%
-\contentsline {tcolorbox}{\numberline {2.2.4}PyTorch Implementation}{55}{amzboxcounter.2.2.4}%
-\contentsline {tcolorbox}{\numberline {2.3.5}Generative Data Synthesis}{63}{amzboxcounter.2.3.5}%
-\contentsline {tcolorbox}{\numberline {2.4.2}Pseudocode: Freshness Circuit Breaker}{69}{amzboxcounter.2.4.2}%
-\contentsline {tcolorbox}{\numberline {2.5.3}Cox Proportional Hazards Implementation}{77}{amzboxcounter.2.5.3}%
-\contentsline {tcolorbox}{\numberline {2.5.6}Time-Travel Dataset Generation}{80}{amzboxcounter.2.5.6}%
-\contentsline {tcolorbox}{\numberline {2.6.4}Python Implementation (PSI)}{88}{amzboxcounter.2.6.4}%
-\contentsline {tcolorbox}{\numberline {3.1.5}Image Rendering Pseudocode}{97}{amzboxcounter.3.1.5}%
-\contentsline {tcolorbox}{\numberline {3.2.3}Pseudocode: Computing Fisher Information}{103}{amzboxcounter.3.2.3}%
-\contentsline {tcolorbox}{\numberline {3.3.1}Standard LoRA Implementation}{110}{amzboxcounter.3.3.1}%
-\contentsline {tcolorbox}{\numberline {3.3.5}The Solution Implementation Structure}{113}{amzboxcounter.3.3.5}%
-\contentsline {tcolorbox}{\numberline {3.4.3}Standard Multilingual Training Loop}{119}{amzboxcounter.3.4.3}%
-\contentsline {tcolorbox}{\numberline {3.4.6}Adapter Implementation}{121}{amzboxcounter.3.4.6}%
-\contentsline {tcolorbox}{\numberline {4.1.3}Calculating AUPRC in Python}{136}{amzboxcounter.4.1.3}%
-\contentsline {tcolorbox}{\numberline {4.2.2}Standard Training Loop (Where the Bias Enters)}{142}{amzboxcounter.4.2.2}%
-\contentsline {tcolorbox}{\numberline {4.2.6}Pseudocode: Black Patch Test}{144}{amzboxcounter.4.2.6}%
-\contentsline {tcolorbox}{\numberline {4.3.3}Pseudocode: The Production Pipeline}{152}{amzboxcounter.4.3.3}%
-\contentsline {tcolorbox}{\numberline {5.1.2}Python Implementation: Reservoir Sampling}{159}{amzboxcounter.5.1.2}%
-\contentsline {tcolorbox}{\numberline {5.2.4}Python-like Pseudocode using T-Digest}{168}{amzboxcounter.5.2.4}%
-\contentsline {tcolorbox}{\numberline {5.3.2}Micro-Batch SGD Pseudocode}{174}{amzboxcounter.5.3.2}%
-\contentsline {tcolorbox}{\numberline {5.4.2}Polling Implementation (The Anti-Pattern)}{182}{amzboxcounter.5.4.2}%
-\contentsline {tcolorbox}{\numberline {5.4.5}Streaming Implementation (The Solution)}{184}{amzboxcounter.5.4.5}%
-\contentsline {tcolorbox}{\numberline {6.1.3}Pseudocode: Training Loop with IPW}{191}{amzboxcounter.6.1.3}%
-\contentsline {tcolorbox}{\numberline {6.2.2}Greedy vs. Beam Search Pseudocode}{198}{amzboxcounter.6.2.2}%
+\contentsline {tcolorbox}{\numberline {1.5.1}Standard LoRA Implementation (simplified)}{40}{amzboxcounter.1.5.1}%
+\contentsline {tcolorbox}{\numberline {2.1.3}Correct Implementation with Scikit-Learn}{50}{amzboxcounter.2.1.3}%
+\contentsline {tcolorbox}{\numberline {2.2.4}PyTorch Implementation}{58}{amzboxcounter.2.2.4}%
+\contentsline {tcolorbox}{\numberline {2.3.5}Generative Data Synthesis}{67}{amzboxcounter.2.3.5}%
+\contentsline {tcolorbox}{\numberline {2.4.2}Pseudocode: Freshness Circuit Breaker}{73}{amzboxcounter.2.4.2}%
+\contentsline {tcolorbox}{\numberline {2.5.3}Cox Proportional Hazards Implementation}{81}{amzboxcounter.2.5.3}%
+\contentsline {tcolorbox}{\numberline {2.5.6}Time-Travel Dataset Generation}{84}{amzboxcounter.2.5.6}%
+\contentsline {tcolorbox}{\numberline {2.6.4}Python Implementation (PSI)}{92}{amzboxcounter.2.6.4}%
+\contentsline {tcolorbox}{\numberline {3.1.5}Image Rendering Pseudocode}{102}{amzboxcounter.3.1.5}%
+\contentsline {tcolorbox}{\numberline {3.2.3}Pseudocode: Computing Fisher Information}{108}{amzboxcounter.3.2.3}%
+\contentsline {tcolorbox}{\numberline {3.3.1}Standard LoRA Implementation}{116}{amzboxcounter.3.3.1}%
+\contentsline {tcolorbox}{\numberline {3.3.5}The Solution Implementation Structure}{119}{amzboxcounter.3.3.5}%
+\contentsline {tcolorbox}{\numberline {3.4.3}Standard Multilingual Training Loop}{125}{amzboxcounter.3.4.3}%
+\contentsline {tcolorbox}{\numberline {3.4.6}Adapter Implementation}{128}{amzboxcounter.3.4.6}%
+\contentsline {tcolorbox}{\numberline {4.1.3}Calculating AUPRC in Python}{144}{amzboxcounter.4.1.3}%
+\contentsline {tcolorbox}{\numberline {4.2.2}Standard Training Loop (Where the Bias Enters)}{149}{amzboxcounter.4.2.2}%
+\contentsline {tcolorbox}{\numberline {4.2.6}Pseudocode: Black Patch Test}{152}{amzboxcounter.4.2.6}%
+\contentsline {tcolorbox}{\numberline {4.3.3}Pseudocode: The Production Pipeline}{160}{amzboxcounter.4.3.3}%
+\contentsline {tcolorbox}{\numberline {5.1.2}Python Implementation: Reservoir Sampling}{166}{amzboxcounter.5.1.2}%
+\contentsline {tcolorbox}{\numberline {5.2.4}Python-like Pseudocode using T-Digest}{175}{amzboxcounter.5.2.4}%
+\contentsline {tcolorbox}{\numberline {5.3.2}Micro-Batch SGD Pseudocode}{181}{amzboxcounter.5.3.2}%
+\contentsline {tcolorbox}{\numberline {6.1.3}Pseudocode: Training Loop with IPW}{188}{amzboxcounter.6.1.3}%
+\contentsline {tcolorbox}{\numberline {6.2.2}Greedy vs. Beam Search Pseudocode}{195}{amzboxcounter.6.2.2}%

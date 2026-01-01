@@ -4,7 +4,7 @@
         \PYG{n+nb}{super}\PYG{p}{()}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{()}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{rank} \PYG{o}{=} \PYG{n}{rank}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{alpha} \PYG{o}{=} \PYG{n}{alpha}
-        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scaling} \PYG{o}{=} \PYG{n}{alpha} \PYG{o}{/} \PYG{n}{rank}  \PYG{c+c1}{\PYGZsh{} \PYGZlt{}\PYGZhy{}\PYGZhy{}\PYGZhy{} The Source of the Problem}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{scaling} \PYG{o}{=} \PYG{n}{alpha} \PYG{o}{/} \PYG{n}{rank}  \PYG{c+c1}{\PYGZsh{} \PYGZlt{}\PYGZob{}\PYGZhy{}\PYGZcb{}\PYGZob{}\PYGZhy{}\PYGZcb{}\PYGZob{}\PYGZhy{}\PYGZcb{} The Source of the Problem}
 
         \PYG{c+c1}{\PYGZsh{} Matrix A: Gaussian Init}
         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{lora\PYGZus{}A} \PYG{o}{=} \PYG{n}{nn}\PYG{o}{.}\PYG{n}{Parameter}\PYG{p}{(}\PYG{n}{torch}\PYG{o}{.}\PYG{n}{randn}\PYG{p}{(}\PYG{n}{rank}\PYG{p}{,} \PYG{n}{in\PYGZus{}dim}\PYG{p}{))}

@@ -14,7 +14,7 @@
         \PYG{c+c1}{\PYGZsh{} Clip propensity to avoid exploding gradients}
         \PYG{n}{weight} \PYG{o}{=} \PYG{l+m+mf}{1.0} \PYG{o}{/} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}
 
-        \PYG{n}{loss} \PYG{o}{+=} \PYG{n}{weight} \PYG{o}{*} \PYG{p}{(}\PYG{n}{y\PYGZus{}true} \PYG{o}{\PYGZhy{}} \PYG{n}{y\PYGZus{}pred}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}
+        \PYG{n}{loss} \PYG{o}{+=} \PYG{n}{weight} \PYG{o}{*} \PYG{p}{(}\PYG{n}{y\PYGZus{}true} \PYG{o}{\PYGZhy{}} \PYG{n}{y\PYGZus{}pred}\PYG{p}{)}\PYGZbs{}\PYG{n}{textbf}\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{2}
 
     \PYG{k}{return} \PYG{n}{loss}
 \end{Verbatim}

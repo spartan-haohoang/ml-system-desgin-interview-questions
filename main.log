@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.1)  1 JAN 2026 11:16
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.1)  1 JAN 2026 12:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1583,85 +1583,196 @@ LaTeX Font Warning: Font shape `TU/LatinModernMono(0)/b/n' undefined
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.167 ... typically becomes simpler: `Bid = Model_
-                                                  Prediction`. With a symmet...
+l.167 ... simpler: \texttt{Bid = Model_Prediction}
+                                                  . With a symmetric model, ...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.167 ... simpler: \texttt{Bid = Model_Prediction}
+                                                  . With a symmetric model, ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-! LaTeX Error: Command \item invalid in math mode.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
                                                   
-l.168     \item
-                \textbf{Feedback Loop:} The system needs to capture not just...
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+! Extra }, or forgotten $.
+\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
+                                                  {\textdef@ \textstyle \f@s...
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
                                                   
-l.168     \item \textbf
-                       {Feedback Loop:} The system needs to capture not just...
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+! Extra }, or forgotten $.
+\text@ ...xtstyle \f@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \sf@...
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
                                                   
-l.168     \item \textbf
-                       {Feedback Loop:} The system needs to capture not just...
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+! Extra }, or forgotten $.
+\text@ ...tstyle \sf@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \ssf...
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-! LaTeX Error: Command \end{enumerate} invalid in math mode.
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
                                                   
-l.169 \end{enumerate}
-                     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
+! Extra }, or forgotten $.
+\text@ ...style \ssf@size {\firstchoice@false #1}}
+                                                  \check@mathfonts }
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Extra }, or forgotten $.
+\text@ ...firstchoice@false #1}}\check@mathfonts }
                                                   
-l.169 \end{enumerate}
-                     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169 \end{enumerate}
-                     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.167 ...ke \texttt{Bid = Model_Prediction * 0.95}
+                                                  .
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 ! Missing $ inserted.
 <inserted text> 
@@ -1674,20 +1785,273 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Overfull \hbox (304.6493pt too wide) in paragraph at lines 167--170
-\TU/LatinModernRoman(0)/m/n/12 logic typically becomes simpler: ‘Bid = Model$[]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][] []
- []
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.169 \end{enumerate}
+                     
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.169 \end{enumerate}
+                     
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.169 \end{enumerate}
+                     
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.169 \end{enumerate}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (478.48882pt too wide) in paragraph at lines 167--170
-[][][][][][][][][][][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
+Overfull \hbox (260.21405pt too wide) in paragraph at lines 167--170
+\TU/LatinModernRoman(0)/m/n/12 logic typically becomes simpler: \TU/LatinModern
+Mono(0)/b/n/12 Bid = Model$[][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][][][][][]$ 
  []
 
 [8] [9] [10] [11] [12] [13] [14]
@@ -1704,10 +2068,21 @@ C.pygtex) [18] [19] [20]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.650 ...g the `softmax` function from the `cross_
-                                                  entropy` calculation. You ...
+l.650 ... function from the \texttt{cross_entropy}
+                                                   calculation. You step bac...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.650 ... function from the \texttt{cross_entropy}
+                                                   calculation. You step bac...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 ! Missing $ inserted.
 <inserted text> 
@@ -1718,10 +2093,11 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (54.86507pt too wide) in paragraph at lines 650--651
-\TU/LatinModernRoman(0)/m/n/12 the ‘cross$[][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][][
-] [][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
+Overfull \hbox (53.64627pt too wide) in paragraph at lines 650--651
+\TU/LatinModernRoman(0)/m/n/12 the \TU/LatinModernMono(0)/b/n/12 cross$[][][][]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
+[][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][][][][]
+[]$ 
  []
 
 [21] [22] [23] [24]
@@ -1733,10 +2109,21 @@ C.pygtex) [25] [26] [27]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.888 ...orch, I'd use `torch.nn.functional.cross_
-                                                  entropy` which handles thi...
+l.888 ...texttt{torch.nn.functional.cross_entropy}
+                                                   which handles this intern...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.888 ...texttt{torch.nn.functional.cross_entropy}
+                                                   which handles this intern...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 ! Missing $ inserted.
 <inserted text> 
@@ -1747,38 +2134,48 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 888--889
-[]\TU/LatinModernRoman(0)/m/n/12 By using the identity $[][][] [][][] [] [] [] 
-[][][] [][][]$, where $[]$ is
+Overfull \hbox (236.25516pt too wide) in paragraph at lines 888--889
+\TU/LatinModernMono(0)/b/n/12 torch.nn.functional.cross$[][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [] []
+$ 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 888--889
-\TU/LatinModernRoman(0)/m/n/12 the max logit, we ensure numerical stability. In
- PyTorch, I’d use
- []
-
-
-Overfull \hbox (214.42195pt too wide) in paragraph at lines 888--889
-\TU/LatinModernRoman(0)/m/n/12 ‘torch.nn.functional.cross$[][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] [
-] []$ 
- []
+! Missing } inserted.
+<inserted text> 
+                }
+l.889 \end{genbox}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 [28] [29] [30] [31]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/A807EE33A8DB577C8120D2ADC0C97DD682A15B1DCA8D177369A2514541E452D
-C.pygtex)
+C.pygtex) [32]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.1024 ...gradients correctly (e.g., toggling `no_
-                                                  sync` improperly), each GP...
+l.1024 ...rrectly (e.g., toggling \texttt{no_sync}
+                                                   improperly), each GPU mig...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.1024 ...rrectly (e.g., toggling \texttt{no_sync}
+                                                   improperly), each GPU mig...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 ! Missing $ inserted.
 <inserted text> 
@@ -1789,72 +2186,75 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (433.36064pt too wide) in paragraph at lines 1024--1025
-\TU/LatinModernRoman(0)/m/n/12 DataParallel‘ but fail to synchronize gradients 
-correctly (e.g., toggling ‘no$[][][][][][][][][][][][][][][][][] [][][][][][][]
+Overfull \hbox (126.73703pt too wide) in paragraph at lines 1024--1025
+\TU/LatinModernMono(0)/b/n/12 toggling no$[][][][][][][][][][][][][][][][] [][]
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] [][][][][][][][][][][][][][][][][][][][][][]$ 
+][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][]$ 
  []
 
-[32] [33] [34] [35] [36] [37] [38]
+[33] [34] [35] [36] [37] [38] [39]
 \openout4 = `main.pyg'.
 
 
-(./_minted-main/23662448047BA52F1DA9BB7E843C9A4C82A15B1DCA8D177369A2514541E452D
-C.pygtex) [39] [40] [41] [42] [43]
+(./_minted-main/5A24A6B2740E3D0D5486D1096ABEC9C082A15B1DCA8D177369A2514541E452D
+C.pygtex
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 7.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 7.
+) [40] [41] [42] [43] [44] [45]
 Chapter 2.
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/B6DC6DCF6627745CBC08D69EF0CABD2582A15B1DCA8D177369A2514541E452D
-C.pygtex) [44
+C.pygtex) [46
 
-] [45] [46] [47]
+] [47] [48] [49]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/EF0A555CA977AC7A2FE2E7559971D09B82A15B1DCA8D177369A2514541E452D
-C.pygtex
-LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 8.
-LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 8.
-) [48] [49] [50]
-Overfull \hbox (55.02103pt too wide) in paragraph at lines 1642--1643
-[]\TU/LatinModernRoman(0)/b/n/12 Use Pipelines: \TU/LatinModernRoman(0)/m/n/12 
-Encapsulate preprocessing in architectural components (like \TU/LatinModernMono
-(0)/b/n/12 sklearn.pipeline\TU/LatinModernRoman(0)/m/n/12 )
- []
-
-[51]
-Overfull \hbox (6.48985pt too wide) in paragraph at lines 1676--1677
-[]\TU/LatinModernRoman(0)/m/n/12 In a fraud detection dataset, the vast majorit
-y of legitimate transactions are ”easy” negatives—
- []
-
-[52] [53] [54]
+C.pygtex) [50] [51] [52] [53] [54] [55] [56] [57]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/8CDD78A319FE675F9B9EA8E3EBF846DA82A15B1DCA8D177369A2514541E452D
-C.pygtex) [55] [56] [57] [58] [59] [60] [61] [62]
+C.pygtex) [58] [59] [60] [61] [62] [63] [64] [65]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/DA36A3BE3F981CFE1B4E0C96B1EAA1D082A15B1DCA8D177369A2514541E452D
-C.pygtex) [63] [64] [65] [66] [67] [68]
+C.pygtex) [66] [67]
+Overfull \hbox (1.81438pt too wide) in paragraph at lines 2100--2101
+\TU/LatinModernMono(0)/m/it/12 Diffusion Models for Long-tailed Food Image Clas
+sification\TU/LatinModernMono(0)/b/n/12 . arXiv:2506.01368. 
+ []
+
+[68] [69] [70] [71]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/82111477820F8135C9A8595DB06541BF82A15B1DCA8D177369A2514541E452D
-C.pygtex) [69]
+C.pygtex) [72]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2261 The streaming pipeline calculating `Demand_
-                                                  Index` lags by 20 minutes ...
+l.2261 ...peline calculating \texttt{Demand_Index}
+                                                   lags by 20 minutes due to...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.2261 ...peline calculating \texttt{Demand_Index}
+                                                   lags by 20 minutes due to...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 ! Missing $ inserted.
 <inserted text> 
@@ -1865,20 +2265,42 @@ I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (199.61012pt too wide) in paragraph at lines 2261--2262
-[]\TU/LatinModernRoman(0)/m/n/12 The streaming pipeline calculating ‘Demand$[][
+Overfull \hbox (217.99933pt too wide) in paragraph at lines 2261--2262
+[]\TU/LatinModernMono(0)/b/n/12 The streaming pipeline calculating Demand$[][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
+[][][][][][][][][][][][][][][][][][][][][][][][][][] []
  []
 
-[70]
+! Missing } inserted.
+<inserted text> 
+                }
+l.2277 \end{exbox}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[73] [74]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2296     \item `generated_
-                            at`: When the ETL job finished.
+l.2296     \item \texttt{generated_at}
+                                      : When the ETL job finished.
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.2296     \item \texttt{generated_at}
+                                      : When the ETL job finished.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 
 ! LaTeX Error: Command \item invalid in math mode.
@@ -1888,7 +2310,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.2297     \item
-                 `source_delay`: How far behind the real-time event stream w...
+                 \texttt{source_delay}: How far behind the real-time event s...
 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1900,8 +2322,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2297     \item `
-                  source_delay`: How far behind the real-time event stream w...
+l.2297     \item \texttt
+                        {source_delay}: How far behind the real-time event s...
 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1913,47 +2335,186 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2297     \item `
-                  source_delay`: How far behind the real-time event stream w...
+l.2297     \item \texttt
+                        {source_delay}: How far behind the real-time event s...
 
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-! LaTeX Error: Command \end{itemize} invalid in math mode.
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
                                                   
-l.2298 \end{itemize}
-                    
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
+! Extra }, or forgotten $.
+\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
+                                                  {\textdef@ \textstyle \f@s...
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
                                                   
-l.2298 \end{itemize}
-                    
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
+! Extra }, or forgotten $.
+\text@ ...xtstyle \f@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \sf@...
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
                                                   
-l.2298 \end{itemize}
-                    
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...tstyle \sf@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \ssf...
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
+                                                  }
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...style \ssf@size {\firstchoice@false #1}}
+                                                  \check@mathfonts }
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...firstchoice@false #1}}\check@mathfonts }
+                                                  
+l.2297     \item \texttt{source_delay}
+                                      : How far behind the real-time event s...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 ! Missing $ inserted.
 <inserted text> 
@@ -1966,20 +2527,285 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-Overfull \hbox (153.14525pt too wide) in paragraph at lines 2296--2299
-[]\TU/LatinModernRoman(0)/m/n/12 ‘generated$[][][] [] [][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][] [] [][][][][][][][][][][][][][][]
-[][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
- []
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2322 ...al-time. If the distribution of `Demand_
-                                                  Index` shifts drastically ...
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.2298 \end{itemize}
+                    
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.2298 \end{itemize}
+                    
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.2298 \end{itemize}
+                    
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2298 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2322 ...he distribution of \texttt{Demand_Index}
+                                                   shifts drastically compar...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.2322 ...he distribution of \texttt{Demand_Index}
+                                                   shifts drastically compar...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 ! Missing $ inserted.
 <inserted text> 
@@ -1989,90 +2815,517 @@ l.2323
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-
-Overfull \hbox (191.43106pt too wide) in paragraph at lines 2322--2323
-\TU/LatinModernRoman(0)/m/n/12 of your features in real-time. If the distributi
-on of ‘Demand$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]$ 
- []
-
-[71] [72] [73] [74] [75]
+[75] [76] [77] [78] [79] [80]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/A8A1983416E6D01CF8DE381031B9B86A82A15B1DCA8D177369A2514541E452D
-C.pygtex) [76] [77] [78] [79]
+C.pygtex) [81] [82] [83]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/7B26214020754C7EDD4A22837617864282A15B1DCA8D177369A2514541E452D
-C.pygtex) [80] [81] [82] [83] [84] [85] [86]
+C.pygtex) [84] [85] [86] [87] [88] [89] [90] [91]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/169195CC6092E8A7F32A1068B936B47B82A15B1DCA8D177369A2514541E452D
-C.pygtex) [87] [88] [89] [90] [91]
+C.pygtex) [92] [93] [94]
+Overfull \hbox (20.07167pt too wide) in paragraph at lines 2910--2911
+\TU/LatinModernMono(0)/b/n/12 Taras Lazariv, 2018. \TU/LatinModernMono(0)/m/it/
+12 Goodness-of-Fit Tests for Large Datasets\TU/LatinModernMono(0)/b/n/12 . arXi
+v:1810.09753. 
+ []
+
+[95] [96]
 Chapter 3.
 
 Underfull \hbox (badness 7486) in paragraph at lines 2942--2942
 []|[]\TU/LatinModernRoman(0)/b/n/24.88 Model Architecture and Training
  []
 
-[92
+[97
 
-] [93] [94]
+] [98] [99]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/2272C7D392111A22B194D5350B76E00182A15B1DCA8D177369A2514541E452D
-C.pygtex) [95] [96]
+C.pygtex) [100] [101]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/B94EC0412AD38A43ECC5A415A7FE835382A15B1DCA8D177369A2514541E452D
-C.pygtex) [97] [98] [99] [100] [101] [102]
+C.pygtex) [102] [103] [104] [105] [106] [107]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/93C273AF5620F3E6BE8FA4F89FD4596C82A15B1DCA8D177369A2514541E452D
-C.pygtex) [103] [104] [105] [106] [107] [108] [109]
+C.pygtex) [108] [109] [110] [111] [112] [113] [114]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/D34AB901CC67104F49CC27A39EBFE45482A15B1DCA8D177369A2514541E452D
-C.pygtex) [110] [111] [112]
+C.pygtex) [115] [116] [117] [118]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/A83F469A28C3C5F34DE6850C6892B19E82A15B1DCA8D177369A2514541E452D
-C.pygtex) [113] [114] [115] [116] [117]
+C.pygtex) [119] [120] [121] [122] [123]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   }
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
+                                                  {\textdef@ \textstyle \f@s...
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   }
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...xtstyle \f@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \sf@...
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   }
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...tstyle \sf@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \ssf...
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   }
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...style \ssf@size {\firstchoice@false #1}}
+                                                  \check@mathfonts }
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...firstchoice@false #1}}\check@mathfonts }
+                                                  
+l.3796 ...ages $L^\textit{$ such that for $L > L^}
+                                                  $, the interference term i...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.3797 \end{thmbox}
+                   
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.3797 \end{thmbox}
+                   
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   \endgroup 
+l.3797 \end{thmbox}
+                   
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3797 \end{thmbox}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[124]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/1D12A2BF2D1FF6FCF20B1CB6E461A80282A15B1DCA8D177369A2514541E452D
-C.pygtex) [118] [119] [120]
+C.pygtex) [125] [126] [127]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/8B2A0C888CA0003BB089C13AF8599CA982A15B1DCA8D177369A2514541E452D
-C.pygtex) [121] [122] [123] [124] [125] [126] [127] [128] [129]
-Overfull \hbox (2.29626pt too wide) in paragraph at lines 4197--4198
-[]\TU/LatinModernRoman(0)/b/n/12 Key Technique: \TU/LatinModernRoman(0)/m/n/12 
-The ”Lipschitz Regularization” term added to the loss function: $[][][][][] []
- []
-
-[130] [131]
+C.pygtex) [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138]
 Chapter 4.
-[132
+[139
 
-] [133] [134] [135]
+] [140] [141] [142]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4390 ... Optimize hyperparameters (e.g., `scale_
-                                                  pos_weight` in XGBoost) to...
+l.4382 ...ameters (e.g., \texttt{scale_pos_weight}
+                                                   in XGBoost) to maximize A...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.4382 ...ameters (e.g., \texttt{scale_pos_weight}
+                                                   in XGBoost) to maximize A...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 
 ! LaTeX Error: Command \item invalid in math mode.
@@ -2081,7 +3334,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4391     \item
+l.4383     \item
                  \textbf{Threshold Tuning:} Pick a threshold based on busine...
 
 Try typing  <return>  to proceed.
@@ -2094,7 +3347,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4391     \item \textbf
+l.4383     \item \textbf
                         {Threshold Tuning:} Pick a threshold based on busine...
 
 Try typing  <return>  to proceed.
@@ -2107,7 +3360,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4391     \item \textbf
+l.4383     \item \textbf
                         {Threshold Tuning:} Pick a threshold based on busine...
 
 Try typing  <return>  to proceed.
@@ -2116,7 +3369,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4393         \item
+l.4385         \item
                      If fraud cost is high, tune for high Recall.
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2124,7 +3377,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.4393         \item
+l.4385         \item
                      If fraud cost is high, tune for high Recall.
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2135,7 +3388,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing \endgroup inserted.
 <inserted text> 
                 \endgroup 
-l.4393         \item
+l.4385         \item
                      If fraud cost is high, tune for high Recall.
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2144,32 +3397,21 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (472.84686pt too wide) in paragraph at lines 4390--4393
-[]\TU/LatinModernRoman(0)/b/n/12 Model Selection: \TU/LatinModernRoman(0)/m/n/1
-2 Optimize hyperparameters (e.g., ‘scale$[][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][]$ 
+Overfull \hbox (496.53319pt too wide) in paragraph at lines 4382--4385
+[]\TU/LatinModernMono(0)/b/n/12 Model Selection: Optimize hyperparameters (e.g.
+, scale$[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][]$ 
  []
 
-! Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.4393         \item
-                     If fraud cost is high, tune for high Recall.
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
 
-
-! LaTeX Error: \begin{enumerate} on input line 4388 ended by \end{itemize}.
+! LaTeX Error: \begin{enumerate} on input line 4380 ended by \end{itemize}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4395     \end{itemize}
+l.4387     \end{itemize}
                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2178,7 +3420,7 @@ or  <return>  to continue without it.
 ! Undefined control sequence.
 \enit@endenumerate ->\enit@after 
                                  \endlist \ifx \enit@series \relax \else \if...
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2189,7 +3431,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...\else \ifnum \enit@resuming 
                                                   =\@ne \enit@setresumekeys ...
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2200,7 +3442,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2209,7 +3451,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2220,7 +3462,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2231,7 +3473,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2240,7 +3482,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 <argument> enit@resume@series@\enit@series 
                                            
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2251,7 +3493,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...me@#1}{\csname c@\@listctr 
                                                   \endcsname \the \csname c@...
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2262,7 +3504,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...e \the \csname c@\@listctr 
                                                   \endcsname }\fi }
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2273,14 +3515,14 @@ and I'll forget about whatever was undefined.
 ! You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 I'm forgetting what you said and using zero instead.
 
 ! Undefined control sequence.
 \enit@endenumerate ...t \fi \ifnum \enit@resuming 
                                                   =\thr@@ \enit@setresumekey...
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2291,7 +3533,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2300,7 +3542,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2311,7 +3553,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2322,7 +3564,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2331,7 +3573,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...me@#1}{\csname c@\@listctr 
                                                   \endcsname \the \csname c@...
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2342,7 +3584,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...e \the \csname c@\@listctr 
                                                   \endcsname }\fi }
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2353,7 +3595,7 @@ and I'll forget about whatever was undefined.
 ! You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 I'm forgetting what you said and using zero instead.
 
@@ -2364,16 +3606,49 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.4388 \end{enumerate}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.4388 \end{enumerate}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.4388 \end{enumerate}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 ! Extra \endgroup.
 <recently read> \endgroup 
                           
-l.4396 \end{enumerate}
+l.4388 \end{enumerate}
                       
 Things are pretty mixed up, but I think the worst is over.
 
@@ -2381,24 +3656,35 @@ Things are pretty mixed up, but I think the worst is over.
 
 
 (./_minted-main/8958BF5E586935CCF97612AAC3AC8E6282A15B1DCA8D177369A2514541E452D
-C.pygtex) [136] [137] [138] [139] [140] [141]
+C.pygtex) [143] [144] [145] [146] [147] [148]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/5364901CB573D527A6B965A8A5149AC682A15B1DCA8D177369A2514541E452D
-C.pygtex) [142] [143]
+C.pygtex) [149] [150] [151]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/FD2CD02E4F795190A542C2F78858FBA182A15B1DCA8D177369A2514541E452D
-C.pygtex) [144] [145] [146] [147] [148] [149] [150] [151]
+C.pygtex) [152] [153] [154] [155] [156] [157] [158]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4916     \item \textbf{Rule:} If `mutual_
-                                           friends(u, v) > 10`, add to candi...
+l.4908 ...:} If \texttt{mutual_friends(u, v) > 10}
+                                                  , add to candidate set.
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.4908 ...:} If \texttt{mutual_friends(u, v) > 10}
+                                                  , add to candidate set.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 
 ! LaTeX Error: Command \end{itemize} invalid in math mode.
@@ -2407,7 +3693,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4917 \end{itemize}
+l.4909 \end{itemize}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2419,7 +3705,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4917 \end{itemize}
+l.4909 \end{itemize}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2431,7 +3717,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.4917 \end{itemize}
+l.4909 \end{itemize}
                     
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2439,7 +3725,18 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4917 \end{itemize}
+l.4909 \end{itemize}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.4909 \end{itemize}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2451,49 +3748,332 @@ my insertion and my current dilemma will both disappear.
 
 
 (./_minted-main/C6D866C07B80F9848F3D088D053FB11082A15B1DCA8D177369A2514541E452D
-C.pygtex) [152] [153] [154]
-Overfull \hbox (23.29385pt too wide) in paragraph at lines 5016--5017
+C.pygtex) [159] [160] [161]
+Overfull \hbox (23.29385pt too wide) in paragraph at lines 5008--5009
 []\TU/LatinModernRoman(0)/b/n/12 Use the Funnel: \TU/LatinModernRoman(0)/m/n/12
  Always design retrieval in stages: cheap/high-recall first, expensive/high-
  []
 
-[155]
+[162]
 Chapter 5.
-[156
+[163
 
-] [157]
-Overfull \hbox (48.48448pt too wide) detected at line 5111
+] [164]
+Overfull \hbox (48.48448pt too wide) detected at line 5103
 []
  []
 
-[158]
+[165]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/BDB62D0B60F418CC9F6589DEDEDBE62282A15B1DCA8D177369A2514541E452D
-C.pygtex) [159] [160] [161] [162] [163] [164] [165] [166] [167]
+C.pygtex) [166] [167] [168] [169] [170] [171] [172] [173] [174]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/A68CD6C9F2EDF8B4269ED999E48C8CEF82A15B1DCA8D177369A2514541E452D
-C.pygtex) [168] [169] [170] [171] [172]
+C.pygtex) [175] [176] [177] [178] [179]
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/A9950E7688656D3EF3631C8E6823743182A15B1DCA8D177369A2514541E452D
-C.pygtex) [173] [174] [175] [176] [177] [178] [179]
-Overfull \hbox (2.51039pt too wide) in paragraph at lines 5835--5836
-[]\TU/LatinModernRoman(0)/m/n/12 The interviewer smiles politely but stops taki
-ng notes. You’ve just walked into the \TU/LatinModernRoman(0)/b/n/12 Database-
- []
+C.pygtex) [180] [181] [182] [183]
 
-[180] [181]
+! LaTeX Error: \symcalallowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   }
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
+                                                  {\textdef@ \textstyle \f@s...
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   }
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...xtstyle \f@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \sf@...
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   }
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...tstyle \sf@size {\firstchoice@false #1}}
+                                                  {\textdef@ \textstyle \ssf...
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+                   }
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Extra }, or forgotten $.
+\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
+                                                  
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...style \ssf@size {\firstchoice@false #1}}
+                                                  \check@mathfonts }
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\text@ ...firstchoice@false #1}}\check@mathfonts }
+                                                  
+l.5757 ...thin a small neighborhood of $\theta_t^}
+                                                  $, assuming the distributi...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Missing character: There is no 𝜌 (U+1D70C) in font Latin Modern Roman 7 Italic/
+OT:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 𝜆 (U+1D706) in font Latin Modern Roman 7 Italic/
+OT:script=latn;language=dflt;mapping=tex-text;!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5862 \rho = \frac{\lambda}{c \mu}
+                                    < 1
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.5862 \rho = \frac{\lambda}{c \mu}
+                                    < 1
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5863 \]
+         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.5863 \]
+         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5868 \frac{50,000}{100}
+                          = 500 \text{ transactions per second}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.5868 \frac{50,000}{100}
+                          = 500 \text{ transactions per second}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5869 \]
+         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.5869 \]
+         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5874 T_
+         {max} = \frac{1}{500} = 0.002 \text{ seconds (2ms)}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5875 \]
+         
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 \openout4 = `main.pyg'.
 
 
 (./_minted-main/E53B8C55C0439E2A57ACF03E8CA8FDB382A15B1DCA8D177369A2514541E452D
-C.pygtex) [182] [183]
-Underfull \hbox (badness 10000) in paragraph at lines 5986--5987
+C.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 5978--5979
 
  []
 
@@ -2501,21 +4081,270 @@ Underfull \hbox (badness 10000) in paragraph at lines 5986--5987
 
 
 (./_minted-main/2B1FFD1F9F6E33AC4555843F6A7E12D682A15B1DCA8D177369A2514541E452D
-C.pygtex) [184] [185] [186] [187]
+C.pygtex)
+! Improper \prevdepth.
+\newpage ...everypar {}\fi \par \ifdim \prevdepth 
+                                                  >\z@ \vskip -\ifdim \prevd...
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   $
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   $
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing { inserted.
+<to be read again> 
+                   $
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.6087 \chapter
+               {Production Systems and Feedback Loops}
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[184]
 Chapter 6.
 
-Underfull \hbox (badness 3354) in paragraph at lines 6095--6095
+Underfull \hbox (badness 3354) in paragraph at lines 6087--6087
 []|[]\TU/LatinModernRoman(0)/b/n/24.88 Production Systems and Feedback
  []
 
-[188
+[185
 
-] [189]
+] [186]
 \openout4 = `main.pyg'.
 
 
-(./_minted-main/BD401059F8C0570CBCDFBBEE3F0EC1D282A15B1DCA8D177369A2514541E452D
-C.pygtex) [190] [191] [192] [193] [194] [195] [196]
+(./_minted-main/A2277845BCD351E70DDD7AB9814109FB82A15B1DCA8D177369A2514541E452D
+C.pygtex) [187] [188] [189] [190] [191] [192] [193]
 \openout4 = `main.pyg'.
 
 
@@ -2525,7 +4354,7 @@ C.pygtex)
 
 
 (./_minted-main/7203E74026303BB56717DD1C07B7C26582A15B1DCA8D177369A2514541E452D
-C.pygtex) [197] [198] [199] [200] [201] [202] (./main.dfn
+C.pygtex) [194] [195] [196] [197] [198] [199] (./main.dfn
 Underfull \hbox (badness 5175) in paragraph at lines 5--5
  [][] [][]\TU/LatinModernRoman(0)/m/n/12 Fisher Information Matrix 
  []
@@ -2548,7 +4377,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--19
 \tf@ex=\write9
 \openout9 = `main.ex'.
 
- (./main.tec [203
+ (./main.tec [200
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 4--4
@@ -2566,7 +4395,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--19
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--28
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
  [][] [][]\TU/LatinModernRoman(0)/m/n/12 Implementation Strategy: 
  []
 
@@ -2580,7 +4409,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--15
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
  [][] [][]\TU/LatinModernRoman(0)/m/n/12 Approximation of Global 
  []
 
@@ -2588,7 +4417,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--23
 \tf@thm=\write11
 \openout11 = `main.thm'.
 
- (./main.code [204]
+ (./main.code [201]
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
  [][] [][]\TU/LatinModernRoman(0)/m/n/12 Monolithic Training Loop 
  []
@@ -2623,16 +4452,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--24
  [][] [][]\TU/LatinModernRoman(0)/m/n/12 Python Implementation: 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--28
- [][] [][]\TU/LatinModernRoman(0)/m/n/12 Streaming Implementation 
- []
-
 )
 \tf@code=\write12
 \openout12 = `main.code'.
 
- [205] 
+ [202] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -2643,27 +4467,18 @@ L3 programming layer <2024-01-22>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 0B672EA22674098C22A53260691D8073;45653
-(rerunfilecheck)             After:  696346650ACF156651AFD837959887CB;8220.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 8A4F81246365C20C33BF945EE59189A7;6299.
 runsystem(rm main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 41969 strings out of 476878
- 926119 string characters out of 5805250
- 1947627 words of memory out of 5000000
- 63116 multiletter control sequences out of 15000+600000
- 560891 words of font info for 100 fonts, out of 8000000 for 9000
+ 42004 strings out of 476878
+ 928801 string characters out of 5805250
+ 1980627 words of memory out of 5000000
+ 63118 multiletter control sequences out of 15000+600000
+ 563255 words of font info for 137 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 116i,13n,128p,1193b,1559s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,25n,128p,1193b,2527s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (206 pages).
+Output written on main.pdf (203 pages).
