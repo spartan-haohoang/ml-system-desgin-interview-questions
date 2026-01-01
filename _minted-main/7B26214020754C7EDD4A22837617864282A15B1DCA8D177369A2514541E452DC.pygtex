@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{time\PYGZus{}travel\PYGZus{}dataset\PYGZus{}gen}\PYG{p}{(}\PYG{n}{db}\PYG{p}{,} \PYG{n}{start\PYGZus{}date}\PYG{p}{,} \PYG{n}{end\PYGZus{}date}\PYG{p}{):}
+    \PYG{n}{training\PYGZus{}set} \PYG{o}{=} \PYG{p}{[]}
+
+    \PYG{c+c1}{\PYGZsh{} Iterate through historical cutoffs}
+    \PYG{k}{for} \PYG{n}{cutoff} \PYG{o+ow}{in} \PYG{n}{date\PYGZus{}range}\PYG{p}{(}\PYG{n}{start\PYGZus{}date}\PYG{p}{,} \PYG{n}{end\PYGZus{}date}\PYG{p}{,} \PYG{n}{freq}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}M\PYGZsq{}}\PYG{p}{):}
+
+        \PYG{c+c1}{\PYGZsh{} 1. Resurrect the Ghosts: Get ALL users active at cutoff}
+        \PYG{c+c1}{\PYGZsh{} (Even those who are currently deleted/churned)}
+        \PYG{n}{active\PYGZus{}users} \PYG{o}{=} \PYG{n}{db}\PYG{o}{.}\PYG{n}{query}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+s2}{            SELECT user\PYGZus{}id FROM transactions}
+\PYG{l+s+s2}{            WHERE date \PYGZlt{} }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{cutoff}\PYG{l+s+si}{\PYGZcb{}}
+\PYG{l+s+s2}{            AND date \PYGZgt{} }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{cutoff}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{n}{\PYGZus{}years}\PYG{l+s+si}{\PYGZcb{}}
+\PYG{l+s+s2}{        \PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{} 2. Compute Features using ONLY past data}
+        \PYG{n}{features} \PYG{o}{=} \PYG{n}{compute\PYGZus{}features}\PYG{p}{(}\PYG{n}{active\PYGZus{}users}\PYG{p}{,} \PYG{n}{valid\PYGZus{}until}\PYG{o}{=}\PYG{n}{cutoff}\PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{} 3. Compute Labels using future data}
+        \PYG{n}{labels} \PYG{o}{=} \PYG{n}{db}\PYG{o}{.}\PYG{n}{query}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+s2}{            SELECT user\PYGZus{}id, 1 as label FROM transactions}
+\PYG{l+s+s2}{            WHERE date BETWEEN }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{cutoff}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ AND }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{cutoff}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{30}\PYG{n}{\PYGZus{}days}\PYG{l+s+si}{\PYGZcb{}}
+\PYG{l+s+s2}{        \PYGZdq{}\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{} Merge and append}
+        \PYG{n}{snapshot} \PYG{o}{=} \PYG{n}{features}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{labels}\PYG{p}{,} \PYG{n}{on}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}user\PYGZus{}id\PYGZsq{}}\PYG{p}{,} \PYG{n}{how}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}left\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{fillna}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+        \PYG{n}{training\PYGZus{}set}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{snapshot}\PYG{p}{)}
+
+    \PYG{k}{return} \PYG{n}{concatenate}\PYG{p}{(}\PYG{n}{training\PYGZus{}set}\PYG{p}{)}
+\end{Verbatim}

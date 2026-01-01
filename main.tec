@@ -1,0 +1,28 @@
+\contentsline {tcolorbox}{\numberline {1.1.4}Heuristic: Analytical Bid Shading}{10}{amzboxcounter.1.1.4}%
+\contentsline {tcolorbox}{\numberline {1.2.4}The Fusion Formula}{18}{amzboxcounter.1.2.4}%
+\contentsline {tcolorbox}{\numberline {1.3.2}Algorithm: Fused Softmax Cross Entropy}{24}{amzboxcounter.1.3.2}%
+\contentsline {tcolorbox}{\numberline {1.4.1}Technique: Single-Batch Overfitting}{31}{amzboxcounter.1.4.1}%
+\contentsline {tcolorbox}{\numberline {1.4.4}Technique: Gradient Inspection}{34}{amzboxcounter.1.4.4}%
+\contentsline {tcolorbox}{\numberline {1.5.3}Implementing rsLoRA}{41}{amzboxcounter.1.5.3}%
+\contentsline {tcolorbox}{\numberline {2.1.1}The Pipeline Pattern}{46}{amzboxcounter.2.1.1}%
+\contentsline {tcolorbox}{\numberline {2.2.2}Implementation Logic}{54}{amzboxcounter.2.2.2}%
+\contentsline {tcolorbox}{\numberline {2.3.4}Strategy: Inpainting with Stable Diffusion}{63}{amzboxcounter.2.3.4}%
+\contentsline {tcolorbox}{\numberline {2.4.4}Technique: The Fallback Hierarchy}{71}{amzboxcounter.2.4.4}%
+\contentsline {tcolorbox}{\numberline {2.5.2}Mitigation Algorithm}{77}{amzboxcounter.2.5.2}%
+\contentsline {tcolorbox}{\numberline {2.5.5}Implementation Strategy: Snapshot Reconstruction}{79}{amzboxcounter.2.5.5}%
+\contentsline {tcolorbox}{\numberline {2.6.3}Key Drift Metrics}{87}{amzboxcounter.2.6.3}%
+\contentsline {tcolorbox}{\numberline {3.1.2}Sequence Processing Pseudocode}{95}{amzboxcounter.3.1.2}%
+\contentsline {tcolorbox}{\numberline {3.1.4}The Solution Pipeline}{97}{amzboxcounter.3.1.4}%
+\contentsline {tcolorbox}{\numberline {3.2.2}EWC Algorithm}{103}{amzboxcounter.3.2.2}%
+\contentsline {tcolorbox}{\numberline {3.3.2}System Implications}{110}{amzboxcounter.3.3.2}%
+\contentsline {tcolorbox}{\numberline {3.4.5}Adapter Architecture}{121}{amzboxcounter.3.4.5}%
+\contentsline {tcolorbox}{\numberline {3.5.2}Algorithm: Lipschitz-Regularized QAT}{126}{amzboxcounter.3.5.2}%
+\contentsline {tcolorbox}{\numberline {4.2.5}The Black Patch Protocol}{144}{amzboxcounter.4.2.5}%
+\contentsline {tcolorbox}{\numberline {4.3.1}Adamic-Adar Formulation}{150}{amzboxcounter.4.3.1}%
+\contentsline {tcolorbox}{\numberline {5.1.3}Optimization: Vitter's Algorithm Z}{160}{amzboxcounter.5.1.3}%
+\contentsline {tcolorbox}{\numberline {5.2.2}KLL Complexity}{166}{amzboxcounter.5.2.2}%
+\contentsline {tcolorbox}{\numberline {5.3.4}Technique: Frequency Capping \& Expiration}{177}{amzboxcounter.5.3.4}%
+\contentsline {tcolorbox}{\numberline {5.4.4}Key Pattern: Log-Centric Architecture}{184}{amzboxcounter.5.4.4}%
+\contentsline {tcolorbox}{\numberline {6.1.2}Exploration Strategy: $\mitepsilon $-Greedy}{190}{amzboxcounter.6.1.2}%
+\contentsline {tcolorbox}{\numberline {6.2.3}Computational Trade-offs}{198}{amzboxcounter.6.2.3}%
+\contentsline {tcolorbox}{\numberline {6.2.5}Implementation Strategy: Low-Latency Beam}{200}{amzboxcounter.6.2.5}%

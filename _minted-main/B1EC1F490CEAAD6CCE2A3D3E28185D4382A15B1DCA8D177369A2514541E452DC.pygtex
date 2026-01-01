@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Hyperparameters fixed before training}
+\PYG{n}{alpha} \PYG{o}{=} \PYG{l+m+mf}{0.7}  \PYG{c+c1}{\PYGZsh{} Importance of Clicks}
+\PYG{n}{beta} \PYG{o}{=} \PYG{l+m+mf}{0.3}   \PYG{c+c1}{\PYGZsh{} Importance of Profit}
+
+\PYG{n}{model} \PYG{o}{=} \PYG{n}{SharedBackboneModel}\PYG{p}{()}
+\PYG{n}{optimizer} \PYG{o}{=} \PYG{n}{Adam}\PYG{p}{(}\PYG{n}{model}\PYG{o}{.}\PYG{n}{parameters}\PYG{p}{())}
+
+\PYG{k}{for} \PYG{n}{batch} \PYG{o+ow}{in} \PYG{n}{data\PYGZus{}loader}\PYG{p}{:}
+    \PYG{c+c1}{\PYGZsh{} Forward pass}
+    \PYG{n}{pred\PYGZus{}click}\PYG{p}{,} \PYG{n}{pred\PYGZus{}profit} \PYG{o}{=} \PYG{n}{model}\PYG{p}{(}\PYG{n}{batch}\PYG{o}{.}\PYG{n}{features}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Calculate losses}
+    \PYG{n}{loss\PYGZus{}c} \PYG{o}{=} \PYG{n}{BCE}\PYG{p}{(}\PYG{n}{pred\PYGZus{}click}\PYG{p}{,} \PYG{n}{batch}\PYG{o}{.}\PYG{n}{click\PYGZus{}label}\PYG{p}{)}
+    \PYG{n}{loss\PYGZus{}p} \PYG{o}{=} \PYG{n}{MSE}\PYG{p}{(}\PYG{n}{pred\PYGZus{}profit}\PYG{p}{,} \PYG{n}{batch}\PYG{o}{.}\PYG{n}{profit\PYGZus{}label}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} The fatal coupling}
+    \PYG{n}{total\PYGZus{}loss} \PYG{o}{=} \PYG{n}{alpha} \PYG{o}{*} \PYG{n}{loss\PYGZus{}c} \PYG{o}{+} \PYG{n}{beta} \PYG{o}{*} \PYG{n}{loss\PYGZus{}p}
+
+    \PYG{c+c1}{\PYGZsh{} Backward pass bakes alpha/beta into weights}
+    \PYG{n}{total\PYGZus{}loss}\PYG{o}{.}\PYG{n}{backward}\PYG{p}{()}
+    \PYG{n}{optimizer}\PYG{o}{.}\PYG{n}{step}\PYG{p}{()}
+\end{Verbatim}

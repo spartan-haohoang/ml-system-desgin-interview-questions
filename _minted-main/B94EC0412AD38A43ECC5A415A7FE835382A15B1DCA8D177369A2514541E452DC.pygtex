@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{render\PYGZus{}trajectory}\PYG{p}{(}\PYG{n}{sequence}\PYG{p}{,} \PYG{n}{width}\PYG{o}{=}\PYG{l+m+mi}{224}\PYG{p}{,} \PYG{n}{height}\PYG{o}{=}\PYG{l+m+mi}{224}\PYG{p}{):}
+    \PYG{n}{canvas} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{((}\PYG{n}{height}\PYG{p}{,} \PYG{n}{width}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{))}
+
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{sequence}\PYG{p}{)):}
+        \PYG{n}{p1} \PYG{o}{=} \PYG{n}{sequence}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+        \PYG{n}{p2} \PYG{o}{=} \PYG{n}{sequence}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}
+
+        \PYG{c+c1}{\PYGZsh{} Color encodes speed}
+        \PYG{n}{speed} \PYG{o}{=} \PYG{n}{distance}\PYG{p}{(}\PYG{n}{p1}\PYG{p}{,} \PYG{n}{p2}\PYG{p}{)} \PYG{o}{/} \PYG{p}{(}\PYG{n}{p2}\PYG{o}{.}\PYG{n}{t} \PYG{o}{\PYGZhy{}} \PYG{n}{p1}\PYG{o}{.}\PYG{n}{t}\PYG{p}{)}
+        \PYG{n}{color} \PYG{o}{=} \PYG{n}{get\PYGZus{}heatmap\PYGZus{}color}\PYG{p}{(}\PYG{n}{speed}\PYG{p}{)}
+
+        \PYG{n}{cv2}\PYG{o}{.}\PYG{n}{line}\PYG{p}{(}\PYG{n}{canvas}\PYG{p}{,} \PYG{n}{p1}\PYG{o}{.}\PYG{n}{coords}\PYG{p}{,} \PYG{n}{p2}\PYG{o}{.}\PYG{n}{coords}\PYG{p}{,} \PYG{n}{color}\PYG{p}{,} \PYG{n}{thickness}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+    \PYG{k}{return} \PYG{n}{canvas}
+
+\PYG{c+c1}{\PYGZsh{} Transfer Learning Model}
+\PYG{n}{base\PYGZus{}model} \PYG{o}{=} \PYG{n}{resnet18}\PYG{p}{(}\PYG{n}{pretrained}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{n}{base\PYGZus{}model}\PYG{o}{.}\PYG{n}{fc} \PYG{o}{=} \PYG{n}{nn}\PYG{o}{.}\PYG{n}{Linear}\PYG{p}{(}\PYG{l+m+mi}{512}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Replace head}
+\PYG{n}{freeze\PYGZus{}parameters}\PYG{p}{(}\PYG{n}{base\PYGZus{}model}\PYG{o}{.}\PYG{n}{features}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} Freeze backbone}
+\end{Verbatim}

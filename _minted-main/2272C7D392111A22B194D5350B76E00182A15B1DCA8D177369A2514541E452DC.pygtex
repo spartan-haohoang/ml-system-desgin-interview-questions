@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{lstm\PYGZus{}inference}\PYG{p}{(}\PYG{n}{sequence}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{} Initialize hidden state}
+    \PYG{n}{h} \PYG{o}{=} \PYG{n}{zeros}\PYG{p}{(}\PYG{n}{hidden\PYGZus{}dim}\PYG{p}{)}
+    \PYG{n}{c} \PYG{o}{=} \PYG{n}{zeros}\PYG{p}{(}\PYG{n}{hidden\PYGZus{}dim}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Sequential processing loop O(N)}
+    \PYG{k}{for} \PYG{n}{point} \PYG{o+ow}{in} \PYG{n}{sequence}\PYG{p}{:}
+        \PYG{n}{x\PYGZus{}input} \PYG{o}{=} \PYG{n}{features}\PYG{p}{(}\PYG{n}{point}\PYG{p}{)}
+        \PYG{n}{h}\PYG{p}{,} \PYG{n}{c} \PYG{o}{=} \PYG{n}{lstm\PYGZus{}cell}\PYG{p}{(}\PYG{n}{x\PYGZus{}input}\PYG{p}{,} \PYG{n}{h}\PYG{p}{,} \PYG{n}{c}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Classification head}
+    \PYG{n}{logits} \PYG{o}{=} \PYG{n}{dense\PYGZus{}layer}\PYG{p}{(}\PYG{n}{h}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{sigmoid}\PYG{p}{(}\PYG{n}{logits}\PYG{p}{)}
+\end{Verbatim}

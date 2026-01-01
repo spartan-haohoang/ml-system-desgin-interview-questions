@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{def} \PYG{n+nf}{get\PYGZus{}prediction}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{,} \PYG{n}{model}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{} Fetch features with metadata}
+    \PYG{n}{features}\PYG{p}{,} \PYG{n}{metadata} \PYG{o}{=} \PYG{n}{feature\PYGZus{}store}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{p}{)}
+
+    \PYG{n}{current\PYGZus{}time} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}
+    \PYG{n}{staleness} \PYG{o}{=} \PYG{n}{current\PYGZus{}time} \PYG{o}{\PYGZhy{}} \PYG{n}{metadata}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}last\PYGZus{}updated\PYGZus{}ts\PYGZsq{}}\PYG{p}{]}
+
+    \PYG{c+c1}{\PYGZsh{} 1. Hard Freshness SLO Check}
+    \PYG{k}{if} \PYG{n}{staleness} \PYG{o}{\PYGZgt{}} \PYG{n}{MAX\PYGZus{}STALENESS\PYGZus{}THRESHOLD}\PYG{p}{:}
+        \PYG{n}{log}\PYG{o}{.}\PYG{n}{warn}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}Feature stale by }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{staleness}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{s. Using fallback.\PYGZdq{}}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n}{heuristics}\PYG{o}{.}\PYG{n}{get\PYGZus{}default\PYGZus{}price}\PYG{p}{()}
+
+    \PYG{c+c1}{\PYGZsh{} 2. Distribution Drift Check (Async/Batch usually)}
+    \PYG{c+c1}{\PYGZsh{} Ideally computed on a sliding window of recent requests}
+    \PYG{k}{if} \PYG{n}{drift\PYGZus{}detector}\PYG{o}{.}\PYG{n}{check}\PYG{p}{(}\PYG{n}{features}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{n}{DRIFT\PYGZus{}THRESHOLD}\PYG{p}{:}
+        \PYG{n}{alert}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Data Distribution Shift Detected\PYGZdq{}}\PYG{p}{)}
+
+    \PYG{k}{return} \PYG{n}{model}\PYG{o}{.}\PYG{n}{predict}\PYG{p}{(}\PYG{n}{features}\PYG{p}{)}
+\end{Verbatim}

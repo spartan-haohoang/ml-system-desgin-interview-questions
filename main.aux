@@ -1,0 +1,836 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand*\HyPL@Entry[1]{}
+\HyPL@Entry{0<</S/D>>}
+\HyPL@Entry{1<</S/D>>}
+\tcolorbox@label{1}{1}
+\tcolorbox@label{2}{3}
+\@writefile{toc}{\contentsline {section}{\numberline {0.1}How to Use This Book}{3}{section.0.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Loss Functions and Optimization Traps}{5}{chapter.1}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\tcolorbox@label{3}{5}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Question 1: The Auto-Bidder Paradox}{5}{section.1.1}\protected@file@percent }
+\newlabel{sec:q01}{{1.1}{5}{Question 1: The Auto-Bidder Paradox}{section.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}The Interview Scenario}{5}{subsection.1.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}The Trap Explained}{6}{subsection.1.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}Technical Deep Dive}{6}{subsection.1.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{6}{subsection.1.1.3}\protected@file@percent }
+\newlabel{thm:quantile-loss}{{1.1.1}{7}{Quantile (Pinball) Loss}{amzboxcounter.1.1.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {1.1.1}Quantile (Pinball) Loss}{7}{amzboxcounter.1.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Implementation}{7}{amzboxcounter.1.1.1}\protected@file@percent }
+\newlabel{code:quantile-pytorch}{{1.1.2}{7}{PyTorch Implementation of Quantile Loss}{amzboxcounter.1.1.2}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {1.1.2}PyTorch Implementation of Quantile Loss}{7}{amzboxcounter.1.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture Implications}{8}{amzboxcounter.1.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.4}Why It Fails}{8}{subsection.1.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Mechanism of Failure}{8}{subsection.1.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Concrete Example}{9}{subsection.1.1.4}\protected@file@percent }
+\newlabel{ex:100k-mistake}{{1.1.3}{9}{The \$100k Mistake}{amzboxcounter.1.1.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {1.1.3}The \$100k Mistake}{9}{amzboxcounter.1.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.5}The Solution}{9}{subsection.1.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Correct Approach: Asymmetric Training}{9}{subsection.1.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The "No Retraining" Workaround: Bid Shading}{9}{subsection.1.1.5}\protected@file@percent }
+\newlabel{tec:bid-shading}{{1.1.4}{10}{Heuristic: Analytical Bid Shading}{amzboxcounter.1.1.4}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {1.1.4}Heuristic: Analytical Bid Shading}{10}{amzboxcounter.1.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.6}Why The Solution Works}{10}{subsection.1.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuitive Explanation}{10}{subsection.1.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{10}{subsection.1.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.7}Related Research Papers}{11}{subsection.1.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Asymmetric Loss for Real Estate}{11}{subsection.1.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: The Winner's Curse in Forecasting}{11}{subsection.1.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.8}Interview Answer Template}{11}{subsection.1.1.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.9}Key Takeaways}{12}{subsection.1.1.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Question 5: The Multi-Objective Loss Trap}{12}{section.1.2}\protected@file@percent }
+\newlabel{sec:q05}{{1.2}{12}{Question 5: The Multi-Objective Loss Trap}{section.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}The Interview Scenario}{12}{subsection.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}The Trap Explained}{13}{subsection.1.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Technical Deep Dive}{14}{subsection.1.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Formulation}{14}{subsection.1.2.3}\protected@file@percent }
+\newlabel{thm:gradient-coupling}{{1.2.1}{15}{The Gradient Coupling Theorem}{amzboxcounter.1.2.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {1.2.1}The Gradient Coupling Theorem}{15}{amzboxcounter.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Implementation (The Wrong Way)}{15}{amzboxcounter.1.2.1}\protected@file@percent }
+\newlabel{code:monolithic-training}{{1.2.2}{15}{Monolithic Training Loop (Trap)}{amzboxcounter.1.2.2}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {1.2.2}Monolithic Training Loop (Trap)}{15}{amzboxcounter.1.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture}{16}{amzboxcounter.1.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.4}Why It Fails}{16}{subsection.1.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Retraining Bottleneck}{16}{subsection.1.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Gradient Domination and Sensitivity}{16}{Item.14}\protected@file@percent }
+\newlabel{ex:gradient-domination}{{1.2.3}{16}{Numerical Failure Mode}{amzboxcounter.1.2.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {1.2.3}Numerical Failure Mode}{16}{amzboxcounter.1.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Pareto Inefficiency}{17}{amzboxcounter.1.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.5}The Solution}{17}{subsection.1.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Key Insight}{17}{subsection.1.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Step-by-Step Implementation}{17}{subsection.1.2.5}\protected@file@percent }
+\newlabel{tec:fusion-formula}{{1.2.4}{18}{The Fusion Formula}{amzboxcounter.1.2.4}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {1.2.4}The Fusion Formula}{18}{amzboxcounter.1.2.4}\protected@file@percent }
+\newlabel{code:decoupled-serving}{{1.2.5}{18}{Decoupled Serving Logic (Python/Pseudocode)}{amzboxcounter.1.2.5}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {1.2.5}Decoupled Serving Logic (Python/Pseudocode)}{18}{amzboxcounter.1.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Why This Wins}{18}{amzboxcounter.1.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.6}Why The Solution Works}{19}{subsection.1.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{19}{subsection.1.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuitive Explanation}{19}{subsection.1.2.6}\protected@file@percent }
+\newlabel{thm:pareto-optimality}{{1.2.6}{19}{Pareto Optimality in Ranking}{amzboxcounter.1.2.6}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {1.2.6}Pareto Optimality in Ranking}{19}{amzboxcounter.1.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.7}Related Research Papers}{19}{subsection.1.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Multi-Objective Recommender Systems}{19}{subsection.1.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Multistakeholder Recommendation}{20}{subsection.1.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.8}Interview Answer Template}{20}{subsection.1.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.9}Key Takeaways}{20}{subsection.1.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Question 22: The Softmax Trap}{21}{section.1.3}\protected@file@percent }
+\newlabel{sec:q22}{{1.3}{21}{Question 22: The Softmax Trap}{section.1.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}The Interview Scenario}{21}{subsection.1.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}The Trap Explained}{22}{subsection.1.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Technical Deep Dive}{22}{subsection.1.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{22}{subsection.1.3.3}\protected@file@percent }
+\newlabel{dfn:softmax-def}{{1.3.1}{23}{Softmax Function}{amzboxcounter.1.3.1}{}}
+\@writefile{dfn}{\contentsline {tcolorbox}{\numberline {1.3.1}Softmax Function}{23}{amzboxcounter.1.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details: The LogSumExp Trick}{23}{AMS.4}\protected@file@percent }
+\newlabel{tec:fused-algo}{{1.3.2}{24}{Algorithm: Fused Softmax Cross Entropy}{amzboxcounter.1.3.2}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {1.3.2}Algorithm: Fused Softmax Cross Entropy}{24}{amzboxcounter.1.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture Implications}{24}{Item.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.4}Why It Fails: A Numerical Analysis}{24}{subsection.1.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Failure Mode 1: Underflow (The Vanishing Gradient)}{24}{subsection.1.3.4}\protected@file@percent }
+\newlabel{ex:underflow-ex}{{1.3.3}{24}{Scenario: The Confident Wrong Prediction}{amzboxcounter.1.3.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {1.3.3}Scenario: The Confident Wrong Prediction}{24}{amzboxcounter.1.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Failure Mode 2: Overflow (The Exploding Exponent)}{25}{Item.32}\protected@file@percent }
+\newlabel{ex:overflow-ex}{{1.3.4}{25}{Scenario: Large Inputs}{amzboxcounter.1.3.4}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {1.3.4}Scenario: Large Inputs}{25}{amzboxcounter.1.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Root Cause Analysis}{25}{Item.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.5}The Solution}{25}{subsection.1.3.5}\protected@file@percent }
+\newlabel{code:softmax-code}{{1.3.5}{25}{Python Implementation (NumPy)}{amzboxcounter.1.3.5}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {1.3.5}Python Implementation (NumPy)}{25}{amzboxcounter.1.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Nuances}{26}{amzboxcounter.1.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.6}Why The Solution Works}{27}{subsection.1.3.6}\protected@file@percent }
+\newlabel{thm:lse-stability}{{1.3.6}{27}{Theorem: Stability of LogSumExp}{amzboxcounter.1.3.6}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {1.3.6}Theorem: Stability of LogSumExp}{27}{amzboxcounter.1.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.7}Related Research Papers}{27}{subsection.1.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Accurate Computation of LSE}{27}{subsection.1.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: LSEAttention}{28}{subsection.1.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Stochastic Optimization of LogSumExp}{28}{subsection.1.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.8}Interview Answer Template}{28}{subsection.1.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.9}Key Takeaways}{29}{subsection.1.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Question 13: The Flat Loss Trap}{29}{section.1.4}\protected@file@percent }
+\newlabel{sec:q13}{{1.4}{29}{Question 13: The Flat Loss Trap}{section.1.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}The Interview Scenario}{29}{subsection.1.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}The Trap Explained}{30}{subsection.1.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}Technical Deep Dive}{30}{subsection.1.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{30}{subsection.1.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Diagnostics}{31}{Item.41}\protected@file@percent }
+\newlabel{tec:single-batch-overfit}{{1.4.1}{31}{Technique: Single-Batch Overfitting}{amzboxcounter.1.4.1}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {1.4.1}Technique: Single-Batch Overfitting}{31}{amzboxcounter.1.4.1}\protected@file@percent }
+\newlabel{code:overfit-protocol}{{1.4.2}{32}{Pseudocode: Overfit Protocol}{amzboxcounter.1.4.2}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {1.4.2}Pseudocode: Overfit Protocol}{32}{amzboxcounter.1.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture Implications}{32}{amzboxcounter.1.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.4}Why It Fails}{33}{subsection.1.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The "Detached Tensor" Failure}{33}{subsection.1.4.4}\protected@file@percent }
+\newlabel{ex:detached-gradient}{{1.4.3}{33}{Example: The Detached Gradient}{amzboxcounter.1.4.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {1.4.3}Example: The Detached Gradient}{33}{amzboxcounter.1.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The "Label Mismatch" Failure}{33}{amzboxcounter.1.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.5}The Solution}{34}{subsection.1.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Solution Strategy}{34}{subsection.1.4.5}\protected@file@percent }
+\newlabel{tec:gradient-inspection}{{1.4.4}{34}{Technique: Gradient Inspection}{amzboxcounter.1.4.4}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {1.4.4}Technique: Gradient Inspection}{34}{amzboxcounter.1.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Why This Works}{34}{amzboxcounter.1.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.6}Why The Solution Works}{35}{subsection.1.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{35}{subsection.1.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuitive Explanation}{35}{subsection.1.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.7}Related Research Papers}{35}{subsection.1.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: A Systematic Survey on Debugging Techniques for Machine Learning Systems}{35}{subsection.1.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.8}Interview Answer Template}{36}{subsection.1.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.9}Key Takeaways}{36}{subsection.1.4.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Question 20: The Vanishing Update Paradox}{36}{section.1.5}\protected@file@percent }
+\newlabel{sec:q20}{{1.5}{36}{Question 20: The Vanishing Update Paradox}{section.1.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.1}The Interview Scenario}{37}{subsection.1.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.2}The Trap Explained}{37}{subsection.1.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.3}Technical Deep Dive}{38}{subsection.1.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{38}{subsection.1.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Constraints}{38}{subsection.1.5.3}\protected@file@percent }
+\newlabel{code:lora-code}{{1.5.1}{39}{Standard LoRA Implementation (simplified)}{amzboxcounter.1.5.1}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {1.5.1}Standard LoRA Implementation (simplified)}{39}{amzboxcounter.1.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Implications}{39}{amzboxcounter.1.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.4}Why It Fails}{39}{subsection.1.5.4}\protected@file@percent }
+\newlabel{ex:collapse-ex}{{1.5.2}{40}{Numerical Example: The Collapse}{amzboxcounter.1.5.2}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {1.5.2}Numerical Example: The Collapse}{40}{amzboxcounter.1.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.5}The Solution}{40}{subsection.1.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Key Insight}{40}{subsection.1.5.5}\protected@file@percent }
+\newlabel{tec:rslora-impl}{{1.5.3}{41}{Implementing rsLoRA}{amzboxcounter.1.5.3}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {1.5.3}Implementing rsLoRA}{41}{amzboxcounter.1.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Step-by-Step Fix}{41}{amzboxcounter.1.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.6}Why The Solution Works}{41}{subsection.1.5.6}\protected@file@percent }
+\newlabel{thm:rslora-stability}{{1.5.4}{41}{Theorem: Stability of rsLoRA}{amzboxcounter.1.5.4}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {1.5.4}Theorem: Stability of rsLoRA}{41}{amzboxcounter.1.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.7}Related Research Papers}{42}{subsection.1.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: A Rank Stabilization Scaling Factor for Fine-Tuning with LoRA}{42}{subsection.1.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.8}Interview Answer Template}{42}{subsection.1.5.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.9}Key Takeaways}{43}{subsection.1.5.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Data Quality and Distribution Issues}{44}{chapter.2}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\tcolorbox@label{49}{44}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Question 17: The Data Leakage Trap}{44}{section.2.1}\protected@file@percent }
+\newlabel{sec:q17}{{2.1}{44}{Question 17: The Data Leakage Trap}{section.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}The Interview Scenario}{44}{subsection.2.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}The Trap Explained}{45}{subsection.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Technical Deep Dive}{45}{subsection.2.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{45}{subsection.2.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Implementation}{46}{subsection.2.1.3}\protected@file@percent }
+\newlabel{tec:pipeline-pattern}{{2.1.1}{46}{The Pipeline Pattern}{amzboxcounter.2.1.1}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {2.1.1}The Pipeline Pattern}{46}{amzboxcounter.2.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture Implications}{46}{Item.55}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.4}Why It Fails: A Failure Analysis}{47}{subsection.2.1.4}\protected@file@percent }
+\newlabel{ex:leakage-proof}{{2.1.2}{47}{Numerical Proof of Failure}{amzboxcounter.2.1.2}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {2.1.2}Numerical Proof of Failure}{47}{amzboxcounter.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.5}The Solution}{48}{subsection.2.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Key Insight}{48}{subsection.2.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Strategy}{48}{subsection.2.1.5}\protected@file@percent }
+\newlabel{code:sklearn-pipeline}{{2.1.3}{48}{Correct Implementation with Scikit-Learn}{amzboxcounter.2.1.3}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {2.1.3}Correct Implementation with Scikit-Learn}{48}{amzboxcounter.2.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Why This Works}{49}{amzboxcounter.2.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.6}Why The Solution Works}{49}{subsection.2.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{49}{subsection.2.1.6}\protected@file@percent }
+\newlabel{thm:vapnik-principle}{{2.1.4}{49}{Vapnik's Principle}{amzboxcounter.2.1.4}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {2.1.4}Vapnik's Principle}{49}{amzboxcounter.2.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.7}Related Research Papers}{50}{subsection.2.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: How to Avoid Machine Learning Pitfalls}{50}{subsection.2.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Leakage and the Reproducibility Crisis}{50}{subsection.2.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.8}Interview Answer Template}{50}{subsection.2.1.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.9}Key Takeaways}{51}{subsection.2.1.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Question 3: The Gradient Drowning Trap}{51}{section.2.2}\protected@file@percent }
+\newlabel{sec:q03}{{2.2}{51}{Question 3: The Gradient Drowning Trap}{section.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}The Interview Scenario}{51}{subsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}The Trap Explained}{52}{subsection.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Technical Deep Dive}{53}{subsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{53}{subsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Gradient Drowning Mechanism}{53}{subsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Solution: Focal Loss}{54}{subsection.2.2.3}\protected@file@percent }
+\newlabel{dfn:focal-loss}{{2.2.1}{54}{Focal Loss}{amzboxcounter.2.2.1}{}}
+\@writefile{dfn}{\contentsline {tcolorbox}{\numberline {2.2.1}Focal Loss}{54}{amzboxcounter.2.2.1}\protected@file@percent }
+\newlabel{tec:focal-implementation}{{2.2.2}{54}{Implementation Logic}{amzboxcounter.2.2.2}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {2.2.2}Implementation Logic}{54}{amzboxcounter.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Why It Fails}{54}{subsection.2.2.4}\protected@file@percent }
+\newlabel{ex:avalanche-negatives}{{2.2.3}{54}{Scenario: The Avalanche of "Easy" Negatives}{amzboxcounter.2.2.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {2.2.3}Scenario: The Avalanche of "Easy" Negatives}{54}{amzboxcounter.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}The Solution}{55}{subsection.2.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Strategy}{55}{subsection.2.2.5}\protected@file@percent }
+\newlabel{code:focal-pytorch}{{2.2.4}{55}{PyTorch Implementation}{amzboxcounter.2.2.4}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {2.2.4}PyTorch Implementation}{55}{amzboxcounter.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Design Decisions \& Trade-offs}{56}{amzboxcounter.2.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.6}Why The Solution Works}{57}{subsection.2.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{57}{subsection.2.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuitive Analogy}{57}{subsection.2.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.7}Related Research Papers}{57}{subsection.2.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Focal Loss for Dense Object Detection}{57}{subsection.2.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: SMOTE: Synthetic Minority Over-sampling Technique}{57}{subsection.2.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.8}Interview Answer Template}{58}{subsection.2.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.9}Key Takeaways}{58}{subsection.2.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Question 18: The Semantic Imbalance Trap}{59}{section.2.3}\protected@file@percent }
+\newlabel{sec:q18}{{2.3}{59}{Question 18: The Semantic Imbalance Trap}{section.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}The Interview Scenario}{59}{subsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}The Trap Explained}{59}{subsection.2.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Technical Deep Dive}{60}{subsection.2.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{60}{subsection.2.3.3}\protected@file@percent }
+\newlabel{dfn:weighted-ce}{{2.3.1}{60}{Weighted Cross-Entropy}{amzboxcounter.2.3.1}{}}
+\@writefile{dfn}{\contentsline {tcolorbox}{\numberline {2.3.1}Weighted Cross-Entropy}{60}{amzboxcounter.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details: Geometric vs. Generative}{61}{amzboxcounter.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture}{61}{amzboxcounter.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.4}Why It Fails}{62}{subsection.2.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Failure Mechanism}{62}{subsection.2.3.4}\protected@file@percent }
+\newlabel{ex:rotation-trap}{{2.3.2}{62}{Failure Analysis: The Rotation Trap}{amzboxcounter.2.3.2}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {2.3.2}Failure Analysis: The Rotation Trap}{62}{amzboxcounter.2.3.2}\protected@file@percent }
+\newlabel{ex:color-jitter}{{2.3.3}{62}{Failure Analysis: The Color Jitter Fallacy}{amzboxcounter.2.3.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {2.3.3}Failure Analysis: The Color Jitter Fallacy}{62}{amzboxcounter.2.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.5}The Solution: Semantic Synthesis}{63}{subsection.2.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Key Insight}{63}{subsection.2.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Step-by-Step Implementation}{63}{subsection.2.3.5}\protected@file@percent }
+\newlabel{tec:inpainting-strategy}{{2.3.4}{63}{Strategy: Inpainting with Stable Diffusion}{amzboxcounter.2.3.4}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {2.3.4}Strategy: Inpainting with Stable Diffusion}{63}{amzboxcounter.2.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Details}{63}{Item.65}\protected@file@percent }
+\newlabel{code:synthesis-code}{{2.3.5}{63}{Generative Data Synthesis}{amzboxcounter.2.3.5}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {2.3.5}Generative Data Synthesis}{63}{amzboxcounter.2.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.6}Why The Solution Works}{64}{subsection.2.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{64}{subsection.2.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Empirical Evidence}{65}{subsection.2.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.7}Related Research Papers}{65}{subsection.2.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: A Unified Framework for Generative Data Augmentation}{65}{subsection.2.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Synthetic Data Augmentation for Long-tailed Food Classification}{65}{subsection.2.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: DiffuPT for Glaucoma Detection}{65}{subsection.2.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.8}Interview Answer Template}{66}{subsection.2.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.9}Key Takeaways}{66}{subsection.2.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Question 21: The Silent Feature Death}{67}{section.2.4}\protected@file@percent }
+\newlabel{sec:q21}{{2.4}{67}{Question 21: The Silent Feature Death}{section.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}The Interview Scenario}{67}{subsection.2.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}The Trap Explained}{67}{subsection.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Technical Deep Dive}{68}{subsection.2.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Formulation of Staleness}{68}{subsection.2.4.3}\protected@file@percent }
+\newlabel{dfn:jsd-def}{{2.4.1}{68}{Key Metric: Jensen-Shannon Divergence (JSD)}{amzboxcounter.2.4.1}{}}
+\@writefile{dfn}{\contentsline {tcolorbox}{\numberline {2.4.1}Key Metric: Jensen-Shannon Divergence (JSD)}{68}{amzboxcounter.2.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Detection}{69}{amzboxcounter.2.4.1}\protected@file@percent }
+\newlabel{code:freshness-circuit}{{2.4.2}{69}{Pseudocode: Freshness Circuit Breaker}{amzboxcounter.2.4.2}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {2.4.2}Pseudocode: Freshness Circuit Breaker}{69}{amzboxcounter.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture Implications}{70}{amzboxcounter.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Why It Fails: A Failure Analysis}{70}{subsection.2.4.4}\protected@file@percent }
+\newlabel{ex:pricing-disaster}{{2.4.3}{70}{Example: The Dynamic Pricing Disaster}{amzboxcounter.2.4.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {2.4.3}Example: The Dynamic Pricing Disaster}{70}{amzboxcounter.2.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Failure Modes}{71}{amzboxcounter.2.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.5}The Solution}{71}{subsection.2.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{1. Instrumenting Data Lineage}{71}{subsection.2.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{2. Implementing Guardrails}{71}{subsection.2.4.5}\protected@file@percent }
+\newlabel{tec:fallback-hierarchy}{{2.4.4}{71}{Technique: The Fallback Hierarchy}{amzboxcounter.2.4.4}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {2.4.4}Technique: The Fallback Hierarchy}{71}{amzboxcounter.2.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{3. Monitoring Distribution Shift}{72}{Item.76}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.6}Why The Solution Works}{72}{subsection.2.4.6}\protected@file@percent }
+\newlabel{thm:iid-guarantee}{{2.4.5}{72}{Statistical Learning Guarantee}{amzboxcounter.2.4.5}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {2.4.5}Statistical Learning Guarantee}{72}{amzboxcounter.2.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.7}Related Research Papers}{72}{subsection.2.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Failure Modes in Machine Learning Systems}{72}{subsection.2.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Towards Observability for Production Machine Learning Pipelines}{72}{subsection.2.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.8}Interview Answer Template}{73}{subsection.2.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.9}Key Takeaways}{73}{subsection.2.4.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Question 24: The Silent Graveyard Effect}{74}{section.2.5}\protected@file@percent }
+\newlabel{sec:q24}{{2.5}{74}{Question 24: The Silent Graveyard Effect}{section.2.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}The Interview Scenario}{74}{subsection.2.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}The Trap Explained}{74}{subsection.2.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.3}Technical Deep Dive}{75}{subsection.2.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{75}{subsection.2.5.3}\protected@file@percent }
+\newlabel{thm:survival-func}{{2.5.1}{76}{Survival Function Definition}{amzboxcounter.2.5.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {2.5.1}Survival Function Definition}{76}{amzboxcounter.2.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details: Cox Proportional Hazards}{76}{amzboxcounter.2.5.1}\protected@file@percent }
+\newlabel{tec:cox-ph}{{2.5.2}{77}{Mitigation Algorithm}{amzboxcounter.2.5.2}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {2.5.2}Mitigation Algorithm}{77}{amzboxcounter.2.5.2}\protected@file@percent }
+\newlabel{code:cox-code}{{2.5.3}{77}{Cox Proportional Hazards Implementation}{amzboxcounter.2.5.3}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {2.5.3}Cox Proportional Hazards Implementation}{77}{amzboxcounter.2.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture}{77}{amzboxcounter.2.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.4}Why It Fails}{78}{subsection.2.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Mechanism of Failure}{78}{subsection.2.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Concrete Example}{78}{subsection.2.5.4}\protected@file@percent }
+\newlabel{ex:two-users}{{2.5.4}{78}{The Tale of Two Users}{amzboxcounter.2.5.4}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {2.5.4}The Tale of Two Users}{78}{amzboxcounter.2.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Numerical Impact}{79}{amzboxcounter.2.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.5}The Solution}{79}{subsection.2.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Insight}{79}{subsection.2.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Step-by-Step Implementation}{79}{subsection.2.5.5}\protected@file@percent }
+\newlabel{tec:snapshot-strategy}{{2.5.5}{79}{Implementation Strategy: Snapshot Reconstruction}{amzboxcounter.2.5.5}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {2.5.5}Implementation Strategy: Snapshot Reconstruction}{79}{amzboxcounter.2.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Details}{80}{Item.84}\protected@file@percent }
+\newlabel{code:time-travel-code}{{2.5.6}{80}{Time-Travel Dataset Generation}{amzboxcounter.2.5.6}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {2.5.6}Time-Travel Dataset Generation}{80}{amzboxcounter.2.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.6}Why The Solution Works}{81}{subsection.2.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuitive Justification}{81}{subsection.2.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Guarantee}{81}{subsection.2.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.7}Related Research Papers}{81}{subsection.2.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Retention Induced Biases in Recommendation Systems (2024)}{81}{subsection.2.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Deep Recurrent Survival Analysis (2018)}{82}{subsection.2.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.8}Interview Answer Template}{82}{subsection.2.5.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.9}Key Takeaways}{82}{subsection.2.5.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Question 16: The P-Value Mirage}{83}{section.2.6}\protected@file@percent }
+\newlabel{sec:q16}{{2.6}{83}{Question 16: The P-Value Mirage}{section.2.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.1}The Interview Scenario}{83}{subsection.2.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}The Trap Explained}{84}{subsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.3}Technical Deep Dive}{84}{subsection.2.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{84}{subsection.2.6.3}\protected@file@percent }
+\newlabel{thm:scaling-law}{{2.6.1}{85}{The Scaling Law of Significance}{amzboxcounter.2.6.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {2.6.1}The Scaling Law of Significance}{85}{amzboxcounter.2.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture}{85}{amzboxcounter.2.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.4}Why It Fails: A Numerical Proof}{86}{subsection.2.6.4}\protected@file@percent }
+\newlabel{ex:million-sample}{{2.6.2}{86}{The Million-Sample Mirage}{amzboxcounter.2.6.2}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {2.6.2}The Million-Sample Mirage}{86}{amzboxcounter.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.5}The Solution: Magnitude Metrics}{87}{subsection.2.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Recommended Metrics}{87}{subsection.2.6.5}\protected@file@percent }
+\newlabel{tec:drift-metrics}{{2.6.3}{87}{Key Drift Metrics}{amzboxcounter.2.6.3}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {2.6.3}Key Drift Metrics}{87}{amzboxcounter.2.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Strategy}{87}{amzboxcounter.2.6.3}\protected@file@percent }
+\newlabel{code:psi-code}{{2.6.4}{88}{Python Implementation (PSI)}{amzboxcounter.2.6.4}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {2.6.4}Python Implementation (PSI)}{88}{amzboxcounter.2.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.6}Why The Solution Works}{89}{subsection.2.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuition: Moving Dirt}{89}{subsection.2.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{89}{subsection.2.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.7}Related Research Papers}{89}{subsection.2.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Scalable Drift Monitoring in Medical Imaging AI}{89}{subsection.2.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Goodness-of-Fit Tests for Large Datasets}{90}{subsection.2.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.8}Interview Answer Template}{90}{subsection.2.6.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.9}Key Takeaways}{90}{subsection.2.6.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Model Architecture and Training Challenges}{92}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\tcolorbox@label{112}{92}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Question 2: When Data Is Small, Representation Is King}{92}{section.3.1}\protected@file@percent }
+\newlabel{sec:q02}{{3.1}{92}{Question 2: When Data Is Small, Representation Is King}{section.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}The Interview Scenario}{92}{subsection.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}The Trap Explained}{93}{subsection.3.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Technical Deep Dive}{93}{subsection.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Formulation}{93}{subsection.3.1.3}\protected@file@percent }
+\newlabel{thm:parameter-explosion}{{3.1.1}{94}{Parameter Explosion}{amzboxcounter.3.1.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {3.1.1}Parameter Explosion}{94}{amzboxcounter.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Complexity}{94}{amzboxcounter.3.1.1}\protected@file@percent }
+\newlabel{tec:sequence-processing}{{3.1.2}{95}{Sequence Processing Pseudocode}{amzboxcounter.3.1.2}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {3.1.2}Sequence Processing Pseudocode}{95}{amzboxcounter.3.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Why It Fails}{95}{subsection.3.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Overfitting Mechanism}{95}{subsection.3.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Concrete Examples}{96}{subsection.3.1.4}\protected@file@percent }
+\newlabel{ex:entropy-gap}{{3.1.3}{96}{The Entropy Gap}{amzboxcounter.3.1.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {3.1.3}The Entropy Gap}{96}{amzboxcounter.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Degradation}{96}{Item.96}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}The Solution}{96}{subsection.3.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Approach}{96}{subsection.3.1.5}\protected@file@percent }
+\newlabel{tec:solution-pipeline}{{3.1.4}{97}{The Solution Pipeline}{amzboxcounter.3.1.4}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {3.1.4}The Solution Pipeline}{97}{amzboxcounter.3.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Step-by-Step Implementation}{97}{Item.103}\protected@file@percent }
+\newlabel{code:image-rendering}{{3.1.5}{97}{Image Rendering Pseudocode}{amzboxcounter.3.1.5}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {3.1.5}Image Rendering Pseudocode}{97}{amzboxcounter.3.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.6}Why The Solution Works}{98}{subsection.3.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Leveraging Inductive Biases}{98}{subsection.3.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Power of Transfer Learning}{98}{subsection.3.1.6}\protected@file@percent }
+\newlabel{thm:transfer-learning}{{3.1.6}{98}{Transfer Learning Efficiency}{amzboxcounter.3.1.6}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {3.1.6}Transfer Learning Efficiency}{98}{amzboxcounter.3.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.7}Related Research Papers}{98}{subsection.3.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Deep Learning with Splunk and TensorFlow}{98}{subsection.3.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: BeCAPTCHA-Mouse}{99}{subsection.3.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.8}Interview Answer Template}{99}{subsection.3.1.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.9}Key Takeaways}{99}{subsection.3.1.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Question 9: The Catastrophic Forgetting Trap}{100}{section.3.2}\protected@file@percent }
+\newlabel{sec:q09}{{3.2}{100}{Question 9: The Catastrophic Forgetting Trap}{section.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}The Interview Scenario}{100}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}The Trap Explained}{100}{subsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Technical Deep Dive}{101}{subsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Formulation}{101}{subsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Solution: Elastic Weight Consolidation (EWC)}{102}{subsection.3.2.3}\protected@file@percent }
+\newlabel{dfn:fisher-info}{{3.2.1}{102}{Fisher Information Matrix (FIM)}{amzboxcounter.3.2.1}{}}
+\@writefile{dfn}{\contentsline {tcolorbox}{\numberline {3.2.1}Fisher Information Matrix (FIM)}{102}{amzboxcounter.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Implementation}{102}{amzboxcounter.3.2.1}\protected@file@percent }
+\newlabel{tec:ewc-algorithm}{{3.2.2}{103}{EWC Algorithm}{amzboxcounter.3.2.2}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {3.2.2}EWC Algorithm}{103}{amzboxcounter.3.2.2}\protected@file@percent }
+\newlabel{code:fisher-compute}{{3.2.3}{103}{Pseudocode: Computing Fisher Information}{amzboxcounter.3.2.3}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {3.2.3}Pseudocode: Computing Fisher Information}{103}{amzboxcounter.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Why It Fails}{104}{subsection.3.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Geometry of Forgetting}{104}{subsection.3.2.4}\protected@file@percent }
+\newlabel{ex:flattening-effect}{{3.2.4}{104}{Numerical Example: The "Flattening" Effect}{amzboxcounter.3.2.4}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {3.2.4}Numerical Example: The "Flattening" Effect}{104}{amzboxcounter.3.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.5}The Solution}{105}{subsection.3.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.6}Why The Solution Works}{105}{subsection.3.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuitive Analogy}{105}{subsection.3.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Bayesian Justification}{105}{subsection.3.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.7}Related Research Papers}{106}{subsection.3.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Overcoming Catastrophic Forgetting in Neural Networks}{106}{subsection.3.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Memory Aware Synapses (MAS)}{106}{subsection.3.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.8}Interview Answer Template}{106}{subsection.3.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.9}Key Takeaways}{107}{subsection.3.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Question 12: The LoRA Knowledge Trap}{107}{section.3.3}\protected@file@percent }
+\newlabel{sec:q12}{{3.3}{107}{Question 12: The LoRA Knowledge Trap}{section.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}The Interview Scenario}{107}{subsection.3.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}The Trap Explained}{108}{subsection.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Technical Deep Dive}{109}{subsection.3.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{109}{subsection.3.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Rank Spectrum Problem}{109}{subsection.3.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Implementation}{110}{subsection.3.3.3}\protected@file@percent }
+\newlabel{code:lora-forward}{{3.3.1}{110}{Standard LoRA Implementation}{amzboxcounter.3.3.1}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {3.3.1}Standard LoRA Implementation}{110}{amzboxcounter.3.3.1}\protected@file@percent }
+\newlabel{tec:system-implications}{{3.3.2}{110}{System Implications}{amzboxcounter.3.3.2}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {3.3.2}System Implications}{110}{amzboxcounter.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Why It Fails}{111}{subsection.3.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mechanism 1: The Subspace Constraint}{111}{subsection.3.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mechanism 2: The Scaling Collapse}{111}{subsection.3.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Concrete Failure Examples}{111}{subsection.3.3.4}\protected@file@percent }
+\newlabel{ex:confident-idiot}{{3.3.3}{111}{Example 1: The "Confident Idiot" (Oncology)}{amzboxcounter.3.3.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {3.3.3}Example 1: The "Confident Idiot" (Oncology)}{111}{amzboxcounter.3.3.3}\protected@file@percent }
+\newlabel{ex:probability-collapse}{{3.3.4}{112}{Example 2: Probability Distribution Collapse}{amzboxcounter.3.3.4}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {3.3.4}Example 2: Probability Distribution Collapse}{112}{amzboxcounter.3.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.5}The Solution}{112}{subsection.3.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{1. RS-LoRA (Rank-Stabilized LoRA)}{112}{subsection.3.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{2. LoftQ Initialization}{112}{subsection.3.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{3. Differential Learning Rates}{113}{subsection.3.3.5}\protected@file@percent }
+\newlabel{code:solution-implementation}{{3.3.5}{113}{The Solution Implementation Structure}{amzboxcounter.3.3.5}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {3.3.5}The Solution Implementation Structure}{113}{amzboxcounter.3.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.6}Why The Solution Works}{113}{subsection.3.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{113}{subsection.3.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuition: Tuning the Radio}{114}{subsection.3.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.7}Related Research Papers}{114}{subsection.3.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: A Rank Stabilization Scaling Factor for Fine-Tuning with LoRA}{114}{subsection.3.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: LoftQ: LoRA-Fine-Tuning-Aware Quantization for LLMs}{114}{subsection.3.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: LoRA Learns Less and Forgets Less}{115}{subsection.3.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.8}Interview Answer Template}{115}{subsection.3.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.9}Key Takeaways}{115}{subsection.3.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Question 23: The Curse of Multilinguality}{116}{section.3.4}\protected@file@percent }
+\newlabel{sec:q23}{{3.4}{116}{Question 23: The Curse of Multilinguality}{section.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}The Interview Scenario}{116}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}The Trap Explained}{117}{subsection.3.4.2}\protected@file@percent }
+\newlabel{dfn:curse-def}{{3.4.1}{117}{The Curse of Multilinguality}{amzboxcounter.3.4.1}{}}
+\@writefile{dfn}{\contentsline {tcolorbox}{\numberline {3.4.1}The Curse of Multilinguality}{117}{amzboxcounter.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Technical Deep Dive}{117}{subsection.3.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{118}{subsection.3.4.3}\protected@file@percent }
+\newlabel{thm:capacity-dilution}{{3.4.2}{118}{The Capacity Dilution Theorem (Informal)}{amzboxcounter.3.4.2}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {3.4.2}The Capacity Dilution Theorem (Informal)}{118}{amzboxcounter.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details}{118}{amzboxcounter.3.4.2}\protected@file@percent }
+\newlabel{code:multilingual-train}{{3.4.3}{119}{Standard Multilingual Training Loop}{amzboxcounter.3.4.3}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {3.4.3}Standard Multilingual Training Loop}{119}{amzboxcounter.3.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture Implications}{119}{amzboxcounter.3.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Why It Fails}{120}{subsection.3.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mechanism 1: Negative Interference}{120}{subsection.3.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mechanism 2: The Capacity Cliff}{120}{subsection.3.4.4}\protected@file@percent }
+\newlabel{ex:capacity-crunch}{{3.4.4}{120}{The Capacity Crunch}{amzboxcounter.3.4.4}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {3.4.4}The Capacity Crunch}{120}{amzboxcounter.3.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}The Solution: Bottleneck Adapters}{121}{subsection.3.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Strategy}{121}{subsection.3.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation}{121}{Item.118}\protected@file@percent }
+\newlabel{tec:adapter-arch}{{3.4.5}{121}{Adapter Architecture}{amzboxcounter.3.4.5}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {3.4.5}Adapter Architecture}{121}{amzboxcounter.3.4.5}\protected@file@percent }
+\newlabel{code:adapter-code}{{3.4.6}{121}{Adapter Implementation}{amzboxcounter.3.4.6}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {3.4.6}Adapter Implementation}{121}{amzboxcounter.3.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.6}Why The Solution Works}{122}{subsection.3.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Resolving the Zero-Sum Game}{122}{subsection.3.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Modular Learning Theory}{122}{subsection.3.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.7}Related Research Papers}{122}{subsection.3.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Lifting the Curse of Multilinguality (X-Mod)}{122}{subsection.3.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Breaking the Curse with Experts (X-ELM)}{123}{subsection.3.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.8}Interview Answer Template}{123}{subsection.3.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.9}Key Takeaways}{123}{subsection.3.4.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Question 15: The Counterintuitive Truth About Quantization and Robustness}{124}{section.3.5}\protected@file@percent }
+\newlabel{sec:q15}{{3.5}{124}{Question 15: The Counterintuitive Truth About Quantization and Robustness}{section.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}The Interview Scenario}{124}{subsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}The Trap Explained}{125}{subsection.3.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Technical Deep Dive}{125}{subsection.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{125}{subsection.3.5.3}\protected@file@percent }
+\newlabel{thm:lipschitz-connection}{{3.5.1}{126}{The Lipschitz Connection}{amzboxcounter.3.5.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {3.5.1}The Lipschitz Connection}{126}{amzboxcounter.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details: Defensive Quantization}{126}{amzboxcounter.3.5.1}\protected@file@percent }
+\newlabel{tec:lipschitz-qat}{{3.5.2}{126}{Algorithm: Lipschitz-Regularized QAT}{amzboxcounter.3.5.2}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {3.5.2}Algorithm: Lipschitz-Regularized QAT}{126}{amzboxcounter.3.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture}{127}{amzboxcounter.3.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Why It Fails (The Float32 Trap)}{127}{subsection.3.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Failure Mechanism}{127}{subsection.3.5.4}\protected@file@percent }
+\newlabel{ex:micro-perturbation}{{3.5.3}{127}{Example: The Micro-Perturbation}{amzboxcounter.3.5.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {3.5.3}Example: The Micro-Perturbation}{127}{amzboxcounter.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.5}The Solution}{128}{subsection.3.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Strategy}{128}{subsection.3.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.6}Why The Solution Works}{129}{subsection.3.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{129}{subsection.3.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Empirical Evidence}{129}{Item.123}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.7}Related Research Papers}{129}{subsection.3.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Defensive Quantization}{129}{subsection.3.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Robustness of Transformer-based Text Classifiers}{130}{subsection.3.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.8}Interview Answer Template}{130}{subsection.3.5.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.9}Key Takeaways}{131}{subsection.3.5.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Evaluation and Validation Pitfalls}{132}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\tcolorbox@label{158}{132}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Question 11: The ROC Curve Mirage}{132}{section.4.1}\protected@file@percent }
+\newlabel{sec:q11}{{4.1}{132}{Question 11: The ROC Curve Mirage}{section.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}The Interview Scenario}{132}{subsection.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}The Trap Explained}{132}{subsection.4.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Technical Deep Dive}{133}{subsection.4.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Formulation}{133}{subsection.4.1.3}\protected@file@percent }
+\newlabel{thm:imbalance-dilution}{{4.1.1}{134}{The Imbalance Dilution}{amzboxcounter.4.1.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {4.1.1}The Imbalance Dilution}{134}{amzboxcounter.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture Implications}{134}{amzboxcounter.4.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Why It Fails}{135}{subsection.4.1.4}\protected@file@percent }
+\newlabel{ex:million-transaction}{{4.1.2}{135}{The Million-Transaction Scenario}{amzboxcounter.4.1.2}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {4.1.2}The Million-Transaction Scenario}{135}{amzboxcounter.4.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}The Solution}{136}{subsection.4.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Key Insight}{136}{subsection.4.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Strategy}{136}{subsection.4.1.5}\protected@file@percent }
+\newlabel{code:auprc-code}{{4.1.3}{136}{Calculating AUPRC in Python}{amzboxcounter.4.1.3}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {4.1.3}Calculating AUPRC in Python}{136}{amzboxcounter.4.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.6}Why The Solution Works}{137}{subsection.4.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuitive Justification}{137}{subsection.4.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Foundation}{137}{subsection.4.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.7}Related Research Papers}{137}{subsection.4.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: A Closer Look at AUROC and AUPRC}{137}{subsection.4.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: The Effect of Class Imbalance on Precision-Recall Curves}{138}{subsection.4.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.8}Interview Answer Template}{138}{subsection.4.1.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.9}Key Takeaways}{139}{subsection.4.1.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Question 14: The Gallbladder Illusion}{139}{section.4.2}\protected@file@percent }
+\newlabel{sec:q14}{{4.2}{139}{Question 14: The Gallbladder Illusion}{section.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}The Interview Scenario}{139}{subsection.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}The Trap Explained}{140}{subsection.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Technical Deep Dive}{141}{subsection.4.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{141}{subsection.4.2.3}\protected@file@percent }
+\newlabel{thm:spurious-correlation}{{4.2.1}{141}{The Spurious Correlation Problem}{amzboxcounter.4.2.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {4.2.1}The Spurious Correlation Problem}{141}{amzboxcounter.4.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details}{142}{amzboxcounter.4.2.1}\protected@file@percent }
+\newlabel{code:training-bias}{{4.2.2}{142}{Standard Training Loop (Where the Bias Enters)}{amzboxcounter.4.2.2}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {4.2.2}Standard Training Loop (Where the Bias Enters)}{142}{amzboxcounter.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture}{142}{amzboxcounter.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Why It Fails}{143}{subsection.4.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Failure Mechanism}{143}{subsection.4.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Concrete Examples}{143}{subsection.4.2.4}\protected@file@percent }
+\newlabel{ex:disappearing-gallbladder}{{4.2.3}{143}{Example 1: The Disappearing Gallbladder}{amzboxcounter.4.2.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {4.2.3}Example 1: The Disappearing Gallbladder}{143}{amzboxcounter.4.2.3}\protected@file@percent }
+\newlabel{ex:false-positive}{{4.2.4}{143}{Example 2: The False Positive (Dangerous)}{amzboxcounter.4.2.4}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {4.2.4}Example 2: The False Positive (Dangerous)}{143}{amzboxcounter.4.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}The Solution}{144}{subsection.4.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Key Insight}{144}{subsection.4.2.5}\protected@file@percent }
+\newlabel{tec:black-patch}{{4.2.5}{144}{The Black Patch Protocol}{amzboxcounter.4.2.5}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {4.2.5}The Black Patch Protocol}{144}{amzboxcounter.4.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Strategy}{144}{amzboxcounter.4.2.5}\protected@file@percent }
+\newlabel{code:black-patch-code}{{4.2.6}{144}{Pseudocode: Black Patch Test}{amzboxcounter.4.2.6}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {4.2.6}Pseudocode: Black Patch Test}{144}{amzboxcounter.4.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.6}Why The Solution Works}{145}{subsection.4.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{145}{subsection.4.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuitive Analogy}{145}{subsection.4.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.7}Related Research Papers}{146}{subsection.4.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: The Clever Hans Effect in Unsupervised Learning}{146}{subsection.4.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: IBO - Inpainting-Based Occlusion}{146}{subsection.4.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.8}Interview Answer Template}{146}{subsection.4.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.9}Key Takeaways}{147}{subsection.4.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Question 10: The SOTA Trap}{147}{section.4.3}\protected@file@percent }
+\newlabel{sec:q10}{{4.3}{147}{Question 10: The SOTA Trap}{section.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}The Interview Scenario}{147}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}The Trap Explained}{148}{subsection.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Technical Deep Dive}{148}{subsection.4.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Formulation}{149}{subsection.4.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The GNN Approach (The Trap)}{149}{subsection.4.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Heuristic and Tree-Based Approach (The Solution)}{150}{subsection.4.3.3}\protected@file@percent }
+\newlabel{tec:adamic-adar}{{4.3.1}{150}{Adamic-Adar Formulation}{amzboxcounter.4.3.1}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {4.3.1}Adamic-Adar Formulation}{150}{amzboxcounter.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}Why It Fails}{150}{subsection.4.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Neighborhood Explosion}{150}{subsection.4.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Concrete Economic Failure}{151}{subsection.4.3.4}\protected@file@percent }
+\newlabel{ex:cost-analysis}{{4.3.2}{151}{Cost Analysis: GNN vs. Tree-Based}{amzboxcounter.4.3.2}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {4.3.2}Cost Analysis: GNN vs. Tree-Based}{151}{amzboxcounter.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}The Solution}{151}{subsection.4.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Logic of the Funnel}{151}{subsection.4.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Step-by-Step Implementation}{152}{Item.134}\protected@file@percent }
+\newlabel{code:production-pipeline}{{4.3.3}{152}{Pseudocode: The Production Pipeline}{amzboxcounter.4.3.3}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {4.3.3}Pseudocode: The Production Pipeline}{152}{amzboxcounter.4.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.6}Why The Solution Works}{153}{subsection.4.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification: Structural Equivalence}{153}{subsection.4.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Occam's Razor in Engineering}{153}{subsection.4.3.6}\protected@file@percent }
+\newlabel{thm:triadic-closure}{{4.3.4}{153}{Triadic Closure Property}{amzboxcounter.4.3.4}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {4.3.4}Triadic Closure Property}{153}{amzboxcounter.4.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.7}Related Research Papers}{153}{subsection.4.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Link Prediction Without Learning}{153}{subsection.4.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: PHLP - Persistent Homology for Link Prediction}{154}{subsection.4.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.8}Interview Answer Template}{154}{subsection.4.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.9}Key Takeaways}{155}{subsection.4.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}System Architecture and Infrastructure}{156}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\tcolorbox@label{186}{156}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Question 4: The Infinite Stream Trap}{156}{section.5.1}\protected@file@percent }
+\newlabel{sec:q04}{{5.1}{156}{Question 4: The Infinite Stream Trap}{section.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}The Interview Scenario}{156}{subsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}The Trap Explained}{157}{subsection.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Technical Deep Dive}{158}{subsection.5.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{158}{subsection.5.1.3}\protected@file@percent }
+\newlabel{thm:preservation-uniformity}{{5.1.1}{158}{Theorem: Preservation of Uniformity}{amzboxcounter.5.1.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {5.1.1}Theorem: Preservation of Uniformity}{158}{amzboxcounter.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details}{159}{amzboxcounter.5.1.1}\protected@file@percent }
+\newlabel{code:reservoir-sampling}{{5.1.2}{159}{Python Implementation: Reservoir Sampling}{amzboxcounter.5.1.2}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {5.1.2}Python Implementation: Reservoir Sampling}{159}{amzboxcounter.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture}{159}{amzboxcounter.5.1.2}\protected@file@percent }
+\newlabel{tec:vitter-algorithm}{{5.1.3}{160}{Optimization: Vitter's Algorithm Z}{amzboxcounter.5.1.3}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {5.1.3}Optimization: Vitter's Algorithm Z}{160}{amzboxcounter.5.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Why It Fails}{160}{subsection.5.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Failure Mode 1: The "Fixed Probability" Approach}{160}{subsection.5.1.4}\protected@file@percent }
+\newlabel{ex:variance-failure}{{5.1.4}{160}{The Variance Failure}{amzboxcounter.5.1.4}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {5.1.4}The Variance Failure}{160}{amzboxcounter.5.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Failure Mode 2: The "Periodic" Approach}{160}{amzboxcounter.5.1.4}\protected@file@percent }
+\newlabel{ex:pattern-bias}{{5.1.5}{161}{The Pattern Bias}{amzboxcounter.5.1.5}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {5.1.5}The Pattern Bias}{161}{amzboxcounter.5.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.5}The Solution}{161}{subsection.5.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Aha Moment}{161}{subsection.5.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Steps}{161}{subsection.5.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.6}Why The Solution Works}{162}{subsection.5.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuitive Explanation: The Lake Analogy}{162}{subsection.5.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.7}Related Research Papers}{162}{subsection.5.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Random Sampling with a Reservoir}{162}{subsection.5.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Weighted Reservoir Sampling}{162}{subsection.5.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.8}Interview Answer Template}{163}{subsection.5.1.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.9}Key Takeaways}{163}{subsection.5.1.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Question 6: The Streaming Median Trap}{163}{section.5.2}\protected@file@percent }
+\newlabel{sec:q06}{{5.2}{163}{Question 6: The Streaming Median Trap}{section.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}The Interview Scenario}{164}{subsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}The Trap Explained}{164}{subsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Technical Deep Dive}{165}{subsection.5.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{165}{subsection.5.2.3}\protected@file@percent }
+\newlabel{dfn:quantile-approx}{{5.2.1}{165}{Quantile Approximation}{amzboxcounter.5.2.1}{}}
+\@writefile{dfn}{\contentsline {tcolorbox}{\numberline {5.2.1}Quantile Approximation}{165}{amzboxcounter.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details: Sketching}{165}{amzboxcounter.5.2.1}\protected@file@percent }
+\newlabel{tec:kll-complexity}{{5.2.2}{166}{KLL Complexity}{amzboxcounter.5.2.2}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {5.2.2}KLL Complexity}{166}{amzboxcounter.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture}{166}{amzboxcounter.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Why It Fails}{167}{subsection.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Failure Mechanism}{167}{subsection.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Concrete Failure Example}{167}{subsection.5.2.4}\protected@file@percent }
+\newlabel{ex:memory-math}{{5.2.3}{167}{The Memory Math}{amzboxcounter.5.2.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {5.2.3}The Memory Math}{167}{amzboxcounter.5.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}The Solution}{168}{subsection.5.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Key Insight}{168}{subsection.5.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Strategy}{168}{subsection.5.2.5}\protected@file@percent }
+\newlabel{code:t-digest-code}{{5.2.4}{168}{Python-like Pseudocode using T-Digest}{amzboxcounter.5.2.4}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {5.2.4}Python-like Pseudocode using T-Digest}{168}{amzboxcounter.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Design Decisions and Trade-offs}{169}{amzboxcounter.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.6}Why The Solution Works}{169}{subsection.5.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuition}{169}{subsection.5.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{169}{subsection.5.2.6}\protected@file@percent }
+\newlabel{thm:approx-guarantee}{{5.2.5}{170}{Approximation Guarantee}{amzboxcounter.5.2.5}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {5.2.5}Approximation Guarantee}{170}{amzboxcounter.5.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.7}Related Research Papers}{170}{subsection.5.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: The T-Digest}{170}{subsection.5.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: KLL Sketches}{170}{subsection.5.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.8}Interview Answer Template}{171}{subsection.5.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.9}Key Takeaways}{171}{subsection.5.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Question 7: The 10-Minute Horizon}{171}{section.5.3}\protected@file@percent }
+\newlabel{sec:q07}{{5.3}{171}{Question 7: The 10-Minute Horizon}{section.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}The Interview Scenario}{172}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}The Trap Explained}{172}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Technical Deep Dive}{173}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{173}{subsection.5.3.3}\protected@file@percent }
+\newlabel{thm:incremental-update}{{5.3.1}{173}{Incremental Update Objective}{amzboxcounter.5.3.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {5.3.1}Incremental Update Objective}{173}{amzboxcounter.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details: Online Learning Loop}{174}{amzboxcounter.5.3.1}\protected@file@percent }
+\newlabel{code:micro-batch-sgd}{{5.3.2}{174}{Micro-Batch SGD Pseudocode}{amzboxcounter.5.3.2}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {5.3.2}Micro-Batch SGD Pseudocode}{174}{amzboxcounter.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture: The Worker-PS Pattern}{175}{amzboxcounter.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}Why It Fails}{175}{subsection.5.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Failure Mechanism: Distribution Shift}{175}{subsection.5.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Concrete Failure Example}{175}{subsection.5.3.4}\protected@file@percent }
+\newlabel{ex:cost-staleness}{{5.3.3}{176}{The Cost of Staleness}{amzboxcounter.5.3.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {5.3.3}The Cost of Staleness}{176}{amzboxcounter.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}The Solution}{176}{subsection.5.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Key Insight}{176}{subsection.5.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Strategy}{176}{subsection.5.3.5}\protected@file@percent }
+\newlabel{tec:frequency-capping}{{5.3.4}{177}{Technique: Frequency Capping \& Expiration}{amzboxcounter.5.3.4}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {5.3.4}Technique: Frequency Capping \& Expiration}{177}{amzboxcounter.5.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.6}Why The Solution Works}{177}{subsection.5.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Intuitive Explanation}{177}{subsection.5.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{177}{subsection.5.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.7}Related Research Papers}{178}{subsection.5.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Monolith: Real Time Recommendation System With Collisionless Embedding Table}{178}{subsection.5.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: A Survey on Incremental Update for Neural Recommender Systems}{178}{subsection.5.3.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.8}Interview Answer Template}{178}{subsection.5.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.9}Key Takeaways}{179}{subsection.5.3.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Question 19: The Database-as-Queue Trap}{179}{section.5.4}\protected@file@percent }
+\newlabel{sec:q19}{{5.4}{179}{Question 19: The Database-as-Queue Trap}{section.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}The Interview Scenario}{179}{subsection.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}The Trap Explained}{180}{subsection.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Technical Deep Dive}{181}{subsection.5.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{181}{subsection.5.4.3}\protected@file@percent }
+\newlabel{thm:stability-cliff}{{5.4.1}{181}{The Stability Cliff}{amzboxcounter.5.4.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {5.4.1}The Stability Cliff}{181}{amzboxcounter.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details: The Polling Cycle}{182}{amzboxcounter.5.4.1}\protected@file@percent }
+\newlabel{code:polling-anti}{{5.4.2}{182}{Polling Implementation (The Anti-Pattern)}{amzboxcounter.5.4.2}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {5.4.2}Polling Implementation (The Anti-Pattern)}{182}{amzboxcounter.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture}{183}{amzboxcounter.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Why It Fails: A Failure Analysis}{183}{subsection.5.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Failure Mode 1: Connection Exhaustion}{183}{subsection.5.4.4}\protected@file@percent }
+\newlabel{ex:connection-exhaustion}{{5.4.3}{183}{Scenario: 50k RPS Spike}{amzboxcounter.5.4.3}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {5.4.3}Scenario: 50k RPS Spike}{183}{amzboxcounter.5.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Failure Mode 2: The "Freshness Tax" and Lock Contention}{183}{amzboxcounter.5.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.5}The Solution: Transport Decoupling}{184}{subsection.5.4.5}\protected@file@percent }
+\newlabel{tec:log-centric}{{5.4.4}{184}{Key Pattern: Log-Centric Architecture}{amzboxcounter.5.4.4}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {5.4.4}Key Pattern: Log-Centric Architecture}{184}{amzboxcounter.5.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Correct Approach}{184}{amzboxcounter.5.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Implementation Strategy}{184}{Item.160}\protected@file@percent }
+\newlabel{code:streaming-solution}{{5.4.5}{184}{Streaming Implementation (The Solution)}{amzboxcounter.5.4.5}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {5.4.5}Streaming Implementation (The Solution)}{184}{amzboxcounter.5.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Architecture Benefits}{185}{amzboxcounter.5.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.6}Why The Solution Works}{185}{subsection.5.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Theoretical Justification}{185}{subsection.5.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Empirical Evidence}{186}{subsection.5.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.7}Related Research Papers}{186}{subsection.5.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Kafka-ML}{186}{subsection.5.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Fault Recovery in Streams}{186}{subsection.5.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.8}Interview Answer Template}{187}{subsection.5.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.9}Key Takeaways}{187}{subsection.5.4.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Production Systems and Feedback Loops}{188}{chapter.6}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\tcolorbox@label{225}{188}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Question 8: The CTR Feedback Loop Trap}{188}{section.6.1}\protected@file@percent }
+\newlabel{sec:q08}{{6.1}{188}{Question 8: The CTR Feedback Loop Trap}{section.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.1}The Interview Scenario}{188}{subsection.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.2}The Trap Explained}{189}{subsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.3}Technical Deep Dive}{189}{subsection.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{189}{subsection.6.1.3}\protected@file@percent }
+\newlabel{thm:selection-bias}{{6.1.1}{190}{The Problem of Selection Bias}{amzboxcounter.6.1.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {6.1.1}The Problem of Selection Bias}{190}{amzboxcounter.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Implementation}{190}{amzboxcounter.6.1.1}\protected@file@percent }
+\newlabel{tec:epsilon-greedy}{{6.1.2}{190}{Exploration Strategy: $\epsilon $-Greedy}{amzboxcounter.6.1.2}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {6.1.2}Exploration Strategy: $\mitepsilon $-Greedy}{190}{amzboxcounter.6.1.2}\protected@file@percent }
+\newlabel{code:ipw-training}{{6.1.3}{191}{Pseudocode: Training Loop with IPW}{amzboxcounter.6.1.3}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {6.1.3}Pseudocode: Training Loop with IPW}{191}{amzboxcounter.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{System Architecture}{191}{amzboxcounter.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.4}Why It Fails}{192}{subsection.6.1.4}\protected@file@percent }
+\newlabel{ex:harry-potter-collapse}{{6.1.4}{192}{The "Harry Potter" Feedback Collapse}{amzboxcounter.6.1.4}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {6.1.4}The "Harry Potter" Feedback Collapse}{192}{amzboxcounter.6.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.5}The Solution}{193}{subsection.6.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{The Strategy}{193}{subsection.6.1.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Why This Works}{193}{Item.170}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.6}Why The Solution Works}{194}{subsection.6.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.7}Related Research Papers}{194}{subsection.6.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Degenerate Feedback Loops in Recommender Systems}{194}{subsection.6.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Recommendations as Treatments}{194}{subsection.6.1.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.8}Interview Answer Template}{194}{subsection.6.1.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1.9}Key Takeaways}{195}{subsection.6.1.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Question 25: The Greedy Search Trap}{195}{section.6.2}\protected@file@percent }
+\newlabel{sec:q25}{{6.2}{195}{Question 25: The Greedy Search Trap}{section.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}The Interview Scenario}{195}{subsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}The Trap Explained}{196}{subsection.6.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Technical Deep Dive}{197}{subsection.6.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Mathematical Foundation}{197}{subsection.6.2.3}\protected@file@percent }
+\newlabel{thm:seq-prob}{{6.2.1}{197}{Sequence Probability Objective}{amzboxcounter.6.2.1}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {6.2.1}Sequence Probability Objective}{197}{amzboxcounter.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Algorithmic Details}{197}{amzboxcounter.6.2.1}\protected@file@percent }
+\newlabel{code:greedy-beam}{{6.2.2}{198}{Greedy vs. Beam Search Pseudocode}{amzboxcounter.6.2.2}{}}
+\@writefile{code}{\contentsline {tcolorbox}{\numberline {6.2.2}Greedy vs. Beam Search Pseudocode}{198}{amzboxcounter.6.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Complexity Analysis}{198}{amzboxcounter.6.2.2}\protected@file@percent }
+\newlabel{tec:complexity}{{6.2.3}{198}{Computational Trade-offs}{amzboxcounter.6.2.3}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {6.2.3}Computational Trade-offs}{198}{amzboxcounter.6.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Why It Fails: The "New" vs. "Pennsylvania" Problem}{199}{subsection.6.2.4}\protected@file@percent }
+\newlabel{ex:liberty-bell}{{6.2.4}{199}{Example: The Liberty Bell Trap}{amzboxcounter.6.2.4}{}}
+\@writefile{ex}{\contentsline {tcolorbox}{\numberline {6.2.4}Example: The Liberty Bell Trap}{199}{amzboxcounter.6.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.5}The Solution}{200}{subsection.6.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Key Insight}{200}{subsection.6.2.5}\protected@file@percent }
+\newlabel{tec:low-latency-beam}{{6.2.5}{200}{Implementation Strategy: Low-Latency Beam}{amzboxcounter.6.2.5}{}}
+\@writefile{tec}{\contentsline {tcolorbox}{\numberline {6.2.5}Implementation Strategy: Low-Latency Beam}{200}{amzboxcounter.6.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Why This Works}{200}{Item.175}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.6}Why The Solution Works}{200}{subsection.6.2.6}\protected@file@percent }
+\newlabel{thm:beam-approx}{{6.2.6}{201}{Approximation of Global Maximum}{amzboxcounter.6.2.6}{}}
+\@writefile{thm}{\contentsline {tcolorbox}{\numberline {6.2.6}Approximation of Global Maximum}{201}{amzboxcounter.6.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.7}Related Research Papers}{201}{subsection.6.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: Efficient Beam Search for Large Language Models Using Trie-Based Decoding}{201}{subsection.6.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Paper: On the Depth between Beam Search and Exhaustive Search}{201}{subsection.6.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.8}Interview Answer Template}{202}{subsection.6.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.9}Key Takeaways}{202}{subsection.6.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Index}{202}{subsection.6.2.9}\protected@file@percent }
+\tcolorbox@label{244}{203}
+\gdef\minted@oldcachelist{,
+  default.pygstyle,
+  70A65F76491BB08FE09838186E70720F82A15B1DCA8D177369A2514541E452DC.pygtex,
+  B1EC1F490CEAAD6CCE2A3D3E28185D4382A15B1DCA8D177369A2514541E452DC.pygtex,
+  F92E65CBCEA6B7750F45CA1D025F245082A15B1DCA8D177369A2514541E452DC.pygtex,
+  564CAAFA34FA8843E1DFB416FBFBF3BC82A15B1DCA8D177369A2514541E452DC.pygtex,
+  A807EE33A8DB577C8120D2ADC0C97DD682A15B1DCA8D177369A2514541E452DC.pygtex,
+  23662448047BA52F1DA9BB7E843C9A4C82A15B1DCA8D177369A2514541E452DC.pygtex,
+  B6DC6DCF6627745CBC08D69EF0CABD2582A15B1DCA8D177369A2514541E452DC.pygtex,
+  EF0A555CA977AC7A2FE2E7559971D09B82A15B1DCA8D177369A2514541E452DC.pygtex,
+  8CDD78A319FE675F9B9EA8E3EBF846DA82A15B1DCA8D177369A2514541E452DC.pygtex,
+  DA36A3BE3F981CFE1B4E0C96B1EAA1D082A15B1DCA8D177369A2514541E452DC.pygtex,
+  82111477820F8135C9A8595DB06541BF82A15B1DCA8D177369A2514541E452DC.pygtex,
+  A8A1983416E6D01CF8DE381031B9B86A82A15B1DCA8D177369A2514541E452DC.pygtex,
+  7B26214020754C7EDD4A22837617864282A15B1DCA8D177369A2514541E452DC.pygtex,
+  169195CC6092E8A7F32A1068B936B47B82A15B1DCA8D177369A2514541E452DC.pygtex,
+  2272C7D392111A22B194D5350B76E00182A15B1DCA8D177369A2514541E452DC.pygtex,
+  B94EC0412AD38A43ECC5A415A7FE835382A15B1DCA8D177369A2514541E452DC.pygtex,
+  93C273AF5620F3E6BE8FA4F89FD4596C82A15B1DCA8D177369A2514541E452DC.pygtex,
+  D34AB901CC67104F49CC27A39EBFE45482A15B1DCA8D177369A2514541E452DC.pygtex,
+  A83F469A28C3C5F34DE6850C6892B19E82A15B1DCA8D177369A2514541E452DC.pygtex,
+  1D12A2BF2D1FF6FCF20B1CB6E461A80282A15B1DCA8D177369A2514541E452DC.pygtex,
+  8B2A0C888CA0003BB089C13AF8599CA982A15B1DCA8D177369A2514541E452DC.pygtex,
+  8958BF5E586935CCF97612AAC3AC8E6282A15B1DCA8D177369A2514541E452DC.pygtex,
+  5364901CB573D527A6B965A8A5149AC682A15B1DCA8D177369A2514541E452DC.pygtex,
+  FD2CD02E4F795190A542C2F78858FBA182A15B1DCA8D177369A2514541E452DC.pygtex,
+  C6D866C07B80F9848F3D088D053FB11082A15B1DCA8D177369A2514541E452DC.pygtex,
+  BDB62D0B60F418CC9F6589DEDEDBE62282A15B1DCA8D177369A2514541E452DC.pygtex,
+  A68CD6C9F2EDF8B4269ED999E48C8CEF82A15B1DCA8D177369A2514541E452DC.pygtex,
+  A9950E7688656D3EF3631C8E6823743182A15B1DCA8D177369A2514541E452DC.pygtex,
+  E53B8C55C0439E2A57ACF03E8CA8FDB382A15B1DCA8D177369A2514541E452DC.pygtex,
+  2B1FFD1F9F6E33AC4555843F6A7E12D682A15B1DCA8D177369A2514541E452DC.pygtex,
+  BD401059F8C0570CBCDFBBEE3F0EC1D282A15B1DCA8D177369A2514541E452DC.pygtex,
+  72F7A47C18CF0C3C6A69FB7CACE5457982A15B1DCA8D177369A2514541E452DC.pygtex,
+  7203E74026303BB56717DD1C07B7C26582A15B1DCA8D177369A2514541E452DC.pygtex}
+\newlabel{LastPage}{{6.2.9}{205}{Index}{page.205}{}}
+\gdef\lastpage@lastpage{205}
+\gdef\lastpage@lastpageHy{205}
+\gdef \@abspage@last{206}

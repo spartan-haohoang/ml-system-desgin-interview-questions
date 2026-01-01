@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{current\PYGZus{}seq} \PYG{o}{=} \PYG{p}{[}\PYG{n}{BOS}\PYG{p}{]}
+\PYG{k}{for} \PYG{n}{t} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{max\PYGZus{}len}\PYG{p}{):}
+    \PYG{n}{probs} \PYG{o}{=} \PYG{n}{model}\PYG{p}{(}\PYG{n}{current\PYGZus{}seq}\PYG{p}{)}
+    \PYG{n}{next\PYGZus{}token} \PYG{o}{=} \PYG{n}{argmax}\PYG{p}{(}\PYG{n}{probs}\PYG{p}{)}
+    \PYG{n}{current\PYGZus{}seq}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{next\PYGZus{}token}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{next\PYGZus{}token} \PYG{o}{==} \PYG{n}{EOS}\PYG{p}{:} \PYG{k}{break}
+\PYG{k}{return} \PYG{n}{current\PYGZus{}seq}
+\end{Verbatim}

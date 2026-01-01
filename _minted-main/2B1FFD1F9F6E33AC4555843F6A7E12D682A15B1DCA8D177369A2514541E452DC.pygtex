@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Consumer (ML Service)}
+\PYG{c+c1}{\PYGZsh{} Scales horizontally with the number of partitions}
+\PYG{n}{consumer} \PYG{o}{=} \PYG{n}{KafkaConsumer}\PYG{p}{(}
+    \PYG{l+s+s1}{\PYGZsq{}user\PYGZhy{}features\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{group\PYGZus{}id}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}ml\PYGZhy{}inference\PYGZhy{}group\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{auto\PYGZus{}offset\PYGZus{}reset}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}latest\PYGZsq{}}
+\PYG{p}{)}
+
+\PYG{k}{for} \PYG{n}{message} \PYG{o+ow}{in} \PYG{n}{consumer}\PYG{p}{:}
+    \PYG{n}{event} \PYG{o}{=} \PYG{n}{json}\PYG{o}{.}\PYG{n}{loads}\PYG{p}{(}\PYG{n}{message}\PYG{o}{.}\PYG{n}{value}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Update local state or in\PYGZhy{}memory window}
+    \PYG{n}{vector} \PYG{o}{=} \PYG{n}{update\PYGZus{}state}\PYG{p}{(}\PYG{n}{event}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Trigger inference immediately}
+    \PYG{n}{prediction} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{predict}\PYG{p}{(}\PYG{n}{vector}\PYG{p}{)}
+\end{Verbatim}

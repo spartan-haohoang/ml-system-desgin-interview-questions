@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Standard LoRA Implementation}
+\PYG{k}{def} \PYG{n+nf}{forward}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{W}\PYG{p}{,} \PYG{n}{A}\PYG{p}{,} \PYG{n}{B}\PYG{p}{,} \PYG{n}{alpha}\PYG{p}{,} \PYG{n}{r}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{} x: input tensor [batch, seq\PYGZus{}len, d]}
+    \PYG{c+c1}{\PYGZsh{} W: frozen pretrained weights [d, k]}
+    \PYG{c+c1}{\PYGZsh{} A: trainable adapter [r, k]}
+    \PYG{c+c1}{\PYGZsh{} B: trainable adapter [d, r]}
+
+    \PYG{c+c1}{\PYGZsh{} 1. Compute frozen path}
+    \PYG{n}{h\PYGZus{}frozen} \PYG{o}{=} \PYG{n}{x} \PYG{o}{@} \PYG{n}{W}
+
+    \PYG{c+c1}{\PYGZsh{} 2. Compute adapter path with scaling}
+    \PYG{c+c1}{\PYGZsh{} Standard scaling is alpha/r}
+    \PYG{n}{scaling} \PYG{o}{=} \PYG{n}{alpha} \PYG{o}{/} \PYG{n}{r}
+    \PYG{n}{h\PYGZus{}adapter} \PYG{o}{=} \PYG{p}{(}\PYG{n}{x} \PYG{o}{@} \PYG{n}{A} \PYG{o}{@} \PYG{n}{B}\PYG{p}{)} \PYG{o}{*} \PYG{n}{scaling}
+
+    \PYG{c+c1}{\PYGZsh{} 3. Merge}
+    \PYG{k}{return} \PYG{n}{h\PYGZus{}frozen} \PYG{o}{+} \PYG{n}{h\PYGZus{}adapter}
+\end{Verbatim}

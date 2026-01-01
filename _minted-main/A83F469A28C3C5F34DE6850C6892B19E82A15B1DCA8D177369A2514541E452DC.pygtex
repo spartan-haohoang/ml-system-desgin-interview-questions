@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} The Solution Implementation Structure}
+\PYG{n}{loftq\PYGZus{}init} \PYG{o}{=} \PYG{n}{LoftQ}\PYG{p}{(}\PYG{n}{W\PYGZus{}backbone}\PYG{p}{,} \PYG{n}{r}\PYG{o}{=}\PYG{l+m+mi}{256}\PYG{p}{,} \PYG{n}{bits}\PYG{o}{=}\PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{n}{model}\PYG{o}{.}\PYG{n}{load\PYGZus{}loftq}\PYG{p}{(}\PYG{n}{loftq\PYGZus{}init}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Use RS\PYGZhy{}LoRA Scaling (1/sqrt(r))}
+\PYG{n}{lora\PYGZus{}config} \PYG{o}{=} \PYG{n}{LoRAConfig}\PYG{p}{(}
+    \PYG{n}{r}\PYG{o}{=}\PYG{l+m+mi}{256}\PYG{p}{,}
+    \PYG{n}{alpha}\PYG{o}{=}\PYG{l+m+mi}{16}\PYG{p}{,}
+    \PYG{n}{use\PYGZus{}rslora}\PYG{o}{=}\PYG{k+kc}{True}  \PYG{c+c1}{\PYGZsh{} Enables 1/sqrt(r) scaling}
+\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Differential Learning Rates}
+\PYG{n}{optimizer} \PYG{o}{=} \PYG{n}{AdamW}\PYG{p}{([}
+    \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}params\PYGZsq{}}\PYG{p}{:} \PYG{n}{model}\PYG{o}{.}\PYG{n}{embed\PYGZus{}tokens}\PYG{o}{.}\PYG{n}{parameters}\PYG{p}{(),} \PYG{l+s+s1}{\PYGZsq{}lr\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{1e\PYGZhy{}5}\PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}params\PYGZsq{}}\PYG{p}{:} \PYG{n}{model}\PYG{o}{.}\PYG{n}{layers}\PYG{o}{.}\PYG{n}{parameters}\PYG{p}{(),} \PYG{l+s+s1}{\PYGZsq{}lr\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{1e\PYGZhy{}3}\PYG{p}{\PYGZcb{}}
+\PYG{p}{])}
+\end{Verbatim}

@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Training Phase}
+\PYG{k}{def} \PYG{n+nf}{compute\PYGZus{}loss}\PYG{p}{(}\PYG{n}{batch\PYGZus{}data}\PYG{p}{,} \PYG{n}{model}\PYG{p}{):}
+    \PYG{n}{loss} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{k}{for} \PYG{n}{sample} \PYG{o+ow}{in} \PYG{n}{batch\PYGZus{}data}\PYG{p}{:}
+        \PYG{c+c1}{\PYGZsh{} sample contains: user, item, clicked, propensity\PYGZus{}at\PYGZus{}log\PYGZus{}time}
+        \PYG{n}{y\PYGZus{}true} \PYG{o}{=} \PYG{n}{sample}\PYG{o}{.}\PYG{n}{clicked}
+        \PYG{n}{pi} \PYG{o}{=} \PYG{n}{sample}\PYG{o}{.}\PYG{n}{propensity}  \PYG{c+c1}{\PYGZsh{} Logged during serving}
+
+        \PYG{c+c1}{\PYGZsh{} Predict}
+        \PYG{n}{y\PYGZus{}pred} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{predict}\PYG{p}{(}\PYG{n}{sample}\PYG{o}{.}\PYG{n}{user}\PYG{p}{,} \PYG{n}{sample}\PYG{o}{.}\PYG{n}{item}\PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{} IPW Calculation}
+        \PYG{c+c1}{\PYGZsh{} Clip propensity to avoid exploding gradients}
+        \PYG{n}{weight} \PYG{o}{=} \PYG{l+m+mf}{1.0} \PYG{o}{/} \PYG{n+nb}{max}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{,} \PYG{l+m+mf}{0.01}\PYG{p}{)}
+
+        \PYG{n}{loss} \PYG{o}{+=} \PYG{n}{weight} \PYG{o}{*} \PYG{p}{(}\PYG{n}{y\PYGZus{}true} \PYG{o}{\PYGZhy{}} \PYG{n}{y\PYGZus{}pred}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}
+
+    \PYG{k}{return} \PYG{n}{loss}
+\end{Verbatim}

@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{sklearn.metrics} \PYG{k+kn}{import} \PYG{n}{average\PYGZus{}precision\PYGZus{}score}\PYG{p}{,} \PYG{n}{precision\PYGZus{}recall\PYGZus{}curve}
+
+\PYG{c+c1}{\PYGZsh{} y\PYGZus{}true: binary labels (0/1)}
+\PYG{c+c1}{\PYGZsh{} y\PYGZus{}scores: predicted probabilities}
+\PYG{n}{auprc} \PYG{o}{=} \PYG{n}{average\PYGZus{}precision\PYGZus{}score}\PYG{p}{(}\PYG{n}{y\PYGZus{}true}\PYG{p}{,} \PYG{n}{y\PYGZus{}scores}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} For visualization}
+\PYG{n}{precision}\PYG{p}{,} \PYG{n}{recall}\PYG{p}{,} \PYG{n}{thresholds} \PYG{o}{=} \PYG{n}{precision\PYGZus{}recall\PYGZus{}curve}\PYG{p}{(}\PYG{n}{y\PYGZus{}true}\PYG{p}{,} \PYG{n}{y\PYGZus{}scores}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} Compare against baseline (prevalence)}
+\PYG{n}{baseline} \PYG{o}{=} \PYG{n+nb}{sum}\PYG{p}{(}\PYG{n}{y\PYGZus{}true}\PYG{p}{)} \PYG{o}{/} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{y\PYGZus{}true}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s2}{\PYGZdq{}AUPRC: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{auprc}\PYG{l+s+si}{:}\PYG{l+s+s2}{.4f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{ vs Baseline: }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{baseline}\PYG{l+s+si}{:}\PYG{l+s+s2}{.6f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

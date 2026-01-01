@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{k}{def} \PYG{n+nf}{calculate\PYGZus{}psi}\PYG{p}{(}\PYG{n}{expected}\PYG{p}{,} \PYG{n}{actual}\PYG{p}{,} \PYG{n}{bucket\PYGZus{}type}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}bins\PYGZsq{}}\PYG{p}{,} \PYG{n}{buckets}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{):}
+\PYG{+w}{    }\PYG{l+s+sd}{\PYGZsq{}\PYGZsq{}\PYGZsq{}Calculate the PSI (Population Stability Index) for two arrays\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+
+    \PYG{k}{def} \PYG{n+nf}{scale\PYGZus{}range} \PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{,} \PYG{n+nb}{min}\PYG{p}{,} \PYG{n+nb}{max}\PYG{p}{):}
+        \PYG{n+nb}{input} \PYG{o}{+=} \PYG{p}{(}\PYG{l+m+mf}{1e\PYGZhy{}6}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} handle zero}
+        \PYG{n}{interp} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{interp}\PYG{p}{(}\PYG{n+nb}{input}\PYG{p}{,} \PYG{p}{(}\PYG{n+nb}{min}\PYG{p}{,} \PYG{n+nb}{max}\PYG{p}{),} \PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{))}
+        \PYG{k}{return} \PYG{n}{interp}
+
+    \PYG{n}{breakpoints} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{buckets} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{/} \PYG{p}{(}\PYG{n}{buckets}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mi}{100}
+    \PYG{n}{breakpoints} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{percentile}\PYG{p}{(}\PYG{n}{expected}\PYG{p}{,} \PYG{n}{breakpoints}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Calculate frequencies in bins}
+    \PYG{n}{expected\PYGZus{}percents} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{histogram}\PYG{p}{(}\PYG{n}{expected}\PYG{p}{,} \PYG{n}{breakpoints}\PYG{p}{)[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{/} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{expected}\PYG{p}{)}
+    \PYG{n}{actual\PYGZus{}percents} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{histogram}\PYG{p}{(}\PYG{n}{actual}\PYG{p}{,} \PYG{n}{breakpoints}\PYG{p}{)[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{/} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{actual}\PYG{p}{)}
+
+    \PYG{c+c1}{\PYGZsh{} Compute PSI}
+    \PYG{n}{psi\PYGZus{}value} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}
+        \PYG{p}{(}\PYG{n}{expected\PYGZus{}percents} \PYG{o}{\PYGZhy{}} \PYG{n}{actual\PYGZus{}percents}\PYG{p}{)} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{log}\PYG{p}{(}\PYG{n}{expected\PYGZus{}percents} \PYG{o}{/} \PYG{n}{actual\PYGZus{}percents} \PYG{o}{+} \PYG{l+m+mf}{1e\PYGZhy{}10}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} epsilon for stability}
+    \PYG{p}{)}
+
+    \PYG{k}{return} \PYG{n}{psi\PYGZus{}value}
+
+\PYG{c+c1}{\PYGZsh{} Usage}
+\PYG{n}{drift\PYGZus{}score} \PYG{o}{=} \PYG{n}{calculate\PYGZus{}psi}\PYG{p}{(}\PYG{n}{train\PYGZus{}data}\PYG{p}{,} \PYG{n}{live\PYGZus{}data}\PYG{p}{)}
+\PYG{k}{if} \PYG{n}{drift\PYGZus{}score} \PYG{o}{\PYGZgt{}} \PYG{l+m+mf}{0.2}\PYG{p}{:}
+    \PYG{n}{trigger\PYGZus{}retraining}\PYG{p}{()}
+\end{Verbatim}

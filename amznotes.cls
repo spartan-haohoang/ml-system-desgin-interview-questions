@@ -62,16 +62,28 @@
 % ------------------------------------------------------------
 % FONTS
 
-\setmainfont{STIXTwoText}[
-  Extension = .otf,
-  UprightFont = *-Regular,
-  BoldFont = *-SemiBold,
-  ItalicFont = *-Italic,
-  BoldItalicFont = *-SemiBoldItalic,
-]
-\setmathfont{STIXTwoMath-Regular.otf}
-\setmathfont{STIXTwoMath-Regular.otf}[range={scr,bfscr},StylisticSet=01]
-\setmonofont{Inconsolata}
+% Use STIXTwoText with fallback to Latin Modern Roman
+\IfFontExistsTF{STIXTwoText-Regular.otf}{%
+  \setmainfont{STIXTwoText}[
+    Extension = .otf,
+    UprightFont = *-Regular,
+    BoldFont = *-SemiBold,
+    ItalicFont = *-Italic,
+    BoldItalicFont = *-SemiBoldItalic,
+  ]
+  \setmathfont{STIXTwoMath-Regular.otf}
+  \setmathfont{STIXTwoMath-Regular.otf}[range={scr,bfscr},StylisticSet=01]
+}{%
+  \setmainfont{Latin Modern Roman}
+  \setmathfont{Latin Modern Math}
+}
+
+% Use Inconsolata with fallback to Latin Modern Mono
+\IfFontExistsTF{Inconsolata}{%
+  \setmonofont{Inconsolata}
+}{%
+  \setmonofont{Latin Modern Mono}
+}
 
 % ------------------------------------------------------------
 % PAGE LAYOUT

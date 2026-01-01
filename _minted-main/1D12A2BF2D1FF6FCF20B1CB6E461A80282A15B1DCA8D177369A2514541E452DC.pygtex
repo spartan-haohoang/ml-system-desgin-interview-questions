@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Pseudocode for naive multilingual training}
+
+\PYG{k}{def} \PYG{n+nf}{train\PYGZus{}step}\PYG{p}{(}\PYG{n}{model}\PYG{p}{,} \PYG{n}{batch\PYGZus{}sampler}\PYG{p}{,} \PYG{n}{optimizer}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{} Sample a batch containing mixed languages}
+    \PYG{c+c1}{\PYGZsh{} Usually heavily upsampled for low\PYGZhy{}resource langs}
+    \PYG{n}{batch} \PYG{o}{=} \PYG{n}{batch\PYGZus{}sampler}\PYG{o}{.}\PYG{n}{get\PYGZus{}batch}\PYG{p}{()}
+
+    \PYG{c+c1}{\PYGZsh{} batch = \PYGZob{}}
+    \PYG{c+c1}{\PYGZsh{}   \PYGZsq{}input\PYGZus{}ids\PYGZsq{}: [ ... ],  \PYGZsh{} Mixed En, Fr, Zh, ...}
+    \PYG{c+c1}{\PYGZsh{}   \PYGZsq{}labels\PYGZsq{}:    [ ... ]}
+    \PYG{c+c1}{\PYGZsh{} \PYGZcb{}}
+
+    \PYG{n}{outputs} \PYG{o}{=} \PYG{n}{model}\PYG{p}{(}\PYG{n}{batch}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}input\PYGZus{}ids\PYGZsq{}}\PYG{p}{])}
+    \PYG{n}{loss} \PYG{o}{=} \PYG{n}{cross\PYGZus{}entropy}\PYG{p}{(}\PYG{n}{outputs}\PYG{p}{,} \PYG{n}{batch}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}labels\PYGZsq{}}\PYG{p}{])}
+
+    \PYG{c+c1}{\PYGZsh{} Gradients here are the average of conflicting directions}
+    \PYG{n}{loss}\PYG{o}{.}\PYG{n}{backward}\PYG{p}{()}
+    \PYG{n}{optimizer}\PYG{o}{.}\PYG{n}{step}\PYG{p}{()}
+\end{Verbatim}
