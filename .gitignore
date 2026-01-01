@@ -1,16 +1,47 @@
+.DS_Store
 .DS_STORE
+*.swp
+*.swo
+*~
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+
+# LaTeX custom auxiliary files (amznotes class)
+*.code
+*.dfn
+*.ex
+*.tec
+*.thm
+
+# Minted (code highlighting) output
+_minted-*/
+*.pyg
+
+# Font logs
+missfont.log
+
+# PDF files (uncomment if you want to ignore PDFs)
+# *.pdf
+
+# Scripts
 /update.sh
-/_minted-sample
-/sample.aux
-/sample.code
-/sample.dfn
-/sample.ex
-/sample.fdb_latexmk
-/sample.fls
-/sample.log
-/sample.out
-/sample.synctex.gz
-/sample.tec
-/sample.toc
-/sample.thm
-/sample.xdv
