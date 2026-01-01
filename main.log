@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.1)  1 JAN 2026 14:24
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.1.1)  1 JAN 2026 14:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1551,17 +1551,24 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
 \openout7 = `main.toc'.
 
  [2]
-Overfull \hbox (3.57979pt too wide) in paragraph at lines 42--43
+Overfull \hbox (3.57979pt too wide) in paragraph at lines 44--45
 []\TU/LatinModernRoman(0)/b/n/12 Chapter 5: System Architecture and Infrastruct
 ure \TU/LatinModernRoman(0)/m/n/12 - Real-time systems, stream-
  []
 
 [3
 
-] [4]
+]
+Missing character: There is no 🔗 (U+1F517) in font Latin Modern Roman 12 Bold/O
+T:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ☕ (U+2615) in font Latin Modern Roman 12 Bold/OT
+:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 💰 (U+1F4B0) in font Latin Modern Roman 12 Bold/O
+T:script=latn;language=dflt;mapping=tex-text;!
+[4]
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
 []|[]\TU/LatinModernRoman(0)/b/n/24.88 Loss Functions and Optimization
  []
 
@@ -1569,7 +1576,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--63
 
 ] [6]
 Package hyperref Info: bookmark level for unknown tcolorbox defaults to 0 on in
-put line 122.
+put line 137.
 \openout4 = `main.pyg'.
 
  (./_minted-main/default.pygstyle)
@@ -1623,7 +1630,7 @@ LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
 LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 8.
 ) [48] [49] [50]
-Overfull \hbox (55.02103pt too wide) in paragraph at lines 1642--1643
+Overfull \hbox (55.02103pt too wide) in paragraph at lines 1657--1658
 []\TU/LatinModernRoman(0)/b/n/12 Use Pipelines: \TU/LatinModernRoman(0)/m/n/12 
 Encapsulate preprocessing in architectural components (like \TU/LatinModernMono
 (0)/b/n/12 sklearn.pipeline\TU/LatinModernRoman(0)/m/n/12 )
@@ -1662,7 +1669,7 @@ C.pygtex) [80] [81] [82] [83] [84] [85] [86]
 C.pygtex) [87] [88] [89] [90] [91]
 Chapter 3.
 
-Underfull \hbox (badness 7486) in paragraph at lines 2942--2942
+Underfull \hbox (badness 7486) in paragraph at lines 2957--2957
 []|[]\TU/LatinModernRoman(0)/b/n/24.88 Model Architecture and Training
  []
 
@@ -1704,7 +1711,7 @@ C.pygtex) [118] [119] [120]
 
 (./_minted-main/8B2A0C888CA0003BB089C13AF8599CA982A15B1DCA8D177369A2514541E452D
 C.pygtex) [121] [122] [123] [124] [125] [126] [127] [128] [129]
-Overfull \hbox (2.29626pt too wide) in paragraph at lines 4189--4190
+Overfull \hbox (2.29626pt too wide) in paragraph at lines 4204--4205
 []\TU/LatinModernRoman(0)/b/n/12 Key Technique: \TU/LatinModernRoman(0)/m/n/12 
 The ”Lipschitz Regularization” term added to the loss function: $[][][][][] []
  []
@@ -1734,7 +1741,7 @@ C.pygtex) [144] [145] [146] [147] [148] [149] [150] [151]
 
 (./_minted-main/C6D866C07B80F9848F3D088D053FB11082A15B1DCA8D177369A2514541E452D
 C.pygtex) [152] [153] [154]
-Overfull \hbox (23.29385pt too wide) in paragraph at lines 5008--5009
+Overfull \hbox (23.29385pt too wide) in paragraph at lines 5023--5024
 []\TU/LatinModernRoman(0)/b/n/12 Use the Funnel: \TU/LatinModernRoman(0)/m/n/12
  Always design retrieval in stages: cheap/high-recall first, expensive/high-
  []
@@ -1744,7 +1751,7 @@ Chapter 5.
 [156
 
 ] [157]
-Overfull \hbox (48.48448pt too wide) detected at line 5103
+Overfull \hbox (48.48448pt too wide) detected at line 5118
 []
  []
 
@@ -1764,7 +1771,7 @@ C.pygtex) [168] [169] [170] [171] [172]
 
 (./_minted-main/A9950E7688656D3EF3631C8E6823743182A15B1DCA8D177369A2514541E452D
 C.pygtex) [173] [174] [175] [176] [177] [178] [179]
-Overfull \hbox (2.51039pt too wide) in paragraph at lines 5827--5828
+Overfull \hbox (2.51039pt too wide) in paragraph at lines 5842--5843
 []\TU/LatinModernRoman(0)/m/n/12 The interviewer smiles politely but stops taki
 ng notes. You’ve just walked into the \TU/LatinModernRoman(0)/b/n/12 Database-
  []
@@ -1775,7 +1782,7 @@ ng notes. You’ve just walked into the \TU/LatinModernRoman(0)/b/n/12 Database-
 
 (./_minted-main/E53B8C55C0439E2A57ACF03E8CA8FDB382A15B1DCA8D177369A2514541E452D
 C.pygtex) [182] [183]
-Underfull \hbox (badness 10000) in paragraph at lines 5978--5979
+Underfull \hbox (badness 10000) in paragraph at lines 5993--5994
 
  []
 
@@ -1786,7 +1793,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5978--5979
 C.pygtex) [184] [185] [186] [187]
 Chapter 6.
 
-Underfull \hbox (badness 3354) in paragraph at lines 6087--6087
+Underfull \hbox (badness 3354) in paragraph at lines 6102--6102
 []|[]\TU/LatinModernRoman(0)/b/n/24.88 Production Systems and Feedback
  []
 
@@ -1909,7 +1916,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--28
 \tf@code=\write12
 \openout12 = `main.code'.
 
- [205] 
+ [205]
+Missing character: There is no 🔗 (U+1F517) in font Latin Modern Roman 12 Bold/O
+T:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ☕ (U+2615) in font Latin Modern Roman 12 Bold/OT
+:script=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no 💰 (U+1F4B0) in font Latin Modern Roman 12 Bold/O
+T:script=latn;language=dflt;mapping=tex-text;!
+[206
+
+] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
  ***********
@@ -1921,17 +1937,17 @@ L3 programming layer <2024-01-22>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E96A95BF78A049DBC3B649C373527AC1;6490.
+(rerunfilecheck)             Checksum: D7EB5C3B8330CA573A15728B9EA72671;6627.
 runsystem(rm main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 41927 strings out of 476878
- 925442 string characters out of 5805250
- 1946627 words of memory out of 5000000
- 63074 multiletter control sequences out of 15000+600000
- 560891 words of font info for 100 fonts, out of 8000000 for 9000
+ 41930 strings out of 476878
+ 925547 string characters out of 5805250
+ 1947627 words of memory out of 5000000
+ 63076 multiletter control sequences out of 15000+600000
+ 560899 words of font info for 101 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,13n,128p,1193b,1559s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (206 pages).
+Output written on main.pdf (207 pages).
